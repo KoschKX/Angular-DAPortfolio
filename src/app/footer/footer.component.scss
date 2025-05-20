@@ -1,0 +1,65 @@
+@import  './../../root.scss';
+
+/* === SECTION === */
+
+    section{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        background-color: rgba($orange, 0.9);
+        color: $whitesmoke;
+
+        .left{
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .right{
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .brand{
+            text-transform: uppercase;
+            user-select: none;
+            >a > img{
+                width: 2em;
+                height: 2em;
+                margin-right: 1em;
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+        section{
+            display: flex;
+            flex-direction: column;
+
+            .left,
+            .right{
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+
+            div{
+                margin-bottom: 0.25em;
+                margin-top: 0.4em;
+            }
+
+            .brand{
+                >a >img{
+                    margin-left: -3em;
+                    margin-top: -0.5em;
+                }
+            }
+        }
+    }

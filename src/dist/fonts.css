@@ -1,0 +1,52 @@
+/* === GOOGLE === */
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/raleway-v34-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/font/raleway-v34-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/font/raleway-v34-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/font/raleway-v34-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/font/raleway-v34-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/font/raleway-v34-latin-900.woff2") format("woff2");
+}
+/* === FREE === */
+@font-face {
+  font-display: swap;
+  font-family: "RealMiami";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/realmiami.woff") format("woff");
+  src: url("./assets/font/realmiami.woff2") format("woff2");
+}

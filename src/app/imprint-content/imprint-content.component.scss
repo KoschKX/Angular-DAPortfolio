@@ -1,0 +1,30 @@
+@import  './../../root.scss';
+
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === SECTION === */
+
+    section{
+        width: calc(100% - 4em);
+        max-width: calc(1200px - 4em);
+        padding: 2em;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        position: relative;
+
+        .section_bg{
+            background-color: rgba($hibiscus,0.9);
+            mix-blend-mode: luminosity;
+            z-index: -1;
+        }
+    }

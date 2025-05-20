@@ -1,0 +1,101 @@
+@import  './../../root.scss';
+
+:host {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+:host.subpage{
+    position: relative;
+
+    .page_bg {
+        background-image: url('./../../assets/img/havana.jpg');
+    }
+    .section_bg {
+        background-color: rgba($hibiscus,0.9);
+        mix-blend-mode: luminosity;
+        z-index: -1;
+    }
+}
+
+/* === NAV === */
+
+    nav {
+        display: flex;
+        margin-left: auto;
+        z-index: 1;
+
+        > a > img {
+            width: 64px;
+            height: 64px;
+        }
+
+        > div.nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            > a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $whitesmoke;
+            margin: 1em 0 1em 1em;
+
+            &:hover {
+                color: $hibiscus;
+            }
+            }
+
+            .phone_btn {
+            display: flex;
+            align-items: center;
+            color: white;
+            background-color: #e84865e6;
+            padding: 0.5em;
+            margin-left: 1em;
+            border: 2px solid #ffffff;
+            border-radius: 2em;
+            font-family: sans-serif;
+            font-weight: 500;
+            white-space: nowrap;
+            position: relative;
+
+            > img {
+                height: 1.5em;
+                width: 1.5em;
+                margin-right: 0.5em;
+                vertical-align: middle;
+            }
+            }
+
+            .phone_number {
+            position: relative;
+            top: 0.1em;
+            }
+        }
+    }
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+        nav {
+            align-items: center;
+            flex-direction: column;
+            margin-right: auto;
+
+            > div {
+                > a,
+                .phone_btn {
+                    margin-left: 0.5em;
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    }
