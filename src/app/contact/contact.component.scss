@@ -93,6 +93,58 @@
         width: calc(100% - 2em);
     }
 
+    .gear_box{
+        display: flex; 
+        bottom: 0; width: 100%; 
+    }
+
+
+
+    :host .seal3 svg > g:nth-child(1),
+    :host .seal3 svg > g:nth-child(2){
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        transform-origin: center;
+    }
+
+    :host .seal3 svg > g:nth-child(1){
+        -webkit-animation-name: rotate;
+        transform-origin: 90px 175px;
+    }
+
+    :host .seal3 svg > g:nth-child(2){
+        -webkit-animation-name: rotateReverse;
+        transform-origin: 238.8px 131.5px
+    }
+
+    :host .seal3 svg > g:nth-child(1) path{
+        fill: var(--colorA);
+    }
+    :host .seal3 svg > g:nth-child(2) path{
+        fill: var(--colorF);
+    }
+
+/* === ANIMATION === */
+
+    @-webkit-keyframes rotate {
+        from {
+        -webkit-transform: rotate(0deg);
+        }
+        to {
+        -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes rotateReverse {
+        from {
+        -webkit-transform: rotate(360deg);
+        }
+        to {
+        -webkit-transform: rotate(0deg);
+        }
+    }
+
 /* === RESPONSIVE === */
 
     @media screen and (max-width: 800px) {
@@ -144,6 +196,14 @@
         .boxB img{
             width: 100%;
             margin: auto;
+        }
+
+        .gear_box{
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
         }
 
     }
