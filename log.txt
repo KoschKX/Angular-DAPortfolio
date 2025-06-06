@@ -7,4 +7,7 @@
         The side menu with the dots work now. Had to use ChatGPT to get it to render properly.
 
     15:30:
-        made the first git push.
+        Made the first git push.
+
+    16:00
+        Made projects section functional
