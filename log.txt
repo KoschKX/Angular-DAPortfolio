@@ -14,3 +14,6 @@
 
     16:15
         Animated the gears in the contact section. It was difficult to get the two gears centered.
+
+    16:30
+        Updated footer and build scripts.
