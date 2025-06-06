@@ -10,29 +10,32 @@
             </div>
         </div>
         <div class="col right" style="">
-            <div class="form" style="color: var(--colorB); background-color: var(--colorD);">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="form" style="color: var(--colorB); background-color: var(--colorD);">
                 <div style="display: flex; justify-content: space-between;">
                     <div style="margin-right: 1em;">
                         <span style="margin-left: 0.75em;">What's your name?</span>
-                        <input type="text" placeholder="Your name goes here" />
+                        <input [(ngModel)]="contactData.name" type="text" placeholder="Your name goes here" />
                     </div>
                     <div style="">
                         <span style="margin-left: 0.75em;">What's your email?</span>
-                        <input type="text" placeholder="youremail@email.com" />
+                        <input [(ngModel)]="contactData.email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
                     </div>
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: column;">
                     <span style="margin-left: 0.75em;">How can I help you?</span>
-                    <input type="text" placeholder="Hello Lukas, I am interested in..." />
+                    <input #message="ngModel" [(ngModel)]="contactData.message" type="text" placeholder="Hello Lukas, I am interested in..." />
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: row;">
                     <input type="checkbox" style="margin-right: 1em;" /> <div>I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data.</div>
                 </div>
+                @if (!message.valid && message.touched){
+                    <span>Please enter a message</span>
+                }
                 <br><br>
-                <div style="width: 100%; text-align: center;"><button>Drop a Line</button></div>
-            </div>
+                <div style="width: 100%; text-align: center;"><button type="submit" value="submit">Drop a Line</button></div>
+            </form>
         </div>
     </div>
     <div class="boxA" style="display: flex;">

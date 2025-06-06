@@ -91,14 +91,13 @@
 
     .form input[type="text"]{
         width: calc(100% - 2em);
+        color: var(--colorB);
     }
 
     .gear_box{
         display: flex; 
         bottom: 0; width: 100%; 
     }
-
-
 
     :host .seal3 svg > g:nth-child(1),
     :host .seal3 svg > g:nth-child(2){

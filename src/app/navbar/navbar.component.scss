@@ -298,4 +298,8 @@
         :host nav .nav-menu.social{
             display: none !important;
         }
+
+        :host #side_menu{
+            display: none;
+        }
     }
