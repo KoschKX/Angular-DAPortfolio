@@ -10,4 +10,7 @@
         Made the first git push.
 
     16:00
-        Made projects section functional
+        Made projects section functional.
+
+    16:15
+        Animated the gears in the contact section. It was difficult to get the two gears centered.
