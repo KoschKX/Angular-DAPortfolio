@@ -14,21 +14,22 @@
                 <div style="display: flex; justify-content: space-between;">
                     <div style="margin-right: 1em;">
                         <span style="margin-left: 0.75em;">What's your name?</span>
-                        <input [(ngModel)]="contactData.name" type="text" placeholder="Your name goes here" />
+                        <input name="name" [(ngModel)]="contactData.name" type="text" placeholder="Your name goes here" />
                     </div>
                     <div style="">
                         <span style="margin-left: 0.75em;">What's your email?</span>
-                        <input [(ngModel)]="contactData.email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                        <input name="email" [(ngModel)]="contactData.email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
                     </div>
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: column;">
                     <span style="margin-left: 0.75em;">How can I help you?</span>
-                    <input #message="ngModel" [(ngModel)]="contactData.message" type="text" placeholder="Hello Lukas, I am interested in..." />
+                    <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text" placeholder="Hello Lukas, I am interested in..." />
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: row;">
-                    <input type="checkbox" style="margin-right: 1em;" /> <div>I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data.</div>
+                    <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
+                    <div>I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data.</div>
                 </div>
                 @if (!message.valid && message.touched){
                     <span>Please enter a message</span>

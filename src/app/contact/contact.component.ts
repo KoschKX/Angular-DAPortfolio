@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -9,18 +10,47 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  constructor(private http: HttpClient) {}
+
   contactData  = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    privacy: false
   }
 
+  mailTest = false;
+
   onSubmit(ngForm: NgForm){
-    if (ngForm.valid && ngForm.submitted) {
-      console.log('Form Submitted!', this.contactData);
-      ngForm.reset(); // Reset the form after submission
+    if (ngForm.form.valid && ngForm.submitted && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => {
+            console.log('send post complete');
+            ngForm.resetForm();
+          }
+        
+      });
     } else {
-      console.log('Form is invalid');
+       ngForm.resetForm();
+    }
+  }
+
+  post = {
+    endPoint: '/projects/portfolio/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      }
     }
   }
 
