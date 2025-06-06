@@ -187,6 +187,12 @@
         display: flex;
     }
 
+    .project_button {
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
 /* === ANIMATION === */
 
     @-webkit-keyframes rotate {
@@ -231,10 +237,12 @@
             margin-right: 0em; 
         }
 
-        .project_desc,
-        .project_nav{
+        :host .project_desc,
+        :host .project_nav{
             margin-left: 0;
             margin-right: 0;
         }
+
+
         
     }

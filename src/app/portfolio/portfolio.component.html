@@ -15,14 +15,8 @@
         <div class="col left" style="">
             <div class="projects">
                 <div class="project_holder">
-                    <div class="project  active">
-                        <img src="./assets/img/work_projectA.png" width="100%" height="auto" alt="" srcset="" style=" ">     
-                    </div>  
-                    <div class="project">
-                        <img src="./assets/img/work_projectB.png" width="100%" height="auto" alt="" srcset="" style=" ">     
-                    </div>  
-                    <div class="project">
-                        <img src="./assets/img/work_projectC.png" width="100%" height="auto" alt="" srcset="" style=" ">     
+                    <div class="project active">
+                        <img src="{{projects[currentProject][1]}}" width="100%" height="auto" alt="" srcset="" style=" ">     
                     </div>  
                 </div>
                 <div class="sealC">
@@ -38,34 +32,12 @@
         </div>
         <div class="col right" style="">
             <div class="project_descs">
-                <div class= "project_desc" style="color: var(--colorB); background-color: var(--colorD); ">
-                    <div style="display: flex; justify-content: space-between;"><span>Join</span> <div class="emoji">✅</div></div>
-                    <br>
-                    <div style="color: var(--colorA); font-size: smaller;">HTML | CSS | Firebase | Angular | TypeScript</div>
-                    <br>
-                    Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. 
-                    <br><br>
-                    <div class="button_row">
-                        <button>GitHub →</button><button>Live Test →</button>
-                    </div>
-                </div>
                 <div class= "project_desc active" style="color: var(--colorB); background-color: var(--colorD); ">
-                    <div style="display: flex; justify-content: space-between;"><span>DABubble</span> <div class="emoji">✅</div></div>
+                    <div style="display: flex; justify-content: space-between;"><span>{{projects[currentProject][0]}}</span> <div class="emoji"><img src="{{projects[currentProject][2]}}"></div></div>
                     <br>
-                    <div style="color: var(--colorA); font-size: smaller;">JavaScript | HTML | CSS</div>
+                    <div style="color: var(--colorA); font-size: smaller;">{{projects[currentProject][3]}}</div>
                     <br>
-                    This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.
-                    <br><br>
-                    <div class="button_row">
-                        <button>GitHub →</button><button>Live Test →</button>
-                    </div>
-                </div>
-                <div class= "project_desc" style="color: var(--colorB); background-color: var(--colorD); ">
-                    <div style="display: flex; justify-content: space-between;"><span>Sharkie</span> <div class="emoji">✅</div></div>
-                    <br>
-                    <div style="color: var(--colorA); font-size: smaller;">JavaScript | HTML | CSS</div>
-                    <br>
-                    A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale. 
+                    {{projects[currentProject][4]}}
                     <br><br>
                     <div class="button_row">
                         <button>GitHub →</button><button>Live Test →</button>
@@ -73,7 +45,8 @@
                 </div>
             </div>
             <div class="project_nav">
-                <span><< Previous project</span><span>Next project >></span>
+                <span class="project_button" id="project_button_prev" (click)="prevProject()">&lt;&lt; Previous project</span>
+                <span class="project_button" id="project_button_next" (click)="nextProject()">Next project &gt;&gt;</span>
            </div>
         </div>
     </div>

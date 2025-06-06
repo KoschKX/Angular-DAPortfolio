@@ -24,6 +24,7 @@ export class NavbarComponent implements AfterViewInit {
 
   @ViewChild('navRef') navRef!: ElementRef<HTMLElement>;
 
+  /** INITIALIZE BY ADDING THE DOTS AND CHECK THE SCROLLING FOR THE FIRST TIME */  
   ngAfterViewInit(): void {
     this.anchors = Array.from(document.querySelectorAll('section'));
     setTimeout(() => {
@@ -32,10 +33,12 @@ export class NavbarComponent implements AfterViewInit {
     });
   }
 
+  /** TOGGLE THE DROP DOWN MENU */
   toggleDropMenu() {
     this.dropMenuActive = !this.dropMenuActive;
   }
 
+  /** CHECK IF USER HAS SCROLLED */
   @HostListener('window:scroll', [])
   onScroll() {
     this.checkScroll();
@@ -78,13 +81,15 @@ export class NavbarComponent implements AfterViewInit {
     this.renderer.setAttribute(document.body, 'data-active-section', this.activeSection);
   }
 
+  /** HANDLE WINDOW RESIZING */
   @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
+    onResize(event: Event) {
     if(document.body.classList.contains('fixed') && this.activeSection){
       this.scrollToElement(this.activeSection);
     }
   }
 
+  /** FORCE SCROLL TO ELEMENT */
   scrollToElement(id: string, smooth: boolean = false) {
     const el = document.getElementById(id);
     if (el) {
@@ -96,7 +101,7 @@ export class NavbarComponent implements AfterViewInit {
     }
   }
 
- 
+  /** ADD THE DOTS TO THE SIDE MENU */
   addDots() {
     this.anchors.forEach(anchor => {
       const id = anchor.getAttribute('id');
