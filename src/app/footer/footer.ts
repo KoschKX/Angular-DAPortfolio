@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
       <div class="left">
         <div class="brand">
           <a href="./">
-            <img src="./assets/img/hibiskus.svg" alt="" srcset=""> 
+            <img src="" alt="" srcset=""> 
             <span class="site_title">CAFE EMPANADA</span>
           </a>
         </div>

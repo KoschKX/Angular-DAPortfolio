@@ -1,0 +1,101 @@
+@import  './../../root.scss';
+
+:host {
+}
+
+/* === SECTION === */
+
+    :host section {
+        background-image: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+        .title {
+            h1,
+            h2 {
+                color: whitesmoke;
+            }
+        }
+    }
+
+    :host .two_col {
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    :host .two_col .col.left {
+        align-items: flex-start; 
+        flex-direction: column; 
+        
+        width: 40%; 
+        height: 80%;
+    }
+    :host .two_col .col.right {
+        align-items: flex-end; 
+        flex-direction: column; 
+        position: relative; 
+        justify-content: flex-end;
+        width: 60%; 
+        bottom: -4em; 
+    }
+
+/* === SPECIAL === */
+
+    :host .seal svg {
+
+        
+    }
+    :host .seal svg > g:nth-child(1),
+    :host .seal svg > g:nth-child(2){
+        -webkit-animation-name: rotate;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        transform-origin: center;
+    }
+
+    :host .seal svg > g:nth-child(1) path{
+        fill: var(--colorE);
+    }
+    :host .seal svg > g:nth-child(2) path{
+        fill: var(--colorB);
+    }
+    :host .seal svg > g:nth-child(3) path{
+        fill: var(--colorB);
+    }
+
+/* === ANIMATION === */
+
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+        :host .two_col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+        :host .two_col .col.left {
+            justify-content: flex-end ;
+            height: 50%;
+            width: 100%;
+        }
+        :host .two_col .col.right {
+            height: 50%;
+            width: 100%;
+        }
+    }

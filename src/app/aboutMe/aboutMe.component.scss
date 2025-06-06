@@ -1,0 +1,129 @@
+@import  './../../root.scss';
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* === SECTION === */
+
+    :host section {
+        background-image: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+
+        padding-top: 5vw;
+
+        justify-content: center;
+
+        display: flex;
+        justify-content: flex-end;
+
+        height: calc(100vh - 10vw);
+    }
+
+    :host section .two_col {
+        justify-content: space-between; 
+    }
+
+    :host section .two_col .col.left {
+        position: relative; 
+        display: block; 
+        align-items: center; 
+        flex-direction: column; 
+        width: 50%; 
+        height: 100%;
+        bottom: -5vw; 
+    }
+    :host section .two_col .col.right {
+        position: relative; 
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+    }
+
+/* === SPECIAL ELEMENTS === */
+
+
+    .boxA{
+        top: 0;
+        position: absolute;
+        width: calc(100% - 10vw);
+        margin-top: 10vw;
+    }
+
+    .boxB{
+        padding: 2.5vw;
+        width: calc(125% - 2em);
+        margin-left: clamp(0px, 50vh, 100% - 8em);
+        top: -75%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .photo img{
+        height: calc(100% + 10vh);
+        width: 120%;
+        object-fit: contain; 
+        object-position: center left;
+    }
+
+    .title{
+        position: relative;
+        margin-bottom: 2em;
+    }
+
+ /* === SPECIAL === */
+
+    :host .emoji{
+        -webkit-animation-name: bounce ;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        transform-origin: center;
+    }
+
+/* === ANIMATION === */
+
+  @-webkit-keyframes bounce {
+    from {
+      -webkit-transform: translate((0,0em));
+    }
+    50%{
+       -webkit-transform: translate((0,-0.5em));
+    }
+    to {
+      -webkit-transform: translate((0,0));
+    }
+  }
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+
+        .photo img{
+            object-position: top left;
+        }
+        .boxA{
+            width: 100%;
+            position: relative;
+        }
+        .boxB{
+            padding: 1em; 
+            left: 75%;
+            margin-left: 0;
+            margin-top: -10em;
+        }
+
+        :host section .two_col .col.left {
+            bottom: 0vw; 
+        }
+        :host section .two_col .col.right {
+        }
+
+
+        :host section {
+            height: auto;
+        }
+    }

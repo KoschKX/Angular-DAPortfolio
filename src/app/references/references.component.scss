@@ -1,0 +1,40 @@
+ 
+:host section{
+   justify-content: center;
+   display: flex; 
+   align-items: flex-start; 
+}
+
+ .zitat{
+    width: 33%; margin: 1vw; position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+ }
+
+ .refs{
+    display: flex;
+ }
+
+ .zitat_content{
+   width: calc(100% - 6vw);
+   padding: 3vw; 
+   color: var(--colorB); 
+   border-radius: 0.5em; 
+   border: 1px solid var(--colorB);
+ }
+ 
+ .zitat:first-child{
+   margin-left:0;
+ }
+
+ .zitat:last-child{
+   margin-right:0;
+ }
+ 
+ @media screen and (max-width: 800px) {
+    .zitat{
+        width: 100%;
+    }
+
+    .refs{
+        flex-direction: column;
+    }
+}

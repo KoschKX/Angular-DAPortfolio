@@ -1,4 +1,20 @@
+$colorA: #679AAC;
+$colorB: #f8f7e5;
+$colorC: #000000;
+$colorD: #1D1D1D;
+$colorE: #F9AF42;
+$colorF: #ff834f;
+
 $hibiscus: #e84865;
 $orange: #ff8000;
 $teal: #9eb0b4;
 $whitesmoke: whitesmoke;
+
+:root {
+    --colorA: #{$colorA};
+    --colorB: #{$colorB};
+    --colorC: #{$colorC};
+    --colorD: #{$colorD};
+    --colorE: #{$colorE};
+    --colorF: #{$colorF};
+}

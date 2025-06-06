@@ -1,60 +1,68 @@
 /* === GOOGLE === */
 
-  @font-face {
+@font-face {
+    font-family: 'Eczar';
+    src: url('./assets/font/Eczar-Bold.eot');
+    src: url('./assets/font/Eczar-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Eczar-Bold.woff2') format('woff2'),
+        url('./assets/font/Eczar-Bold.woff') format('woff'),
+        url('./assets/font/Eczar-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
     font-display: swap;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/font/raleway-v34-latin-regular.woff2') format('woff2'); 
-  }
+}
 
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./assets/font/raleway-v34-latin-500.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';
-    font-style: normal;
+@font-face {
+    font-family: 'Eczar';
+    src: url('./assets/font/Eczar-SemiBold.eot');
+    src: url('./assets/font/Eczar-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Eczar-SemiBold.woff2') format('woff2'),
+        url('./assets/font/Eczar-SemiBold.woff') format('woff'),
+        url('./assets/font/Eczar-SemiBold.ttf') format('truetype');
     font-weight: 600;
-    src: url('./assets/font/raleway-v34-latin-600.woff2') format('woff2'); 
-  }
-
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';
     font-style: normal;
-    font-weight: 700;
-    src: url('./assets/font/raleway-v34-latin-700.woff2') format('woff2'); 
-  }
-
-  @font-face {
     font-display: swap;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    src: url('./assets/font/raleway-v34-latin-800.woff2') format('woff2');
-  }
+}
 
-  @font-face {
+@font-face {
+    font-family: 'Eczar';
+    src: url('./assets/font/Eczar-ExtraBold.eot');
+    src: url('./assets/font/Eczar-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Eczar-ExtraBold.woff2') format('woff2'),
+        url('./assets/font/Eczar-ExtraBold.woff') format('woff'),
+        url('./assets/font/Eczar-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
     font-display: swap;
-    font-family: 'Raleway';
+}
+
+@font-face {
+    font-family: 'Eczar';
+    src: url('./assets/font/Eczar-Medium.eot');
+    src: url('./assets/font/Eczar-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Eczar-Medium.woff2') format('woff2'),
+        url('./assets/font/Eczar-Medium.woff') format('woff'),
+        url('./assets/font/Eczar-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
-    font-weight: 900;
-    src: url('./assets/font/raleway-v34-latin-900.woff2') format('woff2'); 
-  }
-
-/* === FREE === */
-
-  @font-face {
     font-display: swap;
-    font-family: 'RealMiami';
+}
+
+@font-face {
+    font-family: 'Eczar';
+    src: url('./assets/font/Eczar-Regular.eot');
+    src: url('./assets/font/Eczar-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Eczar-Regular.woff2') format('woff2'),
+        url('./assets/font/Eczar-Regular.woff') format('woff'),
+        url('./assets/font/Eczar-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-    src: url('./assets/font/realmiami.woff') format('woff'); 
-    src: url('./assets/font/realmiami.woff2') format('woff2'); 
-  }
+    font-display: swap;
+}
+
+.fontA{
+    font-family: 'Eczar', serif;
+}
+.fontB{
+    font-family: sans-serif;
+}

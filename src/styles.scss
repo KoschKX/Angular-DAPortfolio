@@ -1,41 +1,43 @@
 @use './fonts.scss';
 @import  './root.scss';
 
-/* === TYPOGRAPHY === */
 
-  .fontRealMiami {
-    font-family: 'RealMiami';
-    font-weight: 100;
-  }
+
+html{
+  scroll-behavior: smooth;
+}
+  
+body.fixed{
+    overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Eczar";
+}
+
+/* === TYPOGRAPHY === */
 
   .fontRaleway {
     font-family: 'Raleway';
     font-weight: 600;
   }
 
-body::before{
-    content: "";
-    width:  100%;
-    height: 100%;
-    background-image: url('./assets/img/patterns/wavecut.png');
-    position: fixed;
-    opacity: 0.4;
-}
-
 /* === BASE === */
 
-  body,
+   body,
   .page_bg {
     overflow-y: scroll;
     margin: 0;
-    font-family: 'Raleway';
-    background-image: url('./assets/img/havana.jpg');
+    font-family: sans-serif;
+    background-image: none;
     background-color: $teal;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     z-index: 0;
   }
+  
 
   a {
     color: $whitesmoke;
@@ -46,6 +48,22 @@ body::before{
     }
   }
 
+  button{
+    background: transparent;
+    border: solid 1px var(--colorB);
+    color: var(--colorB);
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    font-size: 1em;
+  }
+
+  .button_row button{
+    margin-right: 2em;
+  }
+  .button_row button:last-child {
+    margin-right: 0;
+  }
+  
   .content
   {
     min-height: calc( 100vh - 10em);
@@ -57,71 +75,120 @@ body::before{
     overflow-y: hidden;
   }
   
-  .section_bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    width: 100%;
-    max-width: 1200px;
-    height: calc(100%);
-    
-    margin-top: -2em;
-    margin: auto;
-  }
-
-
 /* === SECTION === */
 
   section {
-    width: calc(100% - 4em);
-    max-width: calc(1200px - 4em);
-    padding: 2em;
+    width: calc(100% - 10vw);
+
+    max-width: 1400px;
+
+    min-height: calc(100vh - 8em);
+
+    padding: 5vw;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
     margin: auto;
 
     position: relative;
-    display: flex;
+
+    overflow: hidden;
+
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-
-
     .title {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2em;
-      width: calc(100% - 4em);
-
+      display: block;
+      
       h1,
       h2 {
-        color: whitesmoke;
         line-height: 1em;
-        margin: 0.2em 0;
+        margin: 0;
         font-weight: 100;
-        text-align: center;
       }
 
       h1 {
-        font-size: 2.5em;
+        font-size: clamp(2em, 13vw, 6em);
+        font-size: clamp(2em, 13vmin, 6em);
+        font-weight: 600; 
+      }
+      h2 {
+        font-size: clamp(1.25em, 7.5vw, 2.5em);
+        font-size: clamp(1.25em, 7.5vmin, 2.5em);
       }
     }
   }
 
+  section.fixed_height{
+    height: calc(100vh - 15vw);
+  }
+
+  section.fixed_height_desktop{
+    height: calc(100vh - 15vw);
+  }
+
+  section .two_col {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    .col{
+      width: 50%;
+      height: 100%;
+      display: flex;
+    }
+  }
+
+  section .row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+
+  section .flt{
+    position: absolute;
+  }
+
 /* === RESPONSIVE === */
 
-  section {
+  @media screen and (max-width: 800px) {
+    .two_col {
+      display: flex;
+    }
+    .two_col .col{
+      display: flex;
+    }
+    section.fixed_height_desktop{
+      height: auto;
+    }
+  }
 
-      @media screen and (max-width: 800px) {
-
-        font-size: 1.33em;
-        
-        h2 {
-          font-size: 5vw;
-        }
+  @media screen and (max-height: 640px) {
+      section {
+        min-height: calc(640px - 8em);
       }
+  }
+
+
+/* === FORMS === */
+
+  input[type="text"] {
+      background: none;
+      border: none;
+      padding: 1em;
+      border-bottom: 1px solid var(--colorF);
+  }
+
+/* === SVG === */
+
+  .svg_layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
   }

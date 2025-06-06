@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 65 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-16,-12)">
+        <path d="M48.184,84C47.809,84 47.359,84 46.984,83.85L24.334,77.55C22.534,77.025 21.259,75.45 21.034,73.65L16.009,16.95C15.934,15.675 16.309,14.475 17.134,13.5C17.959,12.6 19.159,12 20.434,12L76.009,12C77.284,12 78.484,12.525 79.309,13.5C80.134,14.4 80.584,15.675 80.434,16.95L75.409,73.65C75.259,75.525 73.909,77.1 72.109,77.55L49.384,83.85C49.009,83.925 48.559,84 48.184,84Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16,-12)">
+        <path d="M25.462,73.2L20.438,16.5L76.013,16.5L70.988,73.2L48.263,79.5L25.613,73.2L25.462,73.2Z" style="fill:rgb(38,77,228);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16,-12)">
+        <path d="M66.555,69.606L70.905,21.156L48.18,21.156L48.18,74.706L66.555,69.606Z" style="fill:rgb(41,101,241);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16,-12)">
+        <path d="M31.97,42.143L32.57,49.118L48.095,49.118L48.095,42.143L31.895,42.143L31.97,42.143ZM31.295,35.018L48.17,35.018L48.17,28.043L30.695,28.043L31.295,35.018ZM48.17,60.218L40.445,58.118L39.92,52.568L32.945,52.568L33.92,63.518L48.17,67.493L48.17,60.218Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-16,-12)">
+        <path d="M48.18,42.156L48.18,49.131L56.73,49.131L55.905,58.131L48.18,60.231L48.18,67.431L62.43,63.456L62.43,62.256C62.505,62.256 64.155,43.956 64.155,43.956L64.305,42.081L65.58,27.981L48.18,27.981L48.18,34.956L58.005,34.956L57.405,42.081L48.255,42.081L48.18,42.156Z" style="fill:white;fill-rule:nonzero;"/>
+    </g>
+</svg>

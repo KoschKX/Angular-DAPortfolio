@@ -13,7 +13,7 @@
     position: relative;
 
     .page_bg {
-        background-image: url('./../../assets/img/havana.jpg');
+        background-image: none;
     }
     .section_bg {
         background-color: rgba($hibiscus,0.9);
@@ -22,12 +22,46 @@
     }
 }
 
+:host {
+    /* overflow: hidden ;*/
+}
+:host section{
+    overflow: visible;
+    align-items: flex-end;
+}
+
+/* === NAV === */
+
+    .lang{
+        border: 1px solid var(--colorD);
+        border-radius: 200%;
+        padding: 0.5em;
+        height: 1em;
+        width: 1em;
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+
 /* === NAV === */
 
     nav {
-        display: flex;
-        margin-left: auto;
-        z-index: 1;
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+
+        position: fixed;
+        width: calc(100% - 10vw);
+        max-width: 1400px;
+
+        z-index: 900;
+
+        margin-top: 0.25em;
+
+        height: 4em;
 
         > a > img {
             width: 64px;
@@ -40,54 +74,213 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-
-            > a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: $whitesmoke;
-            margin: 1em 0 1em 1em;
-
-            &:hover {
-                color: $hibiscus;
-            }
-            }
-
-            .phone_btn {
-            display: flex;
-            align-items: center;
-            color: white;
-            background-color: #e84865e6;
             padding: 0.5em;
-            margin-left: 1em;
-            border: 2px solid #ffffff;
-            border-radius: 2em;
-            font-family: sans-serif;
-            font-weight: 500;
-            white-space: nowrap;
-            position: relative;
-
-            > img {
-                height: 1.5em;
-                width: 1.5em;
-                margin-right: 0.5em;
-                vertical-align: middle;
-            }
+            padding-left: 0; padding-right: 0;
+            > a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: var(--colorD);
+                margin: 0.5em;
+                &:hover {
+                    color: var(--colorE);
+                }
             }
 
-            .phone_number {
-            position: relative;
-            top: 0.1em;
+            a:last-child{
+                margin-right: 0em;
+            }
+            a:first-child{
+                margin-left: 0em;
             }
         }
+        
     }
+
+    body.fixed :host nav{
+        position: absolute;
+        width: 100%;
+    }
+
+    #menu .open_btn svg,
+    #pmenu .close_btn svg{
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+    }
+    :host nav .open_btn svg path{
+        fill: var(--colorD) !important;
+    }
+    :host nav .close_btn svg path{
+        fill: var(--colorE) !important;
+    }
+    :host nav .s_logo svg path{
+        fill: var(--colorF) !important;
+    }
+
+/* === DROP MENU === */
+
+    #pmenu {
+        list-style: none;
+
+        position: fixed;
+        top: -1em;
+        margin-right: -100%;
+        z-index: 1;
+        background: #F8F7E5;
+        padding: 1em;
+        border: 1px solid var(--colorD);
+        min-width: 7.5em;
+
+        visibility: hidden;
+
+        transition: all 1s;
+
+        z-index: 950;
+    }
+
+    #pmenu *{
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    #pmenu.open {
+        visibility: visible;
+        top: -0.75em;
+        margin-right: -1em;
+    }
+
+
+    #pmenu li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    #pmenu li:first-child {
+        margin-top: 0em;
+    }
+
+    #pmenu li:last-child {
+        margin-bottom: 0em;
+    }
+
+    #pmenu li a {
+        color: var(--colorD);
+    }
+
+    #pmenu .title {
+        display: flex;
+        justify-content: space-between;
+        color: var(--colorA);
+
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+
+    #pmenu .title .close_btn {
+        color: var(--colorE);
+        width: 0.75em;
+        height: 0.75em;
+    }   
+
+    #pmenu .title .close_btn path {
+        fill: var(--colorE) !important;
+    }
+
+    :host nav .nav-menu.social{
+        display: none;
+    }
+
+/* === SIDE MENU === */
+
+    #side_menu{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        pointer-events: none;
+    }
+
+    #side_menu ul{
+        list-style: none;
+        position: relative;
+        right: -4vw;
+        padding: 0;
+    }
+
+    #side_menu li{
+        height: 1em;
+        width: 1em;
+
+        pointer-events: all;
+    }
+    #side_menu li .dot,
+    #side_menu li .diamond{
+        display: block;
+        position: relative;
+        width: 50%;
+        width: 50%;
+        margin: 1em 0;
+        
+    }
+
+    :host #side_menu li .diamond{
+        display: none;
+        left: -12.5%;
+        width: 75%;
+    }
+
+    :host #side_menu li .dot path{
+        fill: var(--colorD);
+    }
+    :host #side_menu li .diamond rect{
+        fill: var(--colorE);
+    }
+
+    :host #side_menu li a.active .dot{
+        display: none;
+    }
+    :host #side_menu li a.active .diamond{
+        display: block;
+
+    }
+   
+
+/* === MENU COLOR === */
+
+    body[data-active-section="hero"]{
+        :host nav .nav-menu.social{
+            display: flex;
+        }
+    }
+
+    body[theme="dark"]{
+        color: var(--colorB) !important;
+        :host nav .lang{
+            color: var(--colorB) !important;
+            border: 1px solid var(--colorB) !important;
+        }
+        :host nav .open_btn svg path{
+            fill: var(--colorB) !important;
+        }
+        :host nav .s_logo_text svg path{
+            fill: var(--colorB) !important;
+        }
+
+        :host #side_menu li .dot path{
+            fill: var(--colorB) !important;
+        }
+    }
+
 
 /* === RESPONSIVE === */
 
     @media screen and (max-width: 800px) {
         nav {
             align-items: center;
-            flex-direction: column;
             margin-right: auto;
 
             > div {
@@ -97,5 +290,12 @@
                     margin-right: 0.5em;
                 }
             }
+        }
+        :host nav{
+            position: absolute;
+            width: 100%;
+        }
+        :host nav .nav-menu.social{
+            display: none !important;
         }
     }

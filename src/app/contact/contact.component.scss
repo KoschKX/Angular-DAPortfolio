@@ -1,0 +1,149 @@
+@import  './../../root.scss';
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* === SECTION === */
+
+    :host section .two_col {
+        margin: 0;
+    }
+
+    :host section {
+        
+        background-image: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+
+        justify-content: center;
+
+    }
+
+    :host section .two_col .col.left {
+        position: relative; 
+        display: block; 
+        align-items: center; 
+        flex-direction: column; 
+        width: 50%; 
+        height: 100%;
+
+        margin: 2em;
+        margin-left: 0em;
+    }
+    :host section .two_col .col.right {
+        position: relative; 
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+    }
+
+/* === SPECIAL === */
+
+    .skill{
+        color: var(--colorB);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    .skill_icon{
+        width: 4em;
+        height: 4em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .form{
+        position: relative; 
+        margin: 2em;
+        margin-right: 0;
+    }
+
+    .boxA{
+        height: 10em;
+        justify-content: space-between; 
+        width: 100%;
+    }
+
+    .boxA .box_col {
+        width: 33%; 
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .boxB{
+        position: relative;
+        margin-top: -10em;
+        justify-content: space-between; 
+        width: 100%;
+    }
+
+    .boxB .box_col {
+        width: 33%; text-align: left;
+    }
+
+    .form input[type="text"]{
+        width: calc(100% - 2em);
+    }
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+
+        :host section .two_col {
+            flex-direction: column;
+        }
+        
+        :host section .two_col .col.left {
+            width: 100%; 
+        }
+        :host section .two_col .col.right {
+            width: 100%; 
+        }
+
+        .form{
+            margin-left: 0;
+            margin-right: 0;
+        }
+      
+        .boxA{
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            width: 100%;
+        }
+
+        .boxA .box_col:first-child{
+            display: none;
+        }
+
+        .boxA .footer{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .boxB {
+            position: relative;
+            margin-top: 0em;
+            width: 100%;
+        }
+
+        .boxB .box_col{
+            width: 100%;
+        }
+
+        .boxB img{
+            width: 100%;
+            margin: auto;
+        }
+
+    }

@@ -1,0 +1,120 @@
+@import  './../../root.scss';
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+:host section{
+  display: flex;background-color: var(--colorD);flex-direction: row;flex-wrap: wrap;justify-content: center;align-content: center;
+
+}
+
+
+/* === SPECIAL === */
+
+    :host .sealB svg {
+
+        
+    }
+    :host .sealB svg > g:nth-child(1){
+        -webkit-animation-name: rotate;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        transform-origin: center;
+    }
+
+    :host .sealB svg > g:nth-child(1) path{
+        fill: var(--colorF);
+    }
+  
+
+/* === ANIMATION === */
+
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+/* === SECTION === */
+
+    .skill{
+        color: var(--colorB);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        height: 50%;
+        width: 15%;
+        margin: 0 5% 2.5% 5%;
+        margin-right: 0;
+        font-weight: 100;
+    }
+    .skill_icon{
+        width: 80%;
+        max-width: 80%;
+        min-height: 5em;
+        height: 5vw;
+        margin-bottom: 1em;
+    }
+
+    :host section .two_col {
+        justify-content: space-between; 
+        height: auto;
+        margin-bottom: 5vw;
+        align-items: flex-end;
+    }
+
+    :host section .two_col.rowA .col.left {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    :host section .two_col.rowB .col.left {
+        align-items: flex-end;
+    }
+    :host section .two_col.rowB .col.right {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+
+        justify-content: flex-end;
+    }
+    
+    :host .boxA{
+        width: 100%;
+    }
+    
+
+/* === RESPONSIVE === */
+
+    @media screen and (max-width: 800px) {
+
+        :host section .two_col {
+            flex-direction: column;
+        }
+        :host section .two_col .col {
+            width: 100%;
+        }
+        :host section .two_col.rowB .col.right {
+            justify-content: center;
+        }
+
+        :host .boxA{
+            position: relative;
+        }
+
+        .skill{
+            width: 20%;
+        }
+        
+    }
