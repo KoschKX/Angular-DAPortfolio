@@ -106,7 +106,6 @@ export class NavbarComponent implements AfterViewInit {
     this.anchors.forEach(anchor => {
       const id = anchor.getAttribute('id');
       if (id && id !== 'navbar') {
-        console.log(id);
         this.addDot('#' + id);
       }
     });

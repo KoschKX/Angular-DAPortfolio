@@ -1,1 +1,1 @@
-ng build CafeEmpanada --configuration=production --output-hashing=none
+ng build Portfolio --configuration=production --output-hashing=none

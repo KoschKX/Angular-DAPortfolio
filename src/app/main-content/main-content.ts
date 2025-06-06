@@ -18,5 +18,5 @@ import { ContactComponent } from '../contact/contact.component';
   styleUrl: '../app.component.scss'
 })
 export class MainContentComponent {
-  title = 'Cafe Empanada';
+  title = 'Portfolio';
 }
