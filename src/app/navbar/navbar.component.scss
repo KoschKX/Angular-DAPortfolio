@@ -63,7 +63,7 @@
 
         height: 4em;
 
-        > a > img {
+        #top_menu > a > img {
             width: 64px;
             height: 64px;
         }
@@ -172,7 +172,6 @@
         display: flex;
         justify-content: space-between;
         color: var(--colorA);
-
         font-size: 1.5em;
         font-weight: 100;
     }
@@ -191,23 +190,29 @@
         display: none;
     }
 
+/* === STICKY NAV === */
+
+    nav.stick_to_section{
+        position: absolute;
+        width: 100%;
+    }
+
 /* === SIDE MENU === */
 
     #side_menu{
-        position: absolute;
-        width: 100%;
+        position: fixed;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-
         pointer-events: none;
+        z-index: 900;
     }
 
     #side_menu ul{
         list-style: none;
         position: relative;
-        right: -4vw;
+        right: calc(-3.25vw + 0.15em);
         padding: 0;
     }
 
@@ -223,13 +228,12 @@
         position: relative;
         width: 50%;
         width: 50%;
-        margin: 1em 0;
-        
+        margin: 1em auto;
     }
+
 
     :host #side_menu li .diamond{
         display: none;
-        left: -12.5%;
         width: 75%;
     }
 
@@ -256,7 +260,6 @@
             display: flex;
         }
     }
-
     
     :host nav.dark .lang{
         color: var(--colorB) !important;

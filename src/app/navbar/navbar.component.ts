@@ -53,6 +53,7 @@ export class NavbarComponent implements AfterViewInit {
     let closestId: string | null = null;
     let minDistance = Number.POSITIVE_INFINITY;
 
+    /** FIND ACTIVE SECTION */
     this.anchors.forEach(anchor => {
       const rect = anchor.getBoundingClientRect();
       const distance = Math.abs(rect.top);
@@ -65,17 +66,13 @@ export class NavbarComponent implements AfterViewInit {
     if (!this.activeSection || this.activeSection == "navbar") {
       this.activeSection = "hero";
     }
-    const sect = document.querySelector('#' + this.activeSection) as HTMLElement;
-    if (sect) {
+
+    const sect = document.getElementById(this.activeSection || 'hero');
+
+    /** STICK NAV BAR TO SECTION TOP */
+    if (sect && this.navRef?.nativeElement) {
       this.top = sect.offsetTop;
-      const navbar = document.querySelector('#navbar nav') as HTMLElement;
-      if (navbar) {
-        if (document.body.classList.contains('fixed')) {
-          this.renderer.setStyle(this.navRef.nativeElement, 'top', this.top + 'px');
-        } else {
-          this.renderer.setStyle(this.navRef.nativeElement, 'top', 0 + 'px');
-        }
-      }
+      this.renderer.setStyle(this.navRef.nativeElement, 'top', this.top + 'px');
     }
     
     this.renderer.setAttribute(document.body, 'data-active-section', this.activeSection);
