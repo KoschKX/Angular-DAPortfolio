@@ -199,6 +199,11 @@
         display: none;
     }
 
+    :host nav .nav-menu.social svg{
+        width: 1em;
+        height: 1em;
+    }
+
     #pmenu .menu_seal{
         vertical-align: middle;
         overflow: hidden;
@@ -287,6 +292,19 @@
    
 
 /* === MENU COLOR === */
+
+    :host nav .nav-menu.social svg > g:nth-child(2) path{
+        fill: var(--colorB);
+    }
+    :host nav .nav-menu.social svg > g:nth-child(1) path,
+    :host nav .nav-menu.social svg > g:nth-child(1) rect{
+        fill: var(--colorF);
+        transition: fill-opacity 0.3s;
+    }
+    :host nav .nav-menu.social a:hover svg> g:nth-child(1) path,
+    :host nav .nav-menu.social a:hover svg> g:nth-child(1) rect{
+        fill-opacity: 1 !important;
+    }
 
     body[data-active-section="hero"]{
         :host nav .nav-menu.social{

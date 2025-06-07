@@ -27,3 +27,6 @@
 
     15:40
         Added Menu animations.
+
+    16:45
+        Animated menu social media icons.
