@@ -32,22 +32,6 @@
 
 /* === NAV === */
 
-    .lang{
-        border: 1px solid var(--colorD);
-        border-radius: 200%;
-        padding: 0.5em;
-        height: 1em;
-        width: 1em;
-        line-height: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-
-/* === NAV === */
-
     nav {
         display: flex; 
         flex-direction: row; 
@@ -118,6 +102,27 @@
         fill: var(--colorF) !important;
     }
 
+
+    .lang{
+        border: 1px solid var(--colorD);
+        border-radius: 200%;
+        padding: 0.5em;
+        height: 1em;
+        width: 1em;
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        transition: background-color 0.3s;
+    }
+
+    .lang:hover{
+        background-color: var(--colorF);
+        color: initial
+    }
+
 /* === DROP MENU === */
 
     #pmenu {
@@ -152,8 +157,10 @@
 
 
     #pmenu li {
+        /*
         margin-top: 0.5em;
         margin-bottom: 0.5em;
+        */
     }
 
     #pmenu li:first-child {
@@ -174,6 +181,8 @@
         color: var(--colorA);
         font-size: 1.5em;
         font-weight: 100;
+
+        margin-bottom: 0.5em;
     }
 
     #pmenu .title .close_btn {
@@ -188,6 +197,31 @@
 
     :host nav .nav-menu.social{
         display: none;
+    }
+
+    #pmenu .menu_seal{
+        vertical-align: middle;
+        overflow: hidden;
+        width: 0;
+        opacity: 0;
+
+        display: inline-block;
+
+        transition: width 0.3s, opacity 0.15s;
+    }
+
+    #pmenu li:hover .menu_seal{
+        width: 1.5em;
+        opacity: 1
+    }
+
+    #pmenu .menu_seal svg{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #pmenu .menu_seal svg path{
+        fill: var(--colorF);
     }
 
 /* === STICKY NAV === */
@@ -212,7 +246,7 @@
     #side_menu ul{
         list-style: none;
         position: relative;
-        right: calc(-3.25vw + 0.15em);
+        right: calc(-3.5vw);
         padding: 0;
     }
 
@@ -276,6 +310,12 @@
         fill: var(--colorB) !important;
     }
 
+    :host nav .s_logo_text svg path{
+        transition: fill 0.3s;
+    }
+    :host nav .s_logo_text:hover svg path{
+        fill: var(--colorF) !important;
+    }
 
 /* === RESPONSIVE === */
 

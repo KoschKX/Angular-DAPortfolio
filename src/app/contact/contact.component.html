@@ -12,23 +12,23 @@
         <div class="col right" style="">
             <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="form" style="color: var(--colorB); background-color: var(--colorD);">
                 <div style="display: flex; justify-content: space-between;">
-                    <div style="margin-right: 1em;">
-                        <span style="margin-left: 0.75em;">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
+                    <div class="form_cell" style="margin-right: 1em;">
+                        <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
                         <input name="name" [(ngModel)]="contactData.name" type="text" [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate" />
                     </div>
-                    <div>
-                        <span style="margin-left: 0.75em;">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
+                    <div class="form_cell">
+                        <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
                         <input name="email" [(ngModel)]="contactData.email" type="text" [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
                     </div>
                 </div>
                 <br>
-                <div style="display: flex; flex-direction: column;">
-                    <span style="margin-left: 0.75em;">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
+                <div class="form_cell" style="display: flex; flex-direction: column;">
+                    <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
                     <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text" [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate" />
                 </div>
                 <br>
-                <div style="display: flex; flex-direction: row;">
-                    <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
+                <div class="form_cell" style="display: flex; flex-direction: row;">
+                    <input class="form_label"  type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
                     <div [innerHTML]="'CONTACT.PRIVACY_TEXT' | translate"></div>
                 </div>
                 @if (!message.valid && message.touched){

@@ -21,6 +21,9 @@
 8 Jun, 2025:
     12:30
         Reference and Skill sections now use loops.
-        
+
     14:00
         Navbar now sticks to the current section, if it has class.
+
+    15:40
+        Added Menu animations.

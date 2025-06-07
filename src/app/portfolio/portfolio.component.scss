@@ -191,10 +191,32 @@
         display: flex;
     }
 
-    .project_button {
+    a.project_button {
+        color: var(--colorD);
         cursor: pointer;
         user-select: none;
         -webkit-user-select: none;
+    }
+    a.project_button:hover{
+        color: var(--colorF);
+    }
+
+/* === BUTTON ARROWS === */
+
+    .button_arrow{
+        height: 1em;
+        width: 1em;
+        margin-left: 0.25em;
+        vertical-align: text-bottom;
+
+        transform-origin: center;
+        transition: transform 0.3s;
+    }
+    svg.button_arrow > g:nth-child(1) path{
+        fill: var(--colorB);
+    }
+    button:hover svg.button_arrow{
+        transform: rotate(-45deg);
     }
 
 /* === ANIMATION === */

@@ -40,11 +40,15 @@ h2 {
   
 
   a {
-    color: $whitesmoke;
+    color: var(--colorB);
     text-decoration: none;
 
+    cursor: pointer;
+
+    transition: color 0.3s;
+
     &:hover {
-      text-decoration: underline;
+      color: var(--colorF);
     }
   }
 
@@ -55,6 +59,13 @@ h2 {
     padding: 0.5em 1.5em;
     border-radius: 2em;
     font-size: 1em;
+
+    transition: background-color 0.3s;
+  }
+
+  button:hover{
+    background-color: var(--colorF);
+    cursor: pointer
   }
 
   .button_row button{

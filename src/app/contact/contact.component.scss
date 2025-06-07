@@ -124,6 +124,40 @@
         fill: var(--colorF);
     }
 
+    .form_cell *{
+        user-select: none;
+        --webkit-user-select: none
+    }
+
+    .form_cell .form_label{
+        transition: color 0.3s;
+    }
+
+    .form_cell:hover .form_label{
+        color: var(--colorF);
+    }
+
+    :host ::ng-deep .form_cell a {
+        color: var(--colorF) !important;
+    }
+    :host ::ng-deep .form_cell a:hover {
+        color: var(--colorB) !important;
+    }
+
+    .form_cell input[type="text"]{
+        background-color: transparent;
+        border: solid 1px var(--colorB);
+        color: var(--colorB);
+        padding: 0.5em 1em;
+        border-radius: 2em;
+        font-size: 1em;
+    }
+
+    .form_cell input[type="text"]:focus{
+        outline: none;
+        border-color: var(--colorF);
+    }
+
 /* === ANIMATION === */
 
     @-webkit-keyframes rotate {

@@ -13,6 +13,15 @@ export class NavbarComponent implements AfterViewInit {
   
   currentLang = 'en';
 
+  links: [string, string][] = [
+    [ 'NAV.ABOUT', '#hero' ],
+    [ 'NAV.SKILLS', '#skills' ],
+    [ 'NAV.PORTFOLIO', '#portfolio' ],
+    [ 'NAV.REFERENCES', '#references' ],
+    [ 'NAV.CONTACT', '#Contact' ]
+  ]
+
+
   constructor(
     private renderer: Renderer2, 
     @Inject(DOCUMENT) private document: Document, 
