@@ -70,7 +70,7 @@ export class NavbarComponent implements AfterViewInit {
     const sect = document.getElementById(this.activeSection || 'hero');
 
     /** STICK NAV BAR TO SECTION TOP */
-    if (sect && this.navRef?.nativeElement) {
+    if (sect && this.navRef?.nativeElement && this.navRef.nativeElement.classList.contains('stick_to_nav')) {
       this.top = sect.offsetTop;
       this.renderer.setStyle(this.navRef.nativeElement, 'top', this.top + 'px');
     }
