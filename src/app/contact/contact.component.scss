@@ -144,15 +144,6 @@
         color: var(--colorB) !important;
     }
 
-    .form_cell input[type="text"]{
-        background-color: transparent;
-        border: solid 1px var(--colorB);
-        color: var(--colorB);
-        padding: 0.5em 1em;
-        border-radius: 2em;
-        font-size: 1em;
-    }
-
     .form_cell input[type="text"]:focus{
         outline: none;
         border-color: var(--colorF);
