@@ -1,0 +1,85 @@
+{
+    "NAV": {
+        "ABOUT": "About Me",
+        "SKILLS": "Skillset",
+        "PORTFOLIO": "Portfolio",
+        "REFERENCES": "References",
+        "CONTACT": "Contact"
+    },
+    "HERO": {
+        "HEADLINE": "Hello there! I'm",
+        "SUBHEAD": "Frontend Developer",
+        "INTOUCH": "Get in touch"
+    },
+    "CONTACT": {
+        "HEADLINE": "Let's build something Cool together!",
+        "SUBHEAD": "Got a problem to solve?",
+        "INTRO": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+        "NAME_LABEL": "What's your name?",
+        "NAME_PLACEHOLDER": "Your name goes here",
+        "EMAIL_LABEL": "What's your email?",
+        "EMAIL_PLACEHOLDER": "youremail@email.com",
+        "MESSAGE_LABEL": "How can I help you?",
+        "MESSAGE_PLACEHOLDER": "Hello Lukas, I am interested in...",
+        "PRIVACY_TEXT": "I've read the <a href='/privacypolicy'>privacy policy</a> and agree to the processing of my data.",
+        "MESSAGE_REQUIRED": "Please enter a message",
+        "SUBMIT": "Drop a Line",
+        "LEGAL": "Imprint",
+        "LINKEDIN": "LinkedIn",
+        "GITHUB": "GitHub"
+    },
+    "ABOUT_ME": {
+        "TITLE": "About Me",
+        "INTRO": "Hey there, I'm Hanna. My passion for IT started in the most unexpected way—while hiking deep in the woods, I stumbled upon what looked like a weathered laptop half-buried under moss and pine needles. No idea how it got there, but curiosity took over. I powered it up (with a bit of jury-rigged solar magic) and discovered lines of cryptic code—logs, maybe, or something more… wild. Ever since, I've been hooked.",
+        "CONNECT": "Let's connect and create something amazing together!",
+        "BUTTON": "Let's Talk"
+    },
+    "REFERENCES": {
+        "HEADLINE": "What my colleagues say about me",
+        "LINKEDIN": "To Linkedin profile >>",
+        "TANJA": {
+            "NAME": "Tanja Schulz",
+            "TEXT": "Anna has proven to be a reliable group partner. Her technical skills and proactive approach were crucial to the success of our project.",
+            "ROLE": "Frontend Developer"
+        },
+        "HANS": {
+            "NAME": "Hans Janisch",
+            "TEXT": "I had the good fortune of working with Hanna in a group project at the Developer Akademie that involved a lot of effort. She always stayed calm, cool, and focused, and made sure our team was set up for success. She's super knowledgeable, easy to work with, and I'd happily work with her again given the chance.",
+            "ROLE": "Team Partner"
+        },
+        "ANTON": {
+            "NAME": "Anton Fischer",
+            "TEXT": "Our project benefited enormously from Simon's efficient way of working.",
+            "ROLE": "Team Partner"
+        }
+    },
+    "SKILLS": {
+        "HEADLINE": "Core Competencies",
+        "INTRO": "Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?"
+    },
+    "PORTFOLIO": {
+        "HEADLINE": "My Work",
+        "INTRO": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
+        "GITHUB": "GitHub",
+        "LIVE": "Live Test",
+        "PREVIOUS": "Previous project",
+        "NEXT": "Next project"
+    },
+    "PROJECTS": {
+        "JOIN": {
+            "TITLE": "Join",
+            "TAGS": "HTML | CSS | Firebase | Angular | TypeScript",
+            "DESC": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+        },
+        "DABUBBLE": {
+            "TITLE": "DABubble",
+            "TAGS": "JavaScript | HTML | CSS",
+            "DESC": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+        },
+        "SHARKIE": {
+            "TITLE": "Sharkie",
+            "TAGS": "JavaScript | HTML | CSS",
+            "DESC": "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale."
+        }
+    }
+}

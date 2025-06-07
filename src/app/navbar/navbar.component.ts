@@ -1,19 +1,24 @@
 import { Component, HostListener, AfterViewInit, Renderer2, Inject, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements AfterViewInit {
+  
+  currentLang = 'en';
 
   constructor(
     private renderer: Renderer2, 
     @Inject(DOCUMENT) private document: Document, 
-    private ngZone: NgZone) 
-  {}
+    private ngZone: NgZone,
+    private translate: TranslateService
+  ) {}
 
   dropMenuActive: boolean = false;
   activeSection: string | null = null;
@@ -114,4 +119,9 @@ export class NavbarComponent implements AfterViewInit {
     this.dots.push(link);
   }
 
+  /** SWITCH LANGUAGES */
+  switchLang() {
+    this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+    this.translate.use(this.currentLang);
+  }
 }

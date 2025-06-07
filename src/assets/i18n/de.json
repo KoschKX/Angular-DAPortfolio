@@ -1,0 +1,85 @@
+{
+    "NAV": {
+        "ABOUT": "Über mich",
+        "SKILLS": "Fähigkeiten",
+        "PORTFOLIO": "Portfolio",
+        "REFERENCES": "Referenzen",
+        "CONTACT": "Kontakt"
+    },
+    "HERO": {
+        "HEADLINE": "Hallo! Ich bin",
+        "SUBHEAD": "Frontend-Entwickler",
+        "INTOUCH": "Kontakt aufnehmen"
+    },
+    "CONTACT": {
+        "HEADLINE": "Lass uns gemeinsam etwas Cooles bauen!",
+        "SUBHEAD": "Hast du ein Problem zu lösen?",
+        "INTRO": "Ermutige Menschen, dich zu kontaktieren, und beschreibe, für welche Rolle du dich interessierst. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffst.",
+        "NAME_LABEL": "Wie ist dein Name?",
+        "NAME_PLACEHOLDER": "Dein Name hier",
+        "EMAIL_LABEL": "Wie ist deine E-Mail?",
+        "EMAIL_PLACEHOLDER": "dein@email.de",
+        "MESSAGE_LABEL": "Wie kann ich helfen?",
+        "MESSAGE_PLACEHOLDER": "Hallo Lukas, ich interessiere mich für...",
+        "PRIVACY_TEXT": "Ich habe die <a href='/privacypolicy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein",
+        "SUBMIT": "Nachricht senden",
+        "LEGAL": "Impressum",
+        "LINKEDIN": "LinkedIn",
+        "GITHUB": "GitHub"
+    },
+    "ABOUT_ME": {
+        "TITLE": "Über mich",
+        "INTRO": "Hallo, ich bin Hanna. Meine Leidenschaft für IT begann auf unerwartete Weise – beim Wandern tief im Wald stieß ich auf einen verwitterten Laptop, halb im Moos und unter Kiefernnadeln vergraben. Keine Ahnung, wie er dorthin kam, aber meine Neugier war geweckt. Ich schaltete ihn ein (mit etwas improvisierter Solartechnik) und entdeckte Zeilen kryptischen Codes – Protokolle vielleicht, oder etwas noch Wilderes. Seitdem bin ich begeistert.",
+        "CONNECT": "Lass uns in Kontakt treten und gemeinsam etwas Großartiges schaffen!",
+        "BUTTON": "Kontakt aufnehmen"
+    },
+    "REFERENCES": {
+        "HEADLINE": "Was meine Kollegen über mich sagen",
+        "LINKEDIN": "Zum Linkedin-Profil >>",
+        "TANJA": {
+            "NAME": "Tanja Schulz",
+            "TEXT": "Anna hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und ihr proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
+            "ROLE": "Frontend-Entwicklerin"
+        },
+        "HANS": {
+            "NAME": "Hans Janisch",
+            "TEXT": "Ich hatte das Glück, mit Hanna an einem Gruppenprojekt an der Developer Akademie zu arbeiten, das viel Einsatz erforderte. Sie blieb immer ruhig, gelassen und fokussiert und sorgte dafür, dass unser Team erfolgreich war. Sie ist sehr kompetent, angenehm im Umgang und ich würde jederzeit wieder mit ihr zusammenarbeiten.",
+            "ROLE": "Team-Partner"
+        },
+        "ANTON": {
+            "NAME": "Anton Fischer",
+            "TEXT": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise.",
+            "ROLE": "Team-Partner"
+        }
+    },
+    "SKILLS": {
+        "HEADLINE": "Kernkompetenzen",
+        "INTRO": "Betone, dass du eine Vielzahl von Frontend-Technologien in deinen Projekten eingesetzt hast. Wo hast du diese Fähigkeiten genutzt: statische oder dynamische Websites, responsive Layouts, Datenvisualisierung, benutzerfreundliche Oberflächen?"
+    },
+    "PORTFOLIO": {
+        "HEADLINE": "Meine Arbeit",
+        "INTRO": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "GITHUB": "GitHub",
+        "LIVE": "Live-Test",
+        "PREVIOUS": "Vorheriges Projekt",
+        "NEXT": "Nächstes Projekt"
+    },
+    "PROJECTS": {
+        "JOIN": {
+            "TITLE": "Join",
+            "TAGS": "HTML | CSS | Firebase | Angular | TypeScript",
+            "DESC": "Taskmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+        },
+        "DABUBBLE": {
+            "TITLE": "DABubble",
+            "TAGS": "JavaScript | HTML | CSS",
+            "DESC": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Oberfläche, Echtzeitnachrichten und robuster Kanalorganisation."
+        },
+        "SHARKIE": {
+            "TITLE": "Sharkie",
+            "TAGS": "JavaScript | HTML | CSS",
+            "DESC": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen."
+        }
+    }
+}

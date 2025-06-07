@@ -2,12 +2,12 @@
     <div class="rowA two_col" style="">
         <div class="col left" style="">
             <div class="title" style="font-size: 0.7em">
-                <h1 style="color: var(--colorD);">My Work</h1>
+                <h1 style="color: var(--colorD);">{{ 'PORTFOLIO.HEADLINE' | translate }}</h1>
             </div>
         </div>
         <div class="col right" style="">
             <div style="color: var(--colorD); position: relative;">
-                Explore a selection of my work here - Interact with the projects to see my skills in action.
+                {{ 'PORTFOLIO.INTRO' | translate }}
             </div>
         </div>
     </div>
@@ -33,20 +33,24 @@
         <div class="col right" style="">
             <div class="project_descs">
                 <div class= "project_desc active" style="color: var(--colorB); background-color: var(--colorD); ">
-                    <div style="display: flex; justify-content: space-between;"><span>{{projects[currentProject][0]}}</span> <div class="emoji"><img src="{{projects[currentProject][2]}}"></div></div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>{{projects[currentProject][0] | translate }}</span>
+                        <div class="emoji"><img src="{{projects[currentProject][2] | translate }}"></div>
+                    </div>
                     <br>
-                    <div style="color: var(--colorA); font-size: smaller;">{{projects[currentProject][3]}}</div>
+                    <div style="color: var(--colorA); font-size: smaller;">{{projects[currentProject][3] | translate }}</div>
                     <br>
-                    {{projects[currentProject][4]}}
+                    {{projects[currentProject][4] | translate }}
                     <br><br>
                     <div class="button_row">
-                        <button>GitHub →</button><button>Live Test →</button>
+                        <button>{{ 'PORTFOLIO.GITHUB' | translate }} →</button>
+                        <button>{{ 'PORTFOLIO.LIVE' | translate }} →</button>
                     </div>
                 </div>
             </div>
             <div class="project_nav">
-                <span class="project_button" id="project_button_prev" (click)="prevProject()">&lt;&lt; Previous project</span>
-                <span class="project_button" id="project_button_next" (click)="nextProject()">Next project &gt;&gt;</span>
+                <span class="project_button" id="project_button_prev" (click)="prevProject()">&lt;&lt; {{ 'PORTFOLIO.PREVIOUS' | translate }}</span>
+                <span class="project_button" id="project_button_next" (click)="nextProject()">{{ 'PORTFOLIO.NEXT' | translate }} &gt;&gt;</span>
            </div>
         </div>
     </div>

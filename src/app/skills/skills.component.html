@@ -2,10 +2,12 @@
     <div class="rowA two_col">
         <div class="col left" style="">
             <div class="title" style="font-size: 0.6em; margin-bottom: 3em; width: 100%;">
-                <h1 style="color: var(--colorB); margin-top: 0; margin-right: auto;">Core Competencies</h1>
+                <h1 style="color: var(--colorB); margin-top: 0; margin-right: auto;">
+                    {{ 'SKILLS.HEADLINE' | translate }}
+                </h1>
             </div>
             <div style="color: var(--colorB); background-color: var(--colorA); padding: 2vw; position: relative; border-radius: 0.25em;">
-                Emphasise that you have used a variety of front-end technologies in your projects. Where have you used these skills: static or dynamic websites, responsive layouts, data visualization interfaces, smooth user experiences?
+                {{ 'SKILLS.INTRO' | translate }}
             </div>
         </div>
         <div class="col right" style=""></div>
@@ -13,16 +15,11 @@
     <div class="rowB two_col" style="">
         <div class="col left" style=""></div>
         <div class="col right" style="">
-            <div class="skill"><img src="./assets/img/skill_html.svg" class="skill_icon" /> HTML</div>
-            <div class="skill"><img src="./assets/img/skill_css.svg" class="skill_icon"  /> CSS</div>
-            <div class="skill"><img src="./assets/img/skill_ts.svg" class="skill_icon"  /> Typescript</div>
-            <div class="skill"><img src="./assets/img/skin_js.svg" class="skill_icon"  /> Javascript</div>
-            <div class="skill"><img src="./assets/img/skin_angular.svg" class="skill_icon"  /> Angular</div>
-            <div class="skill"><img src="./assets/img/skill_firebase.svg" class="skill_icon"  /> Firebase</div>
-            <div class="skill"><img src="./assets/img/skill_git.svg" class="skill_icon"  /> Git</div>
-            <div class="skill"><img src="./assets/img/skill_material.svg" class="skill_icon"  /> Material</div>
-            <div class="skill"><img src="./assets/img/skill_rest.svg" class="skill_icon"  /> Rest</div>
-            <div class="skill"><img src="./assets/img/skill_scum.svg" class="skill_icon"  /> Scrum</div>  
+            <div class="skill" *ngFor="let skill of skills">
+                <div class="zitat_content" style="">
+                    <img class="skill_icon" src="{{skill[1]}}"  /> {{skill[0]}}
+                </div>
+            </div>
         </div>
         <div class="boxA flt" style="">
             <div class="sealB" style="width: 8em; height: 8em;" alt="" srcset="">

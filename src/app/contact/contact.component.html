@@ -2,34 +2,34 @@
     <div class="row two_col" style="">
         <div class="col left" >
             <div class="title" style="font-size: 0.7em;">
-                <h1 style="font-weight: 600; color: var(--colorE);">Let's build something Cool together!</h1>
+                <h1 style="font-weight: 600; color: var(--colorE);">{{ 'CONTACT.HEADLINE' | translate }}</h1>
             </div>
-            <h2 style="color: var(--colorF);">Got a problem to solve?</h2>
-            <div >
-                Encourage people to contact you and describe what role you are interested in.  Show that you will add value to their projects through your work. 
+            <h2 style="color: var(--colorF);">{{ 'CONTACT.SUBHEAD' | translate }}</h2>
+            <div>
+                {{ 'CONTACT.INTRO' | translate }}
             </div>
         </div>
         <div class="col right" style="">
             <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="form" style="color: var(--colorB); background-color: var(--colorD);">
                 <div style="display: flex; justify-content: space-between;">
                     <div style="margin-right: 1em;">
-                        <span style="margin-left: 0.75em;">What's your name?</span>
-                        <input name="name" [(ngModel)]="contactData.name" type="text" placeholder="Your name goes here" />
+                        <span style="margin-left: 0.75em;">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
+                        <input name="name" [(ngModel)]="contactData.name" type="text" [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate" />
                     </div>
-                    <div style="">
-                        <span style="margin-left: 0.75em;">What's your email?</span>
-                        <input name="email" [(ngModel)]="contactData.email" type="text" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                    <div>
+                        <span style="margin-left: 0.75em;">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
+                        <input name="email" [(ngModel)]="contactData.email" type="text" [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
                     </div>
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: column;">
-                    <span style="margin-left: 0.75em;">How can I help you?</span>
-                    <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text" placeholder="Hello Lukas, I am interested in..." />
+                    <span style="margin-left: 0.75em;">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
+                    <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text" [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate" />
                 </div>
                 <br>
                 <div style="display: flex; flex-direction: row;">
                     <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
-                    <div>I've read the <a href="/privacypolicy">privacy policy</a> and agree to the processing of my data.</div>
+                    <div [innerHTML]="'CONTACT.PRIVACY_TEXT' | translate"></div>
                 </div>
                 @if (!message.valid && message.touched){
                     <span>Please enter a message</span>
@@ -45,9 +45,9 @@
             © Hanna Schneider 2024
         </div>
         <div class="box_col footer" style="">
-            <a href="" style="margin-right: 1em;">Impressum</a> 
-            <a href="" style="margin-right: 1em;">LinkedIn</a> 
-            <a href="" style="margin-right: 0em;">GitHub</a>
+            <a href="" style="margin-right: 1em;">{{ 'CONTACT.LEGAL' | translate }}</a>
+            <a href="" style="margin-right: 1em;">{{ 'CONTACT.LINKEDIN' | translate }}</a>
+            <a href="" style="margin-right: 0em;">{{ 'CONTACT.GITHUB' | translate }}</a>
         </div>
     </div>
     <div class="boxB" style="display: flex; justify-content: space-between; width: 100%;">

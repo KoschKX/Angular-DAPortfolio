@@ -1,23 +1,26 @@
 <section id="about" class="fixed_height_desktop" style="background-color: var(--colorB);">
     <div class="boxA flt" style="">
         <div class="title" style="text-align: right; font-size: 0.7em;">
-            <h1 cstyle="color: var(--colorD); margin-left: auto; margin-top: 0;">
-                About Me
+            <h1 style="color: var(--colorD); margin-left: auto; margin-top: 0;">
+                {{ 'ABOUT_ME.TITLE' | translate }}
             </h1>
         </div>
     </div>
     <div class="two_col">
         <div class="col left" style="">
             <div class="photo" style="font-family: 'Eczar', sans-serif; padding: 0; display: inherit; width: 100%; height: 100%;">
-                <img src="./assets/img/photoA.png"  alt="" srcset="" style="">
+                <img src="./assets/img/photoA.png" alt="" srcset="" style="">
             </div>
             <div class="boxB" style="color: var(--colorB); background-color: var(--colorD);">
-                    Hey there, I'm Hanna. My passion for IT started in the most unexpected way—while hiking deep in the woods, I stumbled upon what looked like a weathered laptop half-buried under moss and pine needles. No idea how it got there, but curiosity took over. I powered it up (with a bit of jury-rigged solar magic) and discovered lines of cryptic code—logs, maybe, or something more… wild. Ever since, I've been hooked.
-                    <br><br>
-                    Let's connect and create something amazing together! 
-                    <br><br>
-                    <div style="display: flex; justify-content: space-between;"><button>Let's Talk</button> <span class="emoji">🤫</span></div>
+                {{ 'ABOUT_ME.INTRO' | translate }}
+                <br><br>
+                {{ 'ABOUT_ME.CONNECT' | translate }}
+                <br><br>
+                <div style="display: flex; justify-content: space-between;">
+                    <button>{{ 'ABOUT_ME.BUTTON' | translate }}</button>
+                    <span class="emoji">🤫</span>
                 </div>
+            </div>
         </div>
         <div class="col right" style="">
             
