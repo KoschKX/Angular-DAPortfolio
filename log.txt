@@ -3,10 +3,10 @@
     It took all day. :(
 
 7 Jun, 2025:
-    14:00: 
+    14:00 
         The side menu with the dots work now. Had to use ChatGPT to get it to render properly.
 
-    15:30:
+    15:30
         Made the first git push.
 
     16:00
@@ -17,3 +17,7 @@
 
     16:30
         Updated footer and build scripts.
+
+8 Jun, 2025:
+    12:30
+        Reference and Skill sections now use loops.
