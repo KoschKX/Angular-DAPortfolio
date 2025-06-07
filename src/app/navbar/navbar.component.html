@@ -1,5 +1,5 @@
 <section id="navbar" style="padding-top: 0;" style="display: flex; padding: 0;">
-    <nav style="" #navRef> 
+    <nav class="invert" style="" #navRef> 
         <div class="nav-menu social">
             <a href="#socialA"><img style="width: 1em; height: 1em;" src="./assets/img/socialA.svg" alt="" srcset=""></a>
             <a href="#socialB"><img style="width: 1em; height: 1em;" src="./assets/img/socialB.svg" alt="" srcset=""></a>
@@ -20,7 +20,7 @@
                         </g>
                     </svg>
                 </span>
-                <span class="s_logo_text" style="width: auto; height: 2em; margin-left: 2em;">
+                <span class="s_logo_text invert" style="width: auto; height: 2em; margin-left: 2em;">
                     <svg width="100%" height="100%" viewBox="0 0 151 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                         <g transform="matrix(1,0,0,1,-41.086,-8)">
                             <path d="M182.732,31.669C182.178,31.669 181.719,31.487 181.356,31.125C180.994,30.741 180.812,30.271 180.812,29.717L180.812,16.502C180.812,15.948 180.994,15.489 181.356,15.126C181.719,14.742 182.178,14.55 182.732,14.55C183.287,14.55 183.746,14.742 184.108,15.126C184.471,15.489 184.652,15.948 184.652,16.502L184.652,19.51L184.428,17.366C184.663,16.854 184.962,16.406 185.324,16.022C185.708,15.617 186.135,15.286 186.604,15.03C187.073,14.753 187.575,14.55 188.108,14.422C188.641,14.294 189.175,14.23 189.708,14.23C190.348,14.23 190.881,14.412 191.308,14.774C191.756,15.137 191.98,15.564 191.98,16.054C191.98,16.758 191.798,17.27 191.436,17.59C191.073,17.889 190.678,18.038 190.252,18.038C189.846,18.038 189.473,17.963 189.132,17.814C188.812,17.665 188.439,17.59 188.012,17.59C187.628,17.59 187.233,17.686 186.828,17.878C186.444,18.049 186.081,18.326 185.74,18.71C185.42,19.094 185.153,19.574 184.94,20.15C184.748,20.704 184.652,21.366 184.652,22.134L184.652,29.717C184.652,30.271 184.471,30.741 184.108,31.125C183.746,31.487 183.287,31.669 182.732,31.669Z" style="fill-rule:nonzero;"/>
@@ -55,7 +55,7 @@
         </div>
         <div id="side_menu">
             <ul>
-                <li *ngFor="let dot of dots">
+                <li class="invert" *ngFor="let dot of dots">
                     <a [href]="dot" [class.active]="dot === '#' + activeSection">
                         <svg class="dot" width="100%" height="100%" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <g transform="matrix(0.707107,-0.707107,0.707107,0.707107,-3.51656,-0.201996)">
@@ -92,10 +92,10 @@
                 </svg>
             </a>
         </li>
-        <li><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
-        <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
-        <li><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
-        <li><a href="#references">{{ 'NAV.REFERENCES' | translate }}</a></li>
-        <li><a href="#contact">{{ 'NAV.CONTACT' | translate }}</a></li>
+        <li class="invert"><a href="#about">{{ 'NAV.ABOUT' | translate }}</a></li>
+        <li class="invert"><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
+        <li class="invert"><a href="#portfolio">{{ 'NAV.PORTFOLIO' | translate }}</a></li>
+        <li class="invert"><a href="#references">{{ 'NAV.REFERENCES' | translate }}</a></li>
+        <li class="invert"><a href="#contact">{{ 'NAV.CONTACT' | translate }}</a></li>
     </ul>
 </section>

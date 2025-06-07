@@ -61,29 +61,45 @@ export class NavbarComponent implements AfterViewInit {
         closestId = anchor.id;
       }
     });
-
     this.activeSection = closestId;
-
     if (!this.activeSection || this.activeSection == "navbar") {
       this.activeSection = "hero";
     }
-
     const sect = document.querySelector('#' + this.activeSection) as HTMLElement;
-    if(sect){
+    if (sect) {
       this.top = sect.offsetTop;
-      const navbar=document.querySelector('#navbar nav') as HTMLElement;
-      if(navbar){
-        if(document.body.classList.contains('fixed')){
+      const navbar = document.querySelector('#navbar nav') as HTMLElement;
+      if (navbar) {
+        if (document.body.classList.contains('fixed')) {
           this.renderer.setStyle(this.navRef.nativeElement, 'top', this.top + 'px');
-        }else{
+        } else {
           this.renderer.setStyle(this.navRef.nativeElement, 'top', 0 + 'px');
         }
       }
     }
-
-    this.theme = document.querySelector('#' + this.activeSection)?.getAttribute('theme') || 'light';
-    document.querySelector('body')?.setAttribute('theme', this.theme);
+    
     this.renderer.setAttribute(document.body, 'data-active-section', this.activeSection);
+    
+    /** HANDLE INVERTED COLORS */
+    const sectRect = sect?.getBoundingClientRect();
+    const halfway = sectRect ? sectRect.top + sectRect.height / 2 : 0;
+    const invertElements = Array.from(document.querySelectorAll('.invert')) as HTMLElement[];
+    invertElements.forEach(el => {
+      el.classList.remove('light', 'dark');
+      const elRect = el.getBoundingClientRect();
+      const elCenter = elRect.top + elRect.height / 2;
+
+      let themed = false;
+
+      this.anchors.forEach(section => {
+        const sectionRect = section.getBoundingClientRect();
+        if (elCenter >= sectionRect.top && elCenter <= sectionRect.bottom) {
+          const theme = section.getAttribute('theme') || 'light';
+          el.classList.add(theme); 
+          themed = true;
+        }
+      });
+    });
   }
 
   /** HANDLE WINDOW RESIZING */

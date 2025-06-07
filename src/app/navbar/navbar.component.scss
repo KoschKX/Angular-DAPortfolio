@@ -257,22 +257,20 @@
         }
     }
 
-    body[theme="dark"]{
+    
+    :host nav.dark .lang{
         color: var(--colorB) !important;
-        :host nav .lang{
-            color: var(--colorB) !important;
-            border: 1px solid var(--colorB) !important;
-        }
-        :host nav .open_btn svg path{
-            fill: var(--colorB) !important;
-        }
-        :host nav .s_logo_text svg path{
-            fill: var(--colorB) !important;
-        }
+        border: 1px solid var(--colorB) !important;
+    }
+    :host nav.dark .open_btn svg path{
+        fill: var(--colorB) !important;
+    }
+    :host nav.dark .s_logo_text svg path{
+        fill: var(--colorB) !important;
+    }
 
-        :host #side_menu li .dot path{
-            fill: var(--colorB) !important;
-        }
+    :host #side_menu li.dark .dot path{
+        fill: var(--colorB) !important;
     }
 
 
