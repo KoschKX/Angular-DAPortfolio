@@ -13,7 +13,7 @@ export class SkillsComponent {
     skills: [string, string][] = [
         ['HTML', './assets/img/skill_html.svg'],
         ['CSS', './assets/img/skill_css.svg'],
-        ['Typescript', './assets/img/skill_css.svg'],
+        ['Typescript', './assets/img/skill_ts.svg'],
         ['Javascript', './assets/img/skill_js.svg'],
         ['Angular', './assets/img/skill_angular.svg'],
         ['Firebase', './assets/img/skill_firebase.svg'],
