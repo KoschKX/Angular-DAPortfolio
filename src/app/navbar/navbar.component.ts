@@ -18,7 +18,7 @@ export class NavbarComponent implements AfterViewInit {
     [ 'NAV.SKILLS', '#skills' ],
     [ 'NAV.PORTFOLIO', '#portfolio' ],
     [ 'NAV.REFERENCES', '#references' ],
-    [ 'NAV.CONTACT', '#Contact' ]
+    [ 'NAV.CONTACT', '#contact' ]
   ]
 
 
