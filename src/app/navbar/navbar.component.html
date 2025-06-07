@@ -94,12 +94,14 @@
             </a>
         </li> 
         <li class="skill" *ngFor="let link of links">
-            <span class="menu_seal">
-                <svg width="100%" height="100%" viewBox="0 0 144 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                    <svg _ngcontent-ng-c2275576293="" width="100%" height="100%" viewBox="25 25 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style=""><g _ngcontent-ng-c2275576293="" transform=""><path _ngcontent-ng-c2275576293="" d="M28,77.942L29.678,85.112L54.454,80.103L34.959,96.357L39.549,102.103L59.735,86.879L49.223,109.911L55.886,113.103L67.435,90.71L68.027,116L75.43,116L76.022,90.808L87.621,113.348L94.284,110.156L83.821,87.223L104.105,102.545L108.695,96.75L89.299,80.594L114.223,85.652L115.901,78.482L91.323,72.295L116,66.058L114.371,58.888L89.546,63.897L109.041,47.643L104.451,41.897L84.265,57.121L94.777,34.089L88.114,30.897L76.565,53.339L75.973,28L68.57,28L67.978,53.192L56.429,30.652L49.716,33.844L60.179,56.777L39.895,41.455L35.305,47.25L54.701,63.406L29.777,58.348L28.148,65.518L52.678,71.705L28,77.942Z" style="fill-rule: nonzero;"></path></g></svg>
-                </svg>
-            </span>
-            <a href="{{link[1]}}">{{ link[0] | translate }}</a>
+            <a href="{{link[1]}}">
+                <span class="menu_seal">
+                    <svg width="100%" height="100%" viewBox="0 0 144 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                        <svg _ngcontent-ng-c2275576293="" width="100%" height="100%" viewBox="25 25 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style=""><g _ngcontent-ng-c2275576293="" transform=""><path _ngcontent-ng-c2275576293="" d="M28,77.942L29.678,85.112L54.454,80.103L34.959,96.357L39.549,102.103L59.735,86.879L49.223,109.911L55.886,113.103L67.435,90.71L68.027,116L75.43,116L76.022,90.808L87.621,113.348L94.284,110.156L83.821,87.223L104.105,102.545L108.695,96.75L89.299,80.594L114.223,85.652L115.901,78.482L91.323,72.295L116,66.058L114.371,58.888L89.546,63.897L109.041,47.643L104.451,41.897L84.265,57.121L94.777,34.089L88.114,30.897L76.565,53.339L75.973,28L68.57,28L67.978,53.192L56.429,30.652L49.716,33.844L60.179,56.777L39.895,41.455L35.305,47.25L54.701,63.406L29.777,58.348L28.148,65.518L52.678,71.705L28,77.942Z" style="fill-rule: nonzero;"></path></g></svg>
+                    </svg>
+                </span>
+                {{ link[0] | translate }}
+            </a>
         </li>
     </ul>
 </section>
