@@ -30,3 +30,6 @@
 
     16:45
         Animated menu social media icons.
+
+    21:15
+        Updated colors and logos. Added my own photo. Added my projects.
