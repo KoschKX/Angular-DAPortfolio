@@ -11,18 +11,6 @@ body.fixed{
     overflow: hidden;
 }
 
-h1,
-h2 {
-  font-family: "Eczar";
-}
-
-/* === TYPOGRAPHY === */
-
-  .fontRaleway {
-    font-family: 'Raleway';
-    font-weight: 600;
-  }
-
 /* === BASE === */
 
    body,
@@ -64,14 +52,14 @@ h2 {
   }
 
   button:hover{
-    background-color: var(--colorF);
+    background-color: var(--colorE);
     cursor: pointer
   }
 
-  .button_row button{
+  .button_row a{
     margin-right: 2em;
   }
-  .button_row button:last-child {
+  .button_row a:last-child {
     margin-right: 0;
   }
   
@@ -191,7 +179,7 @@ h2 {
       background: none;
       border: none;
       padding: 1em;
-      border-bottom: 1px solid var(--colorF);
+      border-bottom: 1px solid var(--colorE);
   }
 
 /* === SVG === */

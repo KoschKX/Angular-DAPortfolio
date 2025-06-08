@@ -76,10 +76,25 @@
             "TAGS": "JavaScript | HTML | CSS",
             "DESC": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Oberfläche, Echtzeitnachrichten und robuster Kanalorganisation."
         },
-        "SHARKIE": {
-            "TITLE": "Sharkie",
+        "CRABTROPICS": {
+            "TITLE": "Crab Tropics",
             "TAGS": "JavaScript | HTML | CSS",
-            "DESC": "Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen."
+            "DESC": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Kit, Münzen und Katzenminze zu finden, um gegen die Killer-Meeresschildkröte zu kämpfen."
+        },
+        "COVENULM": {
+            "TITLE": "CoveN Ulm",
+            "TAGS": "JavaScript | HTML | CSS",
+            "DESC": "Ein immersives Horror-Erlebnis in Ulm mit Live-Shows, thematischen Events und schaurigen Attraktionen – für echte Horror-Fans. Präsentiert von CoveN Ulm."
+        },
+        "CHRONOGLOBE": {
+            "TITLE": "ChronoGlobe",
+            "TAGS": "JavaScript | HTML | CSS | PHP",
+            "DESC": "Eine interaktive Globus-App, mit der du die Weltkarten von Ländern und Imperien für jedes Jahr der Geschichte entdecken kannst."
+        },
+        "WOOIMPORTEXPORT": {
+            "TITLE": "WooCommerce Custom Import / Export",
+            "TAGS": "JavaScript | HTML | CSS | PHP",
+            "DESC": "WooCommerce verfügt über eingeschränkte Möglichkeiten zum Import und Export von Daten. Glücklicherweise ist es erweiterbar."
         }
     }
 }

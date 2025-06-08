@@ -5,10 +5,19 @@ $colorD: #1D1D1D;
 $colorE: #F9AF42;
 $colorF: #ff834f;
 
+$colorA: #571c2a;
+$colorB: #f8f7e5;
+$colorC: #640000;
+$colorD: #00282a;
+$colorE: #ff9d00;
+$colorF: #bd3d00;
+
 $hibiscus: #e84865;
 $orange: #ff8000;
 $teal: #9eb0b4;
 $whitesmoke: whitesmoke;
+
+    
 
 :root {
     --colorA: #{$colorA};
@@ -17,4 +26,15 @@ $whitesmoke: whitesmoke;
     --colorD: #{$colorD};
     --colorE: #{$colorE};
     --colorF: #{$colorF};
+
+    --fontA: 'Eczar',
+    --fontB: serif;
+
+    --fontA: "Kannada", sans-serif;
+    --fontB: sans-serif;
+
+    --fontA: 'Radikal-UltraThin';
+    --fontB: sans-serif;
+
+    
 }

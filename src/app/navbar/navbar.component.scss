@@ -101,7 +101,9 @@
     :host nav .s_logo svg path{
         fill: var(--colorF) !important;
     }
-
+    :host nav .s_logo_text svg path{
+        fill: var(--colorD) !important;
+    }
 
     .lang{
         border: 1px solid var(--colorD);
@@ -132,7 +134,7 @@
         top: -1em;
         margin-right: -100%;
         z-index: 1;
-        background: #F8F7E5;
+        background: var(--colorB);
         padding: 1em;
         border: 1px solid var(--colorD);
         min-width: 7.5em;
@@ -279,7 +281,7 @@
         fill: var(--colorD);
     }
     :host #side_menu li .diamond rect{
-        fill: var(--colorE);
+        fill: var(--colorF);
     }
 
     :host #side_menu li a.active .dot{

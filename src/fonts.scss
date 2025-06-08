@@ -60,9 +60,86 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Kannada';
+    src: url('./assets/font/KannadaMN.eot');
+    src: url('./assets/font/KannadaMN.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/KannadaMN.woff2') format('woff2'),
+        url('./assets/font/KannadaMN.woff') format('woff'),
+        url('./assets/font/KannadaMN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radikal';
+    src: url('./assets/font/Radikal.eot');
+    src: url('./assets/font/Radikal.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Radikal.woff2') format('woff2'),
+        url('./assets/font/Radikal.woff') format('woff'),
+        url('./assets/font/Radikal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radikal';
+    src: url('./assets/font/Radikal.eot');
+    src: url('./assets/font/Radikal.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Radikal.woff2') format('woff2'),
+        url('./assets/font/Radikal.woff') format('woff'),
+        url('./assets/font/Radikal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radikal-Medium';
+    src: url('./assets/font/Radikal-Medium.eot');
+    src: url('./assets/font/Radikal-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Radikal-Medium.woff2') format('woff2'),
+        url('./assets/font/Radikal-Medium.woff') format('woff'),
+        url('./assets/font/Radikal-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radikal-Thin';
+    src: url('./assets/font/Radikal-Thin.eot');
+    src: url('./assets/font/Radikal-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Radikal-Thin.woff2') format('woff2'),
+        url('./assets/font/Radikal-Thin.woff') format('woff'),
+        url('./assets/font/Radikal-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Radikal-UltraThin';
+    src: url('./assets/font/Radikal-UltraThin.eot');
+    src: url('./assets/font/Radikal-UltraThin.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Radikal-UltraThin.woff2') format('woff2'),
+        url('./assets/font/Radikal-UltraThin.woff') format('woff'),
+        url('./assets/font/Radikal-UltraThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .fontA{
-    font-family: 'Eczar', serif;
+    font-family: var(--fontA);
 }
 .fontB{
-    font-family: sans-serif;
+    font-family: var(--fontB);
+}
+
+h1,
+h2 {
+    font-family: var(--fontA);
 }

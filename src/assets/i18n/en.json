@@ -76,10 +76,30 @@
             "TAGS": "JavaScript | HTML | CSS",
             "DESC": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
         },
-        "SHARKIE": {
-            "TITLE": "Sharkie",
+        "CRABTROPICS": {
+            "TITLE": "Crab Tropics",
             "TAGS": "JavaScript | HTML | CSS",
-            "DESC": "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale."
+            "DESC": "A simple Jump-and-Run game based on an object-oriented approach. Help Kit to find coins and catnip to fight against the killer Sea Turtle."
+        },
+        "COVENULM": {
+            "TITLE": "CoveN Ulm",
+            "TAGS": "JavaScript | HTML | CSS | PHP",
+            "DESC": "An immersive horror experience in Ulm featuring live shows, themed events, and eerie attractions designed for true horror fans. Presented by CoveN Ulm."
+        },
+        "CHRONOGLOBE": {
+            "TITLE": "ChronoGlobe",
+            "TAGS": "JavaScript | HTML | CSS | PHP",
+            "DESC": "An interactive globe app that lets you explore world maps of countries and empires for every year in history."
+        },
+        "WOOIMPORTEXPORT": {
+            "TITLE": "WooCommerce Custom Import / Export",
+            "TAGS": "JavaScript | HTML | CSS | PHP",
+            "DESC": "WooCommerce comes with limted data import and export capabilities. Fortunately, it is extendable."
+        },
+        "OKINAWARUSH": {
+            "TITLE": "Okinawa Rush",
+            "TAGS": "C++ | Python | HLSL | GLSL",
+            "DESC": "Ein Multiplayer-Kampf-Plattformer für Switch, PS4, Xbox, PC, Mac und Linux.WooCommerce kommt mit eingeschränkten Datenimport- und Exportmöglichkeiten. Glücklicherweise ist es erweiterbar."
         }
     }
 }

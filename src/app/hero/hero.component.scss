@@ -46,12 +46,10 @@
 
 /* === SPECIAL === */
 
-    :host .seal svg {
+    :host .sealA svg {}
 
-        
-    }
-    :host .seal svg > g:nth-child(1),
-    :host .seal svg > g:nth-child(2){
+    :host .sealA svg > g:nth-child(1),
+    :host .sealA svg > g:nth-child(2){
         -webkit-animation-name: rotate;
         -webkit-animation-duration: 5s;
         -webkit-animation-iteration-count: infinite;
@@ -59,13 +57,23 @@
         transform-origin: center;
     }
 
-    :host .seal svg > g:nth-child(1) path{
-        fill: var(--colorE);
+    :host .sealA svg > g:nth-child(1) path{
+        fill: var(--colorF);
     }
-    :host .seal svg > g:nth-child(2) path{
+    :host .sealA svg > g:nth-child(2) path{
         fill: var(--colorB);
     }
-    :host .seal svg > g:nth-child(3) path{
+    :host .sealA svg > g:nth-child(3) path{
+        fill: var(--colorB);
+    }
+
+    :host .sealB svg > g:nth-child(1) path{
+        fill: var(--colorE);
+    }
+    :host .sealB svg > g:nth-child(2) path{
+        fill: var(--colorB);
+    }
+    :host .sealB svg > g:nth-child(3) path{
         fill: var(--colorB);
     }
 
