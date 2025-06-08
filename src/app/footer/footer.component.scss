@@ -6,8 +6,8 @@
         display: flex;
         flex-direction: row;
         margin: auto;
-        background-color: rgba($orange, 0.9);
-        color: $whitesmoke;
+        background-color: var(--colorE);
+        color: var(--colorB);
 
         .left{
             display: flex;

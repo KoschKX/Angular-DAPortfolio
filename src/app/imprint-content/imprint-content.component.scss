@@ -23,7 +23,7 @@
         position: relative;
 
         .section_bg{
-            background-color: rgba($hibiscus,0.9);
+            background-color: var(--colorE);
             mix-blend-mode: luminosity;
             z-index: -1;
         }

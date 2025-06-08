@@ -118,14 +118,39 @@
             margin-top: -10em;
         }
 
-        :host section .two_col .col.left {
-            bottom: 0vw; 
-        }
-        :host section .two_col .col.right {
-        }
-
-
         :host section {
             height: auto;
+            min-height: calc(100vh - 5vw - 4em);
         }
+
+        ::ng-deep section#hero .two_col .col.right img{
+            width: 200% !important;
+            margin-left: -50% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            object-position: center !important;
+        }
+
+        ::ng-deep section#hero .two_col .col.left {
+            height: 40% !important;
+        }
+
+        ::ng-deep section#hero .two_col .col.right {
+            height: 60% !important;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+
+
+
+        ::ng-deep section#hero .two_col .col.right > div{
+            height: 100% !important;
+            width: calc(100% + 4em) !important;
+            left: 2em;
+            position: relative;
+        }
+
+
     }

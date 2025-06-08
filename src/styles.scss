@@ -19,7 +19,7 @@ body.fixed{
     margin: 0;
     font-family: sans-serif;
     background-image: none;
-    background-color: $teal;
+    background-color: var(--bgcolor);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -120,11 +120,11 @@ body.fixed{
   }
 
   section.fixed_height{
-    height: calc(100vh - 15vw);
+    height: calc(100vh - 8em);
   }
 
   section.fixed_height_desktop{
-    height: calc(100vh - 15vw);
+    height: calc(100vh - 8em);
   }
 
   section .two_col {

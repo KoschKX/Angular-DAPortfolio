@@ -33,3 +33,6 @@
 
     21:15
         Updated colors and logos. Added my own photo. Added my projects.
+
+    23:00
+        Improved responsive design. Updated colors.

@@ -1,9 +1,17 @@
+/** === OLD COLORS === **/
+
+$bgcolor: #9eb0b4;
+
 $colorA: #679AAC;
 $colorB: #f8f7e5;
 $colorC: #000000;
 $colorD: #1D1D1D;
 $colorE: #F9AF42;
 $colorF: #ff834f;
+
+/** === NEW COLORS === **/
+
+$bgcolor: #031a1f;
 
 $colorA: #571c2a;
 $colorB: #f8f7e5;
@@ -12,14 +20,10 @@ $colorD: #00282a;
 $colorE: #ff9d00;
 $colorF: #bd3d00;
 
-$hibiscus: #e84865;
-$orange: #ff8000;
-$teal: #9eb0b4;
-$whitesmoke: whitesmoke;
-
-    
-
 :root {
+
+    --bgcolor: #{$bgcolor};
+
     --colorA: #{$colorA};
     --colorB: #{$colorB};
     --colorC: #{$colorC};

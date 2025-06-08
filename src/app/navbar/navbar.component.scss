@@ -11,15 +11,6 @@
 
 :host.subpage{
     position: relative;
-
-    .page_bg {
-        background-image: none;
-    }
-    .section_bg {
-        background-color: rgba($hibiscus,0.9);
-        mix-blend-mode: luminosity;
-        z-index: -1;
-    }
 }
 
 :host {
@@ -72,10 +63,10 @@
             }
 
             a:last-child{
-                margin-right: 0em;
+                margin-right: 0;
             }
             a:first-child{
-                margin-left: 0em;
+                margin-left: 0;
             }
         }
         
@@ -104,6 +95,13 @@
     :host nav .s_logo_text svg path{
         fill: var(--colorD) !important;
     }
+
+    :host nav .a_logo{
+        display: flex;
+        justify-content: center;
+    }
+
+
 
     .lang{
         border: 1px solid var(--colorD);
@@ -361,5 +359,22 @@
 
         :host #side_menu{
             display: none;
+        }
+
+
+        :host nav .a_logo{
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        :host nav .s_logo_text{
+            width: 50% !important;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        :host nav .top_logo{
+             width: 50% !important;
         }
     }
