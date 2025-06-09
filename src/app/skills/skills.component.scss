@@ -7,10 +7,12 @@
 }
 
 :host section{
-  display: flex;background-color: var(--colorD);flex-direction: row;flex-wrap: wrap;justify-content: center;align-content: center;
-
+  display: flex;background-color: var(--colorD);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
-
 
 /* === SPECIAL === */
 
@@ -28,6 +30,10 @@
 
     :host .sealB svg > g:nth-child(1) path{
         fill: var(--colorA);
+    }
+
+    :host .project_desc{
+        color: var(--colorB); background-color: var(--colorD); 
     }
   
 
@@ -93,7 +99,35 @@
     :host .boxA{
         width: 100%;
     }
+
+    :host .boxB{
+        color: var(--colorB); 
+        background-color: var(--colorA); 
+        padding: 2vw; 
+        position: relative; 
+        border-radius: 0.25em;
+    }
     
+
+/* === UGLY COLORS === */
+
+    body.ugly :host section {
+        background-color: var(--colorDu);
+    }
+
+    body.ugly :host .boxB{
+        color: var(--colorBu); 
+        background-color: var(--colorAu); 
+    }
+
+    body.ugly .skill{
+        color: var(--colorBu);
+    }
+
+    body.ugly :host .sealB svg > g:nth-child(1) path{
+        fill: var(--colorFu);
+    }
+
 
 /* === RESPONSIVE === */
 

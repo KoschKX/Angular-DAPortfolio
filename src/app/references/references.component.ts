@@ -11,8 +11,10 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ReferencesComponent {
     references = [
-      'REFERENCES.TANJA',
-      'REFERENCES.HANS',
-      'REFERENCES.ANTON'
+      'REFERENCES.KENKLEIN',
+      'REFERENCES.PAULHOLCOMB',
+      'REFERENCES.ALICIAMENDA',
+      'REFERENCES.STEVENMILLER',
+      'REFERENCES.KYEPARK'
   ];
 }

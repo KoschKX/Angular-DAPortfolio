@@ -1,8 +1,8 @@
-<section id="references" theme="dark" class="two_col" style="background-color: var(--colorA);">
+<section id="references" theme="dark" class="two_col" style="">
     <div class="rowA" style="width: 100%; align-items: center;">
         <div style="display: flex; align-items: center; flex-direction: column; justify-content: flex-end; width: auto;">
             <div class="title" style="font-size: 0.7em;">
-                <h1 style="color: var(--colorB);">
+                <h1 style="">
                     {{ 'REFERENCES.HEADLINE' | translate }}
                 </h1>
             </div>
@@ -10,19 +10,31 @@
     </div>
     <div class="rowB" style="align-items: flex-end; align-items: center;">
         <div class="refs">
-            <div class="zitat" *ngFor="let ref of references">
-                <div class="zitat_content" style="">
-                    {{ (ref + '.NAME') | translate }}
-                    <br><br>
-                    {{ (ref + '.TEXT') | translate }}
-                    <br><br>
-                    {{ (ref + '.ROLE') | translate }}
-                </div>
-                <a style="display: block; width: 100%; padding: 1em 0; text-align: right;">
-                    {{ 'REFERENCES.LINKEDIN' | translate }}
-                </a>
-            </div>
-        </div>
+  <div class="zitat" *ngFor="let ref of references">
+    <div class="zitat_content">
+      {{ (ref + '.NAME') | translate }}
+      <br><br>
+      {{ (ref + '.TEXT') | translate }}
+      <br><br>
+      {{ (ref + '.ROLE') | translate }}
+    </div>
+    <ng-container *ngIf="(ref + '.PROFILE') | translate as profile; else noProfile">
+      <a *ngIf="profile" [href]="profile" target="_blank" class="profileLink">
+        {{ 'REFERENCES.LINKEDIN' | translate }}
+      </a>
+      <ng-container *ngIf="!profile">
+        <a class="profileLink none">
+          {{ 'REFERENCES.NOPROFILE' | translate }}
+        </a>
+      </ng-container>
+    </ng-container>
+    <ng-template #noProfile>
+      <a class="profileLink none">
+        {{ 'REFERENCES.NOPROFILE' | translate }}
+      </a>
+    </ng-template>
+  </div>
+</div>
     </div>
     <div></div>
 </section>

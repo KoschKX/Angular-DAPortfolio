@@ -40,10 +40,13 @@ export class NavbarComponent implements AfterViewInit {
 
   /** INITIALIZE BY ADDING THE DOTS AND CHECK THE SCROLLING FOR THE FIRST TIME */  
   ngAfterViewInit(): void {
-    this.anchors = Array.from(document.querySelectorAll('section'));
+    this.anchors = Array.from(document.querySelectorAll('section')).filter(section => section.id !== 'navbar') as HTMLElement[];
     setTimeout(() => {
-      this.addDots(); 
+      this.addDots();
       this.checkScroll();
+      requestAnimationFrame(() => {
+        this.handleInvertedColors();
+      });
     });
   }
 
@@ -59,53 +62,60 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   checkScroll() {
-    let closestId: string | null = null;
-    let minDistance = Number.POSITIVE_INFINITY;
 
-    /** FIND ACTIVE SECTION */
-    this.anchors.forEach(anchor => {
-      const rect = anchor.getBoundingClientRect();
-      const distance = Math.abs(rect.top);
-      if (rect.top - 1 <= 0 && distance < minDistance) {
-        minDistance = distance;
-        closestId = anchor.id;
+    this.activeSection = this.findActiveSection();
+
+    this.stickNavBarToSection();
+    
+    this.handleInvertedColors();
+  }
+
+  /** FIND THE ACTIVE SECTION */
+  findActiveSection() {
+      let closestId: string = "";
+      let minDistance = Number.POSITIVE_INFINITY;
+      let activeSection: string = "";
+      this.anchors.forEach(anchor => {
+        const rect = anchor.getBoundingClientRect();
+        const distance = Math.abs(rect.top);
+        if (rect.top - 1 <= 0 && distance < minDistance) {  minDistance = distance; closestId = anchor.id; }
+      });
+      activeSection = closestId;
+      if (!activeSection || activeSection == "navbar") { activeSection = "hero"; }
+      this.renderer.setAttribute(document.body, 'data-active-section', activeSection);
+      return activeSection;
+  }
+
+  /** HANDLE INVERTED COLORS */
+  handleInvertedColors() {
+    const invertElements = Array.from(document.querySelectorAll('.invert')) as HTMLElement[];
+    const firstSectionTheme = this.anchors.length > 0 ? this.anchors[0].getAttribute('theme') || 'light' : 'light';
+    invertElements.forEach(el => {
+      el.classList.remove('light');
+      el.classList.remove('dark');
+      const elRect = el.getBoundingClientRect();
+      const elCenter = elRect.top + elRect.height / 2;
+      let themed = false;
+      for (const section of this.anchors) {
+        const sectionRect = section.getBoundingClientRect();
+        if (elCenter >= sectionRect.top && elCenter <= sectionRect.bottom) {
+          const theme = section.getAttribute('theme') || firstSectionTheme;
+          el.classList.add(theme);
+          themed = true;
+          break;
+        }
       }
+      if (!themed) { el.classList.add(firstSectionTheme); }
     });
-    this.activeSection = closestId;
-    if (!this.activeSection || this.activeSection == "navbar") {
-      this.activeSection = "hero";
-    }
+  }
 
+  /** STICK NAV BAR TO SECTION TOP */
+  stickNavBarToSection(){
     const sect = document.getElementById(this.activeSection || 'hero');
-
-    /** STICK NAV BAR TO SECTION TOP */
     if (sect && this.navRef?.nativeElement && this.navRef.nativeElement.classList.contains('stick_to_section')) {
       this.top = sect.offsetTop;
       this.renderer.setStyle(this.navRef.nativeElement, 'top', this.top + 'px');
     }
-    
-    this.renderer.setAttribute(document.body, 'data-active-section', this.activeSection);
-    
-    /** HANDLE INVERTED COLORS */
-    const sectRect = sect?.getBoundingClientRect();
-    const halfway = sectRect ? sectRect.top + sectRect.height / 2 : 0;
-    const invertElements = Array.from(document.querySelectorAll('.invert')) as HTMLElement[];
-    invertElements.forEach(el => {
-      el.classList.remove('light', 'dark');
-      const elRect = el.getBoundingClientRect();
-      const elCenter = elRect.top + elRect.height / 2;
-
-      let themed = false;
-
-      this.anchors.forEach(section => {
-        const sectionRect = section.getBoundingClientRect();
-        if (elCenter >= sectionRect.top && elCenter <= sectionRect.bottom) {
-          const theme = section.getAttribute('theme') || 'light';
-          el.classList.add(theme); 
-          themed = true;
-        }
-      });
-    });
   }
 
   /** HANDLE WINDOW RESIZING */

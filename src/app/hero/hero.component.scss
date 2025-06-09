@@ -6,15 +6,15 @@
 /* === SECTION === */
 
     :host section {
+
+        background-color: var(--colorA);
+
         background-image: none;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 20%;
         .title {
-            h1,
-            h2 {
-                color: whitesmoke;
-            }
+            h1,  h2 { color: var(--colorB); }
         }
     }
 
@@ -76,6 +76,36 @@
     :host .sealB svg > g:nth-child(3) path{
         fill: var(--colorB);
     }
+
+/* === UGLY COLORS === */
+
+    body.ugly :host section {
+        background-color: var(--colorAu);
+        .title {
+            h1, h2 { color: var(--colorBu); }
+        }
+    }
+    
+    body.ugly :host .sealA svg > g:nth-child(1) path{
+        fill: var(--colorFu);
+    }
+    body.ugly :host .sealA svg > g:nth-child(2) path{
+        fill: var(--colorBu);
+    }
+    body.ugly :host .sealA svg > g:nth-child(3) path{
+        fill: var(--colorBu);
+    }
+
+    body.ugly :host .sealB svg > g:nth-child(1) path{
+        fill: var(--colorFu);
+    }
+    body.ugly :host .sealB svg > g:nth-child(2) path{
+        fill: var(--colorBu);
+    }
+    body.ugly :host .sealB svg > g:nth-child(3) path{
+        fill: var(--colorBu);
+    }
+
 
 /* === ANIMATION === */
 

@@ -12,6 +12,8 @@
     }
 
     :host section {
+        display: flex; 
+        align-items: flex-start; 
         
         background-image: none;
         background-size: cover;
@@ -20,6 +22,11 @@
 
         justify-content: center;
 
+        background-color: var(--colorD); 
+        color: var(--colorB);
+
+        .title h1{ font-weight: 600; color: var(--colorE); }
+        .title h2{ color: var(--colorF); }
     }
 
     :host section .two_col .col.left {
@@ -168,6 +175,43 @@
         -webkit-transform: rotate(0deg);
         }
     }
+
+/* === UGLY COLORS === */
+
+    body.ugly :host section {
+        background-color: var(--colorDu); 
+        color: var(--colorBu);
+
+        .title h1{ font-weight: 600; color: var(--colorEu); }
+        h2{ color: var(--colorFu); }
+    }
+
+    body.ugly .form_cell:hover .form_label{
+        color: var(--colorFu);
+    }
+
+    body.ugly :host ::ng-deep .form_cell a {
+        color: var(--colorFu) !important;
+    }
+    body.ugly :host ::ng-deep .form_cell a:hover {
+        color: var(--colorBu) !important;
+    }
+
+    body.ugly :host .form_cell input[type="text"]:focus{
+        border-color: var(--colorFu);
+    }
+    
+    body.ugly :host .seal3 svg > g:nth-child(1) path{
+        fill: var(--colorFu);
+    }
+    body.ugly :host .seal3 svg > g:nth-child(2) path{
+        fill: var(--colorAu);
+    }
+
+    body.ugly :host .form_cell:hover .form_label{
+        color: var(--colorFu);
+    }
+
 
 /* === RESPONSIVE === */
 

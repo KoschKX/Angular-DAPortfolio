@@ -1,13 +1,13 @@
 /** === OLD COLORS === **/
 
-$bgcolor: #9eb0b4;
+$bgcoloru: #9eb0b4;
 
-$colorA: #679AAC;
-$colorB: #f8f7e5;
-$colorC: #000000;
-$colorD: #1D1D1D;
-$colorE: #F9AF42;
-$colorF: #ff834f;
+$colorAu: #679AAC;
+$colorBu: #f8f7e5;
+$colorCu: #000000;
+$colorDu: #1D1D1D;
+$colorEu: #F9AF42;
+$colorFu: #ff834f;
 
 /** === NEW COLORS === **/
 
@@ -20,7 +20,21 @@ $colorD: #00282a;
 $colorE: #ff9d00;
 $colorF: #bd3d00;
 
+/*** LAYOUT === **/
+    
+$padding: 5vw;
+$width: 1400px;
+
 :root {
+
+    --bgcoloru: #{$bgcoloru};
+
+    --colorAu: #{$colorAu};
+    --colorBu: #{$colorBu};
+    --colorCu: #{$colorCu};
+    --colorDu: #{$colorDu};
+    --colorEu: #{$colorEu};
+    --colorFu: #{$colorFu};
 
     --bgcolor: #{$bgcolor};
 
@@ -31,14 +45,17 @@ $colorF: #bd3d00;
     --colorE: #{$colorE};
     --colorF: #{$colorF};
 
-    --fontA: 'Eczar',
-    --fontB: serif;
+    --fontAu: 'Eczar', serif;
+    --fontBu: serif;
 
+    /*
     --fontA: "Kannada", sans-serif;
     --fontB: sans-serif;
+    */
 
     --fontA: 'Radikal-UltraThin';
     --fontB: sans-serif;
 
-    
+    --width: #{$width};
+    --padding: #{$padding};
 }

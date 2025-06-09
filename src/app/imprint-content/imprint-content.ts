@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './imprint-content.component.html',
   styleUrl: './imprint-content.component.scss'
 })
-export class ImprintContentComponent {
-
-}
+export class ImprintContentComponent {}

@@ -8,19 +8,22 @@
 /* === SECTION === */
 
     :host section {
+
+        background-color: var(--colorE);
+
         background-image: none;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 20%;
 
-        padding-top: 5vw;
+        /* padding-top: 5vw; */
 
         justify-content: center;
 
         display: flex;
         justify-content: flex-end;
 
-        height: calc(100vh - 10vw);
+        /*  height: calc(100vh - 10vw); */
     }
 
     :host section .two_col {
@@ -86,6 +89,22 @@
         image-rendering: optimizeQuality;
     }
 
+    .boxB{
+        color: var(--colorB); 
+        background-color: var(--colorD);
+    }
+
+/* === UGLY COLORS === */
+
+    body.ugly :host section {
+        background-color: var(--colorBu);
+    }
+
+    body.ugly :host .boxB{
+        color: var(--colorBu); 
+        background-color: var(--colorDu);
+    }
+
 /* === ANIMATION === */
 
   @-webkit-keyframes bounce {
@@ -120,7 +139,7 @@
 
         :host section {
             height: auto;
-            min-height: calc(100vh - 5vw - 4em);
+            /* min-height: calc(100vh - 5vw - 4em); */
         }
 
         ::ng-deep section#hero .two_col .col.right img{
@@ -143,14 +162,11 @@
 
     @media screen and (max-width: 600px) {
 
-
-
         ::ng-deep section#hero .two_col .col.right > div{
             height: 100% !important;
             width: calc(100% + 4em) !important;
             left: 2em;
             position: relative;
         }
-
 
     }

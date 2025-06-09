@@ -20,7 +20,7 @@
         "EMAIL_LABEL": "What's your email?",
         "EMAIL_PLACEHOLDER": "youremail@email.com",
         "MESSAGE_LABEL": "How can I help you?",
-        "MESSAGE_PLACEHOLDER": "Hello Lukas, I am interested in...",
+        "MESSAGE_PLACEHOLDER": "Hello, I am interested in...",
         "PRIVACY_TEXT": "I've read the <a href='/privacypolicy'>privacy policy</a> and agree to the processing of my data.",
         "MESSAGE_REQUIRED": "Please enter a message",
         "SUBMIT": "Drop a Line",
@@ -37,20 +37,36 @@
     "REFERENCES": {
         "HEADLINE": "What my colleagues say about me",
         "LINKEDIN": "To Linkedin profile >>",
-        "TANJA": {
-            "NAME": "Tanja Schulz",
-            "TEXT": "Anna has proven to be a reliable group partner. Her technical skills and proactive approach were crucial to the success of our project.",
-            "ROLE": "Frontend Developer"
+        "NOPROFILE": "No profile available",
+        "KENKLEIN": {
+            "NAME": "Kenneth M. Klein",
+            "TEXT": "It is very rare to have in one person such a complete skill set. He was an extremely dedicated employee who was always thinking about his projects and coming up with improvements -- even outside of office hours. His excitement was contagious!",
+            "ROLE": "Developer, Wilopen Products",
+            "PROFILE": ""
         },
-        "HANS": {
-            "NAME": "Hans Janisch",
-            "TEXT": "I had the good fortune of working with Hanna in a group project at the Developer Akademie that involved a lot of effort. She always stayed calm, cool, and focused, and made sure our team was set up for success. She's super knowledgeable, easy to work with, and I'd happily work with her again given the chance.",
-            "ROLE": "Team Partner"
+        "PAULHOLCOMB": {
+            "NAME": "Paul Holcomb",
+            "TEXT": "Gary did the “heavy lifting” on the programming side on projects for Universal Orlando and an internal project called Wayzon. I would recommend Gary to anyone looking for a highly adept programmer.",
+            "ROLE": "Director, New Media Investment Group LLC",
+            "PROFILE": "https://www.linkedin.com/in/holcombpaul/"
         },
-        "ANTON": {
-            "NAME": "Anton Fischer",
-            "TEXT": "Our project benefited enormously from Simon's efficient way of working.",
-            "ROLE": "Team Partner"
+        "ALICIAMENDA": {
+            "NAME": "Alicia Menda",
+            "TEXT": "He is valuable from a creative and from a developer stand point. Also he is always determined to complete projects regardless of the challenges that may be present",
+            "ROLE": "Vice‐President, Nearsource",
+            "PROFILE": "https://www.linkedin.com/in/aliciamenda/"
+        },
+        "STEVENMILLER": {
+            "NAME": "Steven Miller",
+            "TEXT": "He is a multi-talented individual and would bring many benefits to any team, whether it's his programming skills, art, creativity or thinking outside the box to resolve complex issues. He has a unique determination to get to the root causes of problems and resolve them in the most efficient way.",
+            "ROLE": "Lead Programmer, Sokaikan",
+            "PROFILE": ""
+        },
+        "KYEPARK": {
+            "NAME": "Kye Park",
+            "TEXT": "I know that his programming skills are superior because there weren't any modifications he couldn't do, and his final projects were always better than our expectations",
+            "ROLE": "Manager, D & D Florida Import",
+            "PROFILE": ""
         }
     },
     "SKILLS": {
@@ -62,6 +78,8 @@
         "INTRO": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
         "GITHUB": "GitHub",
         "LIVE": "Live Test",
+        "SOURCE": "Source Code",
+        "SHOP": "Shop Page",
         "PREVIOUS": "Previous project",
         "NEXT": "Next project"
     },

@@ -1,21 +1,33 @@
  
 :host section{
-   justify-content: center;
-   display: flex; 
-   align-items: flex-start; 
+  justify-content: center;
+  display: flex; 
+  align-items: flex-start; 
+
+  background-color: var(--colorA);
+
+  .title h1{ color: var(--colorB); }
 }
 
- .zitat{
-    width: 33%; margin: 1vw; position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
- }
+.rowA{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
- .refs{
-    display: flex;
- }
+.refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.zitat {
+  flex: 1 1 calc(33.333% - 1em);
+  box-sizing: border-box;
+  min-width: 250px;
+}
 
- .zitat_content{
-   width: calc(100% - 6vw);
-   padding: 3vw; 
+.zitat_content{
+   width: calc(100% - 4vw);
+   padding: 2vw; 
    color: var(--colorB); 
    border-radius: 0.5em; 
    border: 1px solid var(--colorB);
@@ -28,6 +40,32 @@
  .zitat:last-child{
    margin-right:0;
  }
+
+ .profileLink{
+    display: block; 
+    width: 100%; 
+    padding: 1em 0; 
+    text-align: right;
+ }
+
+ .profileLink.none{
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+ }
+
+ /* === UGLY COLORS === */
+
+  body.ugly :host section {
+    background-color: var(--colorAu);
+
+    .title h1{ color: var(--colorBu); }
+  }
+
+  body.ugly .zitat_content{
+    color: var(--colorBu); 
+    border: 1px solid var(--colorBu);
+  }
  
  @media screen and (max-width: 800px) {
     .zitat{

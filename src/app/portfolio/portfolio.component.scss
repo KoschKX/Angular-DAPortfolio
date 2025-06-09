@@ -15,7 +15,7 @@
         align-items: center;
         margin-bottom: 2em;
     }
-    .skill_icon{
+    .skillIcon{
         width: 4em;
         height: 4em;
         margin-left: 1em;
@@ -23,7 +23,11 @@
         margin-bottom: 1em;
     }
 
-    section {
+    :host section {
+
+        display: flex; 
+        align-items: flex-start; 
+        background-color: var(--colorE);
 
         background-image: none;
         background-size: cover;
@@ -84,7 +88,7 @@
 
 /* === SPECIAL === */
 
-     .project_nav{
+     .projectNav{
         display: flex;
         justify-content: space-between;
         width: calc(100% - 2em);
@@ -165,7 +169,7 @@
         display: block;
     }
 
-    :host .project_holder{
+    :host .projectHolder{
         height: 100%;
         width: 100%;
         display: flex;
@@ -175,7 +179,7 @@
         z-index: 1;
     }
 
-    .project_desc{
+    .projectDesc{
         display: none; 
         flex-direction: column; 
         justify-content: center; 
@@ -184,25 +188,33 @@
         margin: 2em;
         margin-right: 0;
         min-height: calc(100% - 12em);
+
+        color: var(--colorB);
+        background-color: var(--colorD);
     }
 
-    .project_desc.active{
+    .projectTech{
+        color: var(--colorE); 
+        font-size: smaller;
+    }
+
+    .projectDesc.active{
         display: flex;
     }
 
-    a.project_button {
+    a.projectButton {
         color: var(--colorD);
         cursor: pointer;
         user-select: none;
         -webkit-user-select: none;
     }
-    a.project_button:hover{
+    a.projectButton:hover{
         color: var(--colorF);
     }
 
 /* === BUTTON ARROWS === */
 
-    .button_arrow{
+    .buttonArrow{
         height: 1em;
         width: 1em;
         margin-left: 0.25em;
@@ -211,12 +223,41 @@
         transform-origin: center;
         transition: transform 0.3s;
     }
-    svg.button_arrow > g:nth-child(1) path{
+    svg.buttonArrow > g:nth-child(1) path{
         fill: var(--colorB);
     }
-    button:hover svg.button_arrow{
+    button:hover svg.buttonArrow{
         transform: rotate(-45deg);
     }
+
+/* === UGLY COLORS === */
+
+    body.ugly :host section {
+        background-color: var(--colorBu);
+    }
+    
+    body.ugly :host a.projectButton {
+        color: var(--colorDu);
+    }
+
+    body.ugly :host .projects{
+        background-color: var(--colorEu);
+        border: solid 1px var(--colorDu);
+    }
+
+    body.ugly :host .projectTech{
+        color: var(--colorAu); 
+    }
+
+    body.ugly :host .projectDesc{
+        color: var(--colorBu);
+        background-color: var(--colorDu);
+    }
+
+    body.ugly :host .sealC svg > g:nth-child(1) path{
+        fill: var(--colorFu);
+    }
+
 
 /* === ANIMATION === */
 
@@ -262,12 +303,9 @@
             margin-right: 0em; 
         }
 
-        :host .project_desc,
-        :host .project_nav{
+        :host .projectDesc,
+        :host .projectNav{
             margin-left: 0;
             margin-right: 0;
         }
-
-
-        
     }

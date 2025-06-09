@@ -20,7 +20,7 @@
         "EMAIL_LABEL": "Wie ist deine E-Mail?",
         "EMAIL_PLACEHOLDER": "dein@email.de",
         "MESSAGE_LABEL": "Wie kann ich helfen?",
-        "MESSAGE_PLACEHOLDER": "Hallo Lukas, ich interessiere mich für...",
+        "MESSAGE_PLACEHOLDER": "Hallo, ich interessiere mich für...",
         "PRIVACY_TEXT": "Ich habe die <a href='/privacypolicy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein",
         "SUBMIT": "Nachricht senden",
@@ -36,21 +36,37 @@
     },
     "REFERENCES": {
         "HEADLINE": "Was meine Kollegen über mich sagen",
-        "LINKEDIN": "Zum Linkedin-Profil >>",
-        "TANJA": {
-            "NAME": "Tanja Schulz",
-            "TEXT": "Anna hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und ihr proaktiver Ansatz waren entscheidend für den Erfolg unseres Projekts.",
-            "ROLE": "Frontend-Entwicklerin"
+        "LINKEDIN": "Zum LinkedIn-Profil >>",
+        "NOPROFILE": "Kein Profil verfügbar",
+        "KENKLEIN": {
+            "NAME": "Kenneth M. Klein",
+            "TEXT": "Es ist sehr selten, in einer Person ein so umfassendes Kompetenzspektrum zu finden. Er war ein äußerst engagierter Mitarbeiter, der immer über seine Projekte nachgedacht und Verbesserungen vorgeschlagen hat – sogar außerhalb der Arbeitszeiten. Seine Begeisterung war ansteckend!",
+            "ROLE": "Entwickler, Wilopen Products",
+            "PROFILE": ""
         },
-        "HANS": {
-            "NAME": "Hans Janisch",
-            "TEXT": "Ich hatte das Glück, mit Hanna an einem Gruppenprojekt an der Developer Akademie zu arbeiten, das viel Einsatz erforderte. Sie blieb immer ruhig, gelassen und fokussiert und sorgte dafür, dass unser Team erfolgreich war. Sie ist sehr kompetent, angenehm im Umgang und ich würde jederzeit wieder mit ihr zusammenarbeiten.",
-            "ROLE": "Team-Partner"
+        "PAULHOLCOMB": {
+            "NAME": "Paul Holcomb",
+            "TEXT": "Gary hat bei Projekten für Universal Orlando und einem internen Projekt namens Wayzon die „schwere Programmierarbeit“ übernommen. Ich würde Gary jedem empfehlen, der einen äußerst fähigen Programmierer sucht.",
+            "ROLE": "Direktor, New Media Investment Group LLC",
+            "PROFILE": "https://www.linkedin.com/in/holcombpaul/"
         },
-        "ANTON": {
-            "NAME": "Anton Fischer",
-            "TEXT": "Unser Projekt profitierte enorm von Simons effizienter Arbeitsweise.",
-            "ROLE": "Team-Partner"
+        "ALICIAMENDA": {
+            "NAME": "Alicia Menda",
+            "TEXT": "Er ist sowohl aus kreativer als auch aus Entwickler-Sicht wertvoll. Außerdem ist er immer entschlossen, Projekte unabhängig von den Herausforderungen abzuschließen, die auftreten können.",
+            "ROLE": "Vizepräsidentin, Nearsource",
+            "PROFILE": "https://www.linkedin.com/in/aliciamenda/"
+        },
+        "STEVENMILLER": {
+            "NAME": "Steven Miller",
+            "TEXT": "Er ist eine vielseitig talentierte Person und würde jedem Team viele Vorteile bringen, sei es durch seine Programmierkenntnisse, Kunst, Kreativität oder seine Fähigkeit, außerhalb des Rahmens zu denken, um komplexe Probleme zu lösen. Er hat eine einzigartige Entschlossenheit, den Ursachen von Problemen auf den Grund zu gehen und sie auf die effizienteste Weise zu lösen.",
+            "ROLE": "Leitender Programmierer, Sokaikan",
+            "PROFILE": ""
+        },
+        "KYEPARK": {
+            "NAME": "Kye Park",
+            "TEXT": "Ich weiß, dass seine Programmierkenntnisse überlegen sind, weil es keine Änderungen gab, die er nicht umsetzen konnte, und seine Endprojekte waren immer besser als unsere Erwartungen.",
+            "ROLE": "Manager, D & D Florida Import",
+            "PROFILE": ""
         }
     },
     "SKILLS": {
@@ -62,6 +78,8 @@
         "INTRO": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
         "GITHUB": "GitHub",
         "LIVE": "Live-Test",
+        "SOURCE": "Source Code",
+        "SHOP": "Shop-Seite",
         "PREVIOUS": "Vorheriges Projekt",
         "NEXT": "Nächstes Projekt"
     },

@@ -79,29 +79,27 @@
 
     #menu .open_btn svg,
     #pmenu .close_btn svg{
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
         cursor: pointer;
     }
     :host nav .open_btn svg path{
-        fill: var(--colorD) !important;
+        fill: var(--colorD);
     }
     :host nav .close_btn svg path{
-        fill: var(--colorE) !important;
+        fill: var(--colorE)t;
     }
     :host nav .s_logo svg path{
-        fill: var(--colorF) !important;
+        fill: var(--colorF);
     }
     :host nav .s_logo_text svg path{
-        fill: var(--colorD) !important;
+        fill: var(--colorD);
     }
 
     :host nav .a_logo{
         display: flex;
         justify-content: center;
     }
-
-
 
     .lang{
         border: 1px solid var(--colorD);
@@ -135,7 +133,9 @@
         background: var(--colorB);
         padding: 1em;
         border: 1px solid var(--colorD);
-        min-width: 7.5em;
+        border-radius: 0.33em;
+        
+        min-width: 11rem;
 
         visibility: hidden;
 
@@ -151,8 +151,8 @@
 
     #pmenu.open {
         visibility: visible;
-        top: -0.75em;
-        margin-right: -1em;
+        top: -0.5em;
+        margin-right: -0.75rem;
     }
 
 
@@ -294,7 +294,7 @@
 /* === MENU COLOR === */
 
     :host nav .nav-menu.social svg > g:nth-child(2) path{
-        fill: var(--colorB);
+        fill: var(--colorD);
     }
     :host nav .nav-menu.social svg > g:nth-child(1) path,
     :host nav .nav-menu.social svg > g:nth-child(1) rect{
@@ -306,12 +306,18 @@
         fill-opacity: 1 !important;
     }
 
-    body[data-active-section="hero"]{
-        :host nav .nav-menu.social{
-            display: flex;
-        }
+    body[data-active-section="hero"] :host nav .nav-menu.social{
+        display: flex;
     }
     
+    :host nav.dark .nav-menu.social svg > g:nth-child(2) path{
+        fill: var(--colorB);
+    }
+    :host nav.dark .nav-menu.social svg > g:nth-child(1) path,
+    :host nav.dark .nav-menu.social svg > g:nth-child(1) rect{
+        fill: var(--colorB);
+    }
+
     :host nav.dark .lang{
         color: var(--colorB) !important;
         border: 1px solid var(--colorB) !important;
@@ -332,6 +338,53 @@
     }
     :host nav .s_logo_text:hover svg path{
         fill: var(--colorF) !important;
+    }
+
+/* === UGLY COLORS === */
+
+    body.ugly :host nav .nav-menu.social svg > g:nth-child(2) path{
+        fill: var(--colorBu);
+    }
+
+    body.ugly :host nav .nav-menu.social svg > g:nth-child(1) path,
+    body.ugly :host nav .nav-menu.social svg > g:nth-child(1) rect{
+        fill: var(--colorFu);
+    }
+
+    body.ugly :host nav .open_btn svg path{
+        fill: var(--colorDu);
+    }
+    body.ugly :host nav .close_btn svg path{
+        fill: var(--colorEu);
+    }
+    body.ugly :host nav .s_logo svg path{
+        fill: var(--colorFu);
+    }
+    body.ugly :host nav .s_logo_text svg path{
+        fill: var(--colorDu);
+    }
+
+    body.ugly :host .lang{
+        border: 1px solid var(--colorDu);
+    }
+
+    body.ugly :host .lang:hover{
+        background-color: var(--colorFu);
+    }
+
+    body.ugly :host #pmenu .title {
+        color: var(--colorAu);
+    }
+
+    body.ugly :host #pmenu .menu_seal svg path{
+        fill: var(--colorFu);
+    }
+
+    body.ugly :host #side_menu li .dot path{
+        fill: var(--colorDu);
+    }
+    body.ugly :host #side_menu li .diamond rect{
+        fill: var(--colorFu);
     }
 
 /* === RESPONSIVE === */
@@ -375,6 +428,6 @@
 
     @media screen and (max-width: 600px) {
         :host nav .top_logo{
-             width: 50% !important;
+            width: 50% !important;
         }
     }
