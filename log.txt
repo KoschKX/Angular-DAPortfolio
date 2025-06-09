@@ -40,3 +40,6 @@
 9 Jun, 2025:
     14:00
         Updated Photo and About description.
+
+    20:00
+        CSS bug fixes. Fonts and Colors now swappable.
