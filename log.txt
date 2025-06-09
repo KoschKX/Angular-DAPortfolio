@@ -36,3 +36,7 @@
 
     23:00
         Improved responsive design. Updated colors.
+
+9 Jun, 2025:
+    14:00
+        Updated Photo and About description.
