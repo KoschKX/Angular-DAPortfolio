@@ -21,7 +21,7 @@
         "EMAIL_PLACEHOLDER": "dein@email.de",
         "MESSAGE_LABEL": "Wie kann ich helfen?",
         "MESSAGE_PLACEHOLDER": "Hallo, ich interessiere mich für...",
-        "PRIVACY_TEXT": "Ich habe die <a href='/privacypolicy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "PRIVACY_TEXT": "Ich habe die <a href='./privacy'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein",
         "SUBMIT": "Nachricht senden",
         "LEGAL": "Impressum",
@@ -114,6 +114,11 @@
             "TAGS": "JavaScript | HTML | CSS | PHP",
             "DESC": "WooCommerce verfügt über eingeschränkte Möglichkeiten zum Import und Export von Daten. Glücklicherweise ist es erweiterbar."
         }
+    },
+    "PRIVACY": {
+        "HEADLINE": "Impressum",
+        "CONTENT": "Dies ist das Datenschutzerklärung von Garys Portfolio. Es enthält rechtliche Informationen über die Website und deren Inhaber.",
+        "BACK": "Zurück"
     },
     "IMPRINT": {
         "HEADLINE": "Impressum",

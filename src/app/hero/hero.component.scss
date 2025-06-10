@@ -140,7 +140,7 @@
         }
     }
 
-    @media screen and (max-height: 800px) {
+    @media screen and (max-height: 800px) and (min-width: 801px){
         :host .two_col .col.left {
             z-index: 1;
         }

@@ -21,7 +21,7 @@
         "EMAIL_PLACEHOLDER": "youremail@email.com",
         "MESSAGE_LABEL": "How can I help you?",
         "MESSAGE_PLACEHOLDER": "Hello, I am interested in...",
-        "PRIVACY_TEXT": "I've read the <a href='/privacypolicy'>privacy policy</a> and agree to the processing of my data.",
+        "PRIVACY_TEXT": "I've read the <a href='./privacy'>privacy policy</a> and agree to the processing of my data.",
         "MESSAGE_REQUIRED": "Please enter a message",
         "SUBMIT": "Drop a Line",
         "LEGAL": "Imprint",
@@ -119,6 +119,11 @@
             "TAGS": "C++ | Python | HLSL | GLSL",
             "DESC": "Ein Multiplayer-Kampf-Plattformer für Switch, PS4, Xbox, PC, Mac und Linux.WooCommerce kommt mit eingeschränkten Datenimport- und Exportmöglichkeiten. Glücklicherweise ist es erweiterbar."
         }
+    },
+    "PRIVACY": {
+        "HEADLINE": "Privacy Policy",
+        "CONTENT": "This is the privacy policy of Gary's Portfolio. It contains legal information about the website and its owner.",
+        "BACK": "Zurück"
     },
     "IMPRINT":{
         "HEADLINE": "Imprint",

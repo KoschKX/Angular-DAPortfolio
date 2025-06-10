@@ -89,6 +89,11 @@
         image-rendering: optimizeQuality;
     }
 
+    :host .emoji img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
     .boxB{
         color: var(--colorB); 
         background-color: var(--colorD);
@@ -112,7 +117,7 @@
       -webkit-transform: translate((0,0em));
     }
     50%{
-       -webkit-transform: translate((0,-0.5em));
+       -webkit-transform: translate((0,-0.5rem));
     }
     to {
       -webkit-transform: translate((0,0));

@@ -230,12 +230,12 @@
             width: 100%; 
         }
 
-        .form{
+        :host section .form{
             margin-left: 0;
             margin-right: 0;
         }
       
-        .boxA{
+        :host section .boxA{
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
@@ -243,32 +243,32 @@
             width: 100%;
         }
 
-        .boxA .box_col:first-child{
+        :host section .boxA .box_col:first-child{
             display: none;
         }
 
-        .boxA .footer{
+        :host section .boxA .footer{
             display: flex;
             width: 100%;
             justify-content: space-between;
         }
 
-        .boxB {
+        :host section .boxB {
             position: relative;
             margin-top: 0em;
             width: 100%;
         }
 
-        .boxB .box_col{
+        :host section .box_col{
             width: 100%;
         }
 
-        .boxB img{
+        :host section .boxB img{
             width: 100%;
             margin: auto;
         }
 
-        .gear_box{
+        :host section .gear_box{
             display: flex;
             bottom: 0;
             width: 100%;
