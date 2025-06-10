@@ -29,7 +29,7 @@
                 <br>
                 <div class="form_cell" style="display: flex; flex-direction: row;">
                     <input class="form_label"  type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
-                    <div [innerHTML]="'CONTACT.PRIVACY_TEXT' | translate"></div>
+                    <div style="width: calc(100% - 1em);" [innerHTML]="'CONTACT.PRIVACY_TEXT' | translate"></div>
                 </div>
                 @if (!message.valid && message.touched){
                     <span>Please enter a message</span>
