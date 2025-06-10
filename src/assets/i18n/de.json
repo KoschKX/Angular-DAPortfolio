@@ -114,5 +114,10 @@
             "TAGS": "JavaScript | HTML | CSS | PHP",
             "DESC": "WooCommerce verfügt über eingeschränkte Möglichkeiten zum Import und Export von Daten. Glücklicherweise ist es erweiterbar."
         }
+    },
+    "IMPRINT": {
+        "HEADLINE": "Impressum",
+        "CONTENT": "Dies ist das Impressum von Garys Portfolio. Es enthält rechtliche Informationen über die Website und deren Inhaber.",
+        "BACK": "Zurück"
     }
 }

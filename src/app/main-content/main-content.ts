@@ -10,10 +10,12 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
 
+import { ImprintComponent } from '../imprint/imprint.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, AboutMeComponent, FooterComponent, SkillsComponent, PortfolioComponent, ReferencesComponent, ContactComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, AboutMeComponent, FooterComponent, SkillsComponent, PortfolioComponent, ReferencesComponent, ContactComponent, ImprintComponent],
   templateUrl: './main-content.component.html',
   styleUrl: '../app.component.scss'
 })

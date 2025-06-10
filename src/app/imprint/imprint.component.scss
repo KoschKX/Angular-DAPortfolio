@@ -10,9 +10,6 @@
 /* === SECTION === */
 
     section{
-        width: calc(100% - 4em);
-        max-width: calc(1200px - 4em);
-        padding: 2em;
         margin: auto;
         position: relative;
         display: flex;
@@ -22,9 +19,5 @@
 
         position: relative;
 
-        .section_bg{
-            background-color: var(--colorE);
-            mix-blend-mode: luminosity;
-            z-index: -1;
-        }
+        color: var(--colorB);
     }

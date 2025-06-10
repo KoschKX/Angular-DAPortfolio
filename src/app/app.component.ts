@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from "./footer/footer";
 import { SubPageComponent } from "./subpage/subpage";
-import { ImprintContentComponent } from "./imprint-content/imprint-content";
 
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -19,7 +18,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     imports: [
     CommonModule,
     RouterOutlet,
-    ImprintContentComponent,
     FooterComponent,
     SubPageComponent,
     HttpClientModule,

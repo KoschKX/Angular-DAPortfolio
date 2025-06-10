@@ -119,5 +119,10 @@
             "TAGS": "C++ | Python | HLSL | GLSL",
             "DESC": "Ein Multiplayer-Kampf-Plattformer für Switch, PS4, Xbox, PC, Mac und Linux.WooCommerce kommt mit eingeschränkten Datenimport- und Exportmöglichkeiten. Glücklicherweise ist es erweiterbar."
         }
+    },
+    "IMPRINT":{
+        "HEADLINE": "Imprint",
+        "CONTENT": "This is the imprint of Gary's Portfolio. It contains legal information about the website and its owner.",
+        "BACK": "Back"
     }
 }
