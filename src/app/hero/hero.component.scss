@@ -131,9 +131,24 @@
             justify-content: flex-end ;
             height: 50%;
             width: 100%;
+
+            padding-top: 3em;
         }
         :host .two_col .col.right {
             height: 50%;
             width: 100%;
+        }
+    }
+
+    @media screen and (max-height: 800px) {
+        :host .two_col .col.left {
+            z-index: 1;
+        }
+        :host .two_col .col.right {
+            position: absolute;
+            width: 50% !important;
+            right: 0;
+            bottom: -4em;
+            z-index: 0;
         }
     }
