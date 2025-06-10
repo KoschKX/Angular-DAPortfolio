@@ -11,7 +11,7 @@ import { MainContentComponent } from './app/main-content/main-content';
 const routes: Routes = [
   { path: '', component: MainContentComponent },
   { path: ':slug', component: SubPageComponent},
-];
+]; 
 
 bootstrapApplication(AppComponent, {
   providers: [
