@@ -53,3 +53,6 @@
 
     12:00 
         Updated Background color. Linked About Me section to Contact section.
+
+    13:00
+        CSS for width 480px and smaller.
