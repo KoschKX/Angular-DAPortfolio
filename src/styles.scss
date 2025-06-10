@@ -116,8 +116,8 @@ body.fixed{
       }
 
       h1 {
-        font-size: clamp(2em, 13vw, 6em);
-        font-size: clamp(2em, 13vmin, 6em);
+        font-size: clamp(2em, 12vw, 6em);
+        font-size: clamp(2em, 12vmin, 6em);
         font-weight: 600; 
       }
       h2 {
@@ -304,3 +304,21 @@ body.fixed{
   body.ugly input[type="checkbox"]:checked:after {
     border-color: var(--colorFu);
   }
+
+
+  /* === RESPONSIVE === */
+
+   @media screen and (max-width: 480px) {
+      .buttonRow a{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 1em;
+
+        text-align: center;
+      }
+      .buttonRow a:last-child{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0em;
+      }
+   }
