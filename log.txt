@@ -46,3 +46,7 @@
 
     23:00
         Updated About Me section. Disabled contact form Submit Button until validation.
+
+10 Jun, 2025:
+    11:45 
+        Added Privacy Policy page. Fixed CSS bug in Hero section.
