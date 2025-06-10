@@ -42,4 +42,7 @@
         Updated Photo and About description.
 
     20:00
-        CSS bug fixes. Fonts and Colors now swappable.
+        CSS bug fixes. Fonts and Colors now swappable.CSS bug fixes. Fonts and Colors now swappable.
+
+    23:00
+        Updated About Me section. Disabled contact form Submit Button until validation.
