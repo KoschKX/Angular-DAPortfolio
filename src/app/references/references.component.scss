@@ -23,6 +23,9 @@
   flex: 1 1 calc(33.333% - 1em);
   box-sizing: border-box;
   min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .zitat_content{

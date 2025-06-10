@@ -75,6 +75,7 @@
         height: 10em;
         justify-content: space-between; 
         width: 100%;
+        z-index: 1;
     }
 
     .boxA .box_col {
@@ -94,6 +95,7 @@
 
     .boxB .box_col {
         width: 33%; text-align: left;
+        z-index: 0;
     }
 
     .form input[type="text"]{

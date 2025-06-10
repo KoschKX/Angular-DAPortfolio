@@ -238,6 +238,11 @@ body.fixed{
     pointer-events: none;
   }
 
+  [type="submit"][disabled]{
+    opacity: 0.5;    
+    pointer-events: none;
+  }
+
 /* === SVG === */
 
   .svg_layer{

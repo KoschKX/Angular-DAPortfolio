@@ -35,7 +35,9 @@
                     <span>Please enter a message</span>
                 }
                 <br><br>
-                <div style="width: 100%; text-align: center;"><button type="submit" value="submit">Drop a Line</button></div>
+                <div style="width: 100%; text-align: center;">
+                    <button type="submit" value="submit" [disabled]="!contactForm.valid">Drop a Line</button>
+                </div>
             </form>
         </div>
     </div>
@@ -45,9 +47,9 @@
             © Gary Angelone Jr. 2025
         </div>
         <div class="box_col footer" style="">
-            <a href="" style="margin-right: 1em;">{{ 'CONTACT.LEGAL' | translate }}</a>
-            <a href="" style="margin-right: 1em;">{{ 'CONTACT.LINKEDIN' | translate }}</a>
-            <a href="" style="margin-right: 0em;">{{ 'CONTACT.GITHUB' | translate }}</a>
+            <a href="./impressum" style="margin-right: 1em;">{{ 'CONTACT.LEGAL' | translate }}</a>
+            <a href="https://www.linkedin.com/in/gary-angelone-3209a71a/" target="_blank" style="margin-right: 1em;">{{ 'CONTACT.LINKEDIN' | translate }}</a>
+            <a href="https://github.com/KoschKX/" target="_blank" style="margin-right: 0em;">{{ 'CONTACT.GITHUB' | translate }}</a>
         </div>
     </div>
     <div class="boxB" style="display: flex; justify-content: space-between; width: 100%;">
