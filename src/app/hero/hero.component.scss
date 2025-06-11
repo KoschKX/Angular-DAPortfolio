@@ -1,114 +1,120 @@
-@import  './../../root.scss';
+@import './../../root.scss';
 
 :host {
-}
+    
+  /* === SECTION === */
+  section {
+    background-color: var(--colorA);
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
 
-/* === SECTION === */
-
-    :host section {
-
-        background-color: var(--colorA);
-
-        background-image: none;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 20%;
-        .title {
-            h1,  h2 { color: var(--colorB); }
-        }
+    .title {
+      h1,
+      h2 {
+        color: var(--colorB);
+      }
     }
+  }
 
-    :host .two_col {
-        margin: auto;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
+  .two_col {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 
-    :host .two_col .col.left {
-        align-items: flex-start; 
-        flex-direction: column; 
-        
-        width: 40%; 
+    .col {
+      &.left {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 40%;
         height: 80%;
-    }
-    :host .two_col .col.right {
-        align-items: flex-end; 
-        flex-direction: column; 
-        position: relative; 
+      }
+      &.right {
+        align-items: flex-end;
+        flex-direction: column;
+        position: relative;
         justify-content: flex-end;
-        width: 60%; 
-        bottom: -4em; 
+        width: 60%;
+        bottom: -4em;
+      }
     }
+  }
 
-/* === SPECIAL === */
-
-    :host .sealA svg {}
-
-    :host .sealA svg > g:nth-child(1),
-    :host .sealA svg > g:nth-child(2){
+  /* === SPECIAL === */
+  .sealA {
+    svg {
+      > g:nth-child(1),
+      > g:nth-child(2) {
         -webkit-animation-name: rotate;
         -webkit-animation-duration: 5s;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: linear;
         transform-origin: center;
-    }
-
-    :host .sealA svg > g:nth-child(1) path{
+      }
+      > g:nth-child(1) path {
         fill: var(--colorF);
-    }
-    :host .sealA svg > g:nth-child(2) path{
+      }
+      > g:nth-child(2) path {
         fill: var(--colorB);
-    }
-    :host .sealA svg > g:nth-child(3) path{
+      }
+      > g:nth-child(3) path {
         fill: var(--colorB);
+      }
     }
+  }
 
-    :host .sealB svg > g:nth-child(1) path{
+  .sealB {
+    svg {
+      > g:nth-child(1) path {
         fill: var(--colorE);
-    }
-    :host .sealB svg > g:nth-child(2) path{
+      }
+      > g:nth-child(2) path,
+      > g:nth-child(3) path {
         fill: var(--colorB);
+      }
     }
-    :host .sealB svg > g:nth-child(3) path{
-        fill: var(--colorB);
-    }
+  }
 
-/* === UGLY COLORS === */
+  /* === UGLY COLORS === */
+  body.ugly & {
+    section {
+      background-color: var(--colorAu);
 
-    body.ugly :host section {
-        background-color: var(--colorAu);
-        .title {
-            h1, h2 { color: var(--colorBu); }
+      .title {
+        h1,
+        h2 {
+          color: var(--colorBu);
         }
+      }
     }
-    
-    body.ugly :host .sealA svg > g:nth-child(1) path{
+
+    .sealA svg {
+      > g:nth-child(1) path {
         fill: var(--colorFu);
-    }
-    body.ugly :host .sealA svg > g:nth-child(2) path{
+      }
+      > g:nth-child(2) path,
+      > g:nth-child(3) path {
         fill: var(--colorBu);
-    }
-    body.ugly :host .sealA svg > g:nth-child(3) path{
-        fill: var(--colorBu);
+      }
     }
 
-    body.ugly :host .sealB svg > g:nth-child(1) path{
+    .sealB svg {
+      > g:nth-child(1) path {
         fill: var(--colorFu);
-    }
-    body.ugly :host .sealB svg > g:nth-child(2) path{
+      }
+      > g:nth-child(2) path,
+      > g:nth-child(3) path {
         fill: var(--colorBu);
+      }
     }
-    body.ugly :host .sealB svg > g:nth-child(3) path{
-        fill: var(--colorBu);
-    }
+  }
 
-
-/* === ANIMATION === */
-
+  /* === ANIMATION === */
   @-webkit-keyframes rotate {
     from {
       -webkit-transform: rotate(0deg);
@@ -118,37 +124,63 @@
     }
   }
 
+  /* === RESPONSIVE === */
+  @media screen and (max-width: 800px) {
+    .two_col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-/* === RESPONSIVE === */
+      .col {
+        &.left {
+          justify-content: center;
+          height: 50%;
+          width: 100%;
+          padding-top: 3em;
+        }
+        &.right {
+          width: 100%;
+          height: 60%;
+        }
+      }
 
-    @media screen and (max-width: 800px) {
-        :host .two_col {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; 
-        }
-        :host .two_col .col.left {
-            justify-content: center;
-            height: 50%;
-            width: 100%;
+      .col.left {
+        height: 40%;
+      }
 
-            padding-top: 3em;
-        }
-        :host .two_col .col.right {
-            height: 50%;
-            width: 100%;
-        }
+      .col.right img {
+        width: 200% !important;
+        margin-left: -50% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center !important;
+      }
     }
+  }
 
-    @media screen and (max-height: 800px) and (min-width: 801px){
-        :host .two_col .col.left {
-            z-index: 1;
+  @media screen and (max-height: 800px) and (min-width: 801px) {
+    .two_col {
+      .col {
+        &.left {
+          z-index: 1;
         }
-        :host .two_col .col.right {
-            position: absolute;
-            width: 50% !important;
-            right: 0;
-            bottom: -4em;
-            z-index: 0;
+        &.right {
+          position: absolute;
+          width: 50% !important;
+          right: 0;
+          bottom: -4em;
+          z-index: 0;
         }
+      }
     }
+  }
+
+  @media screen and (max-width: 480px) {
+    .two_col .col.right > div {
+      height: 100% !important;
+      width: calc(100% + 4em) !important;
+      left: 2em;
+      position: relative;
+    }
+  }
+}

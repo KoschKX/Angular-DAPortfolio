@@ -1,82 +1,87 @@
- 
-:host section{
-  justify-content: center;
-  display: flex; 
-  align-items: flex-start; 
+:host {
+  section {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--colorA);
 
-  background-color: var(--colorA);
-
-  .title h1{ color: var(--colorB); }
-}
-
-.rowA{
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.refs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-.zitat {
-  flex: 1 1 calc(33.333% - 1em);
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.zitat_content{
-   width: calc(100% - 4vw);
-   padding: 2vw; 
-   color: var(--colorB); 
-   border-radius: 0.5em; 
-   border: 1px solid var(--colorB);
- }
- 
- .zitat:first-child{
-   margin-left:0;
- }
-
- .zitat:last-child{
-   margin-right:0;
- }
-
- .profileLink{
-    display: block; 
-    width: 100%; 
-    padding: 1em 0; 
-    text-align: right;
- }
-
- .profileLink.none{
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: default;
- }
-
- /* === UGLY COLORS === */
-
-  body.ugly :host section {
-    background-color: var(--colorAu);
-
-    .title h1{ color: var(--colorBu); }
+    .title {
+      h1 {
+        color: var(--colorB);
+      }
+    }
   }
 
-  body.ugly .zitat_content{
-    color: var(--colorBu); 
-    border: 1px solid var(--colorBu);
+  .rowA {
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
- 
- @media screen and (max-width: 800px) {
-    .zitat{
-         width: 100%;
-         margin: 0;
-    }
 
-    .refs{
-        flex-direction: column;
+  .refs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    .zitat {
+      flex: 1 1 calc(33.333% - 1em);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .zitat_content {
+        width: calc(100% - 4vw);
+        padding: 2vw;
+        color: var(--colorB);
+        border-radius: 0.5em;
+        border: 1px solid var(--colorB);
+      }
+
+      .profileLink {
+        display: block;
+        width: 100%;
+        padding: 1em 0;
+        text-align: right;
+
+        &.none {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
+      }
     }
+  }
+
+  /* === UGLY COLORS === */
+  body.ugly & {
+    section {
+      background-color: var(--colorAu);
+
+      .title h1 {
+        color: var(--colorBu);
+      }
+    }
+    .zitat_content {
+      color: var(--colorBu);
+      border: 1px solid var(--colorBu);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .refs {
+      flex-direction: column;
+
+      .zitat {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
 }

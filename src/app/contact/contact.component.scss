@@ -1,279 +1,295 @@
-@import  './../../root.scss';
+@import './../../root.scss';
 
 :host {
   display: flex;
   justify-content: flex-end;
-}
 
-/* === SECTION === */
+  section {
+    display: flex;
+    align-items: flex-start;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    justify-content: center;
+    background-color: var(--colorD);
+    color: var(--colorB);
 
-    :host section .two_col {
-        margin: 0;
+    .title {
+      h1 {
+        font-weight: 600;
+        color: var(--colorE);
+      }
+      h2 {
+        color: var(--colorF);
+      }
     }
 
-    :host section {
-        display: flex; 
-        align-items: flex-start; 
-        
-        background-image: none;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 20%;
+    .two_col {
+      margin: 0;
 
-        justify-content: center;
-
-        background-color: var(--colorD); 
-        color: var(--colorB);
-
-        .title h1{ font-weight: 600; color: var(--colorE); }
-        .title h2{ color: var(--colorF); }
+      .col {
+        &.left {
+          position: relative;
+          display: block;
+          align-items: center;
+          flex-direction: column;
+          width: 50%;
+          height: 100%;
+          margin: 2em;
+          margin-left: 0em;
+        }
+        &.right {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
     }
 
-    :host section .two_col .col.left {
-        position: relative; 
-        display: block; 
-        align-items: center; 
-        flex-direction: column; 
-        width: 50%; 
-        height: 100%;
-
-        margin: 2em;
-        margin-left: 0em;
-    }
-    :host section .two_col .col.right {
-        position: relative; 
-        display: flex; 
-        justify-content: center;
-        flex-direction: column;
+    .form {
+      position: relative;
+      margin: 2em;
+      margin-right: 0;
     }
 
-/* === SPECIAL === */
+    .boxA {
+      height: 10em;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 1;
 
-    .skill{
-        color: var(--colorB);
+      .box_col {
+        width: 33%;
+        text-align: center;
         display: flex;
-        flex-direction: column;
-        align-content: center;
+        justify-content: center;
         align-items: center;
-        margin-bottom: 2em;
-    }
-    .skill_icon{
-        width: 4em;
-        height: 4em;
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-bottom: 1em;
+      }
     }
 
-    .form{
-        position: relative; 
-        margin: 2em;
-        margin-right: 0;
-    }
+    .boxB {
+      position: relative;
+      margin-top: -10em;
+      justify-content: space-between;
+      width: 100%;
 
-    .boxA{
-        height: 10em;
-        justify-content: space-between; 
-        width: 100%;
-        z-index: 1;
-    }
-
-    .boxA .box_col {
-        width: 33%; 
-        text-align: center; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-    }
-
-    .boxB{
-        position: relative;
-        margin-top: -10em;
-        justify-content: space-between; 
-        width: 100%;
-    }
-
-    .boxB .box_col {
-        width: 33%; text-align: left;
+      .box_col {
+        width: 33%;
+        text-align: left;
         z-index: 0;
+      }
+      img {
+        width: 100%;
+        margin: auto;
+      }
     }
 
-    .form input[type="text"]{
-        width: calc(100% - 2em);
-        color: var(--colorB);
+    .gear_box {
+      display: flex;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .skill {
+    color: var(--colorB);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+
+    &_icon {
+      width: 4em;
+      height: 4em;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .form {
+    input[type="text"] {
+      width: calc(100% - 2em);
+      color: var(--colorB);
+
+      &:focus {
+        outline: none;
+        border-color: var(--colorF);
+      }
+    }
+  }
+
+  .form_cell {
+    * {
+      user-select: none;
+      --webkit-user-select: none;
     }
 
-    .gear_box{
-        display: flex; 
-        bottom: 0; width: 100%; 
+    .form_label {
+      transition: color 0.3s;
     }
 
-    :host .seal3 svg > g:nth-child(1),
-    :host .seal3 svg > g:nth-child(2){
+    &:hover .form_label {
+      color: var(--colorF);
+    }
+
+    a {
+      color: var(--colorF) !important;
+
+      &:hover {
+        color: var(--colorB) !important;
+      }
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: var(--colorF);
+    }
+  }
+
+  .seal3 {
+    svg {
+      > g:nth-child(1),
+      > g:nth-child(2) {
         -webkit-animation-duration: 5s;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: linear;
         transform-origin: center;
-    }
-
-    :host .seal3 svg > g:nth-child(1){
+      }
+      > g:nth-child(1) {
         -webkit-animation-name: rotate;
         transform-origin: 90px 175px;
-    }
-
-    :host .seal3 svg > g:nth-child(2){
+        path {
+          fill: var(--colorA);
+        }
+      }
+      > g:nth-child(2) {
         -webkit-animation-name: rotateReverse;
-        transform-origin: 238.8px 131.5px
-    }
-
-    :host .seal3 svg > g:nth-child(1) path{
-        fill: var(--colorA);
-    }
-    :host .seal3 svg > g:nth-child(2) path{
-        fill: var(--colorF);
-    }
-
-    .form_cell *{
-        user-select: none;
-        --webkit-user-select: none
-    }
-
-    .form_cell .form_label{
-        transition: color 0.3s;
-    }
-
-    .form_cell:hover .form_label{
-        color: var(--colorF);
-    }
-
-    :host ::ng-deep .form_cell a {
-        color: var(--colorF) !important;
-    }
-    :host ::ng-deep .form_cell a:hover {
-        color: var(--colorB) !important;
-    }
-
-    .form_cell input[type="text"]:focus{
-        outline: none;
-        border-color: var(--colorF);
-    }
-
-/* === ANIMATION === */
-
-    @-webkit-keyframes rotate {
-        from {
-        -webkit-transform: rotate(0deg);
+        transform-origin: 238.8px 131.5px;
+        path {
+          fill: var(--colorF);
         }
-        to {
-        -webkit-transform: rotate(360deg);
-        }
+      }
     }
+  }
 
-    @-webkit-keyframes rotateReverse {
-        from {
-        -webkit-transform: rotate(360deg);
-        }
-        to {
-        -webkit-transform: rotate(0deg);
-        }
-    }
+  /* === UGLY COLORS === */
+  body.ugly & {
+    section {
+      background-color: var(--colorDu);
+      color: var(--colorBu);
 
-/* === UGLY COLORS === */
-
-    body.ugly :host section {
-        background-color: var(--colorDu); 
-        color: var(--colorBu);
-
-        .title h1{ font-weight: 600; color: var(--colorEu); }
-        h2{ color: var(--colorFu); }
-    }
-
-    body.ugly .form_cell:hover .form_label{
+      .title h1 {
+        font-weight: 600;
+        color: var(--colorEu);
+      }
+      h2 {
         color: var(--colorFu);
+      }
     }
 
-    body.ugly :host ::ng-deep .form_cell a {
+    .form_cell {
+      &:hover .form_label {
+        color: var(--colorFu);
+      }
+      a {
         color: var(--colorFu) !important;
-    }
-    body.ugly :host ::ng-deep .form_cell a:hover {
-        color: var(--colorBu) !important;
-    }
-
-    body.ugly :host .form_cell input[type="text"]:focus{
+        &:hover {
+          color: var(--colorBu) !important;
+        }
+      }
+      input[type="text"]:focus {
         border-color: var(--colorFu);
-    }
-    
-    body.ugly :host .seal3 svg > g:nth-child(1) path{
-        fill: var(--colorFu);
-    }
-    body.ugly :host .seal3 svg > g:nth-child(2) path{
-        fill: var(--colorAu);
+      }
     }
 
-    body.ugly :host .form_cell:hover .form_label{
-        color: var(--colorFu);
+    .seal3 {
+      svg {
+        > g:nth-child(1) path {
+          fill: var(--colorFu);
+        }
+        > g:nth-child(2) path {
+          fill: var(--colorAu);
+        }
+      }
     }
+  }
 
-
-/* === RESPONSIVE === */
-
-    @media screen and (max-width: 800px) {
-
-        :host section .two_col {
-            flex-direction: column;
-        }
-        
-        :host section .two_col .col.left {
-            width: 100%; 
-        }
-        :host section .two_col .col.right {
-            width: 100%; 
-        }
-
-        :host section .form{
-            margin-left: 0;
-            margin-right: 0;
-        }
-      
-        :host section .boxA{
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: column;
-
-            width: 100%;
-        }
-
-        :host section .boxA .box_col:first-child{
-            display: none;
-        }
-
-        :host section .boxA .footer{
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        :host section .boxB {
-            position: relative;
-            margin-top: 0em;
-            width: 100%;
-        }
-
-        :host section .box_col{
-            width: 100%;
-        }
-
-        :host section .boxB img{
-            width: 100%;
-            margin: auto;
-        }
-
-        :host section .gear_box{
-            display: flex;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-        }
-
+  /* === ANIMATION === */
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
     }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotateReverse {
+    from {
+      -webkit-transform: rotate(360deg);
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  /* === RESPONSIVE === */
+  @media screen and (max-width: 800px) {
+    section {
+      .two_col {
+        flex-direction: column;
+
+        .col {
+          &.left,
+          &.right {
+            width: 100%;
+          }
+        }
+      }
+
+      .form {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .boxA {
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .box_col:first-child {
+          display: none;
+        }
+
+        .footer {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+
+      .boxB {
+        position: relative;
+        margin-top: 0em;
+        width: 100%;
+      }
+
+      .box_col {
+        width: 100%;
+      }
+
+      .gear_box {
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

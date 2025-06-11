@@ -10,315 +10,303 @@ body.fixed{
 }
 
 /* === BASE === */
+body,
+.page_bg {
+  overflow-y: scroll;
+  margin: 0;
+  font-family: var(--fontB);
+  background-image: none;
+  background-color: var(--bgcolor);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
 
-   body,
-  .page_bg {
-    overflow-y: scroll;
-    margin: 0;
-    font-family: var(--fontB);
-    background-image: none;
-    background-color: var(--bgcolor);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 0;
+.fontA {
+  font-family: var(--fontA);
+}
+
+.fontB {
+  font-family: var(--fontB);
+}
+
+h1, h2 {
+  font-family: var(--fontA);
+}
+
+a {
+  color: var(--colorB);
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--colorF);
   }
+}
 
-  .fontA {
-    font-family: var(--fontA);
-  }
+button{
+  background: transparent;
+  border: solid 1px var(--colorB);
+  color: var(--colorB);
+  padding: 0.5em 1.5em;
+  border-radius: 2em;
+  font-size: 1em;
 
-  .fontB {
-    font-family: var(--fontB);
-  }
+  transition: background-color 0.3s;
+}
 
-  h1, h2 {
-    font-family: var(--fontA);
-  }
+button:hover{
+  background-color: var(--colorE);
+  cursor: pointer
+}
 
-  a {
-    color: var(--colorB);
-    text-decoration: none;
+.buttonRow a{
+  margin-right: 2em;
+}
+.buttonRow a:last-child {
+  margin-right: 0;
+}
 
-    cursor: pointer;
+.content
+{
+  min-height: calc( 100vh - 10em);
+}
 
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--colorF);
-    }
-  }
-
-  button{
-    background: transparent;
-    border: solid 1px var(--colorB);
-    color: var(--colorB);
-    padding: 0.5em 1.5em;
-    border-radius: 2em;
-    font-size: 1em;
-
-    transition: background-color 0.3s;
-  }
-
-  button:hover{
-    background-color: var(--colorE);
-    cursor: pointer
-  }
-
-  .buttonRow a{
-    margin-right: 2em;
-  }
-  .buttonRow a:last-child {
-    margin-right: 0;
-  }
-  
-  .content
-  {
-    min-height: calc( 100vh - 10em);
-  }
-
-/* === BACKGROUNDS === */
-  
-  .page_bg { 
-    overflow-y: hidden;
-  }
+/* === BACKGROUNDS === */  
+.page_bg { 
+  overflow-y: hidden;
+}
   
 /* === SECTION === */
+section{
+  width: calc(100% - (var(--padding) * 2));
+  max-width: var(--width);
 
-  section{
-    width: calc(100% - (var(--padding) * 2));
-    max-width: var(--width);
+  min-height: calc(100vh - 8em);
 
-    min-height: calc(100vh - 8em);
+  padding: var(--padding);
+  padding-top: 4em;
+  padding-bottom: 4em;
 
-    padding: var(--padding);
-    padding-top: 4em;
-    padding-bottom: 4em;
+  margin: auto;
 
-    margin: auto;
+  position: relative;
 
-    position: relative;
+  overflow: hidden;
 
-    overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  .title {
+    display: block;
+    
+    h1,
+    h2 {
+      line-height: 1em;
+      margin: 0;
+      font-weight: 100;
+    }
 
-    .title {
-      display: block;
-      
-      h1,
-      h2 {
-        line-height: 1em;
-        margin: 0;
-        font-weight: 100;
-      }
-
-      h1 {
-        font-size: clamp(2em, 12vw, 6em);
-        font-size: clamp(2em, 12vmin, 6em);
-        font-weight: 600; 
-      }
-      h2 {
-        font-size: clamp(1.25em, 7.5vw, 2.5em);
-        font-size: clamp(1.25em, 7.5vmin, 2.5em);
-      }
+    h1 {
+      font-size: clamp(2em, 12vw, 6em);
+      font-size: clamp(2em, 12vmin, 6em);
+      font-weight: 600; 
+    }
+    h2 {
+      font-size: clamp(1.25em, 7.5vw, 2.5em);
+      font-size: clamp(1.25em, 7.5vmin, 2.5em);
     }
   }
+}
 
-  section.fixed_height{
-    height: calc(100vh - 8em);
-  }
+section.fixed_height{
+  height: calc(100vh - 8em);
+}
 
-  section.fixed_height_desktop{
-    height: calc(100vh - 8em);
-  }
+section.fixed_height_desktop{
+  height: calc(100vh - 8em);
+}
 
-  section .two_col {
-    margin: auto;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+section .two_col {
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  .col{
+    width: 50%;
     height: 100%;
-    width: 100%;
-    .col{
-      width: 50%;
-      height: 100%;
-      display: flex;
-    }
-  }
-
-  section .row{
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 2em;
   }
+}
 
-  section .flt{
-    position: absolute;
-  }
+section .row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+section .flt{
+  position: absolute;
+}
 
 /* === NAVBAR === */
-
-  #navbar{
-    width: calc(100% - (var(--padding) * 2));
-    max-width: var(--width);
-    min-height: calc(100vh - 8em);
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+#navbar{
+  width: calc(100% - (var(--padding) * 2));
+  max-width: var(--width);
+  min-height: calc(100vh - 8em);
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
 /* === RESPONSIVE === */
-
-  @media screen and (max-width: 800px) {
-    .two_col {
-      display: flex;
-    }
-    .two_col .col{
-      display: flex;
-    }
-    section.fixed_height_desktop{
-      height: auto;
-    }
+@media screen and (max-width: 800px) {
+  .two_col {
+    display: flex;
   }
-
-  @media screen and (max-height: 640px) {
-      section {
-        min-height: calc(640px - 8em);
-      }
+  .two_col .col{
+    display: flex;
   }
+  section.fixed_height_desktop{
+    height: auto;
+  }
+}
 
+@media screen and (max-height: 640px) {
+    section {
+      min-height: calc(640px - 8em);
+    }
+}
 
 /* === FORMS === */
+input[type="text"] {
+    background: none;
+    border: none;
+    padding: 1em;
+    border-bottom: 1px solid var(--colorE);
+}
 
-  input[type="text"] {
-      background: none;
-      border: none;
-      padding: 1em;
-      border-bottom: 1px solid var(--colorE);
-  }
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid var(--colorF);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  outline: none;
+  transition: border-color 0.2s;
+}
 
-  input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    background: transparent;
-    margin: 0;
-    width: 1.25em;
-    height: 1.25em;
-    border: 1px solid var(--colorF);
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    vertical-align: middle;
-    outline: none;
-    transition: border-color 0.2s;
-  }
+input[type="checkbox"]:focus { }
 
-  input[type="checkbox"]:focus { }
+input[type="checkbox"]:checked:after {
+  content: '';
+  position: absolute;
+  left: 0.3em;
+  top: 0.1em;
+  width: 0.33em;
+  height: 0.5em;
+  border: 1px solid var(--colorF);
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
 
-  input[type="checkbox"]:checked:after {
-    content: '';
-    position: absolute;
-    left: 0.3em;
-    top: 0.1em;
-    width: 0.33em;
-    height: 0.5em;
-    border: 1px solid var(--colorF);
-    border-width: 0 3px 3px 0;
-    border-radius: 1px;
-    transform: rotate(45deg);
-    pointer-events: none;
-  }
-
-  [type="submit"][disabled]{
-    opacity: 0.5;    
-    pointer-events: none;
-  }
+[type="submit"][disabled]{
+  opacity: 0.5;    
+  pointer-events: none;
+}
 
 /* === SVG === */
-
-  .svg_layer{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
+.svg_layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 
 /* === UGLY COLORS === */
+body.ugly body,
+body.ugly .page_bg {
+  font-family: var(--fontBu);
+}
 
-  body.ugly body,
-  body.ugly .page_bg {
+body.ugly .fontA{
+  font-family: var(--fontAu);
+}
+
+body.ugly .fontB{
     font-family: var(--fontBu);
-  }
+}
 
-  body.ugly .fontA{
+body.ugly h1, 
+body.ugly h2 {
     font-family: var(--fontAu);
+}
+
+body.ugly,
+body.ugly .page_bg {
+  background-color: var(--bgcoloru);
+}
+
+body.ugly a {
+  color: var(--colorBu);
+  &:hover {
+    color: var(--colorFu);
   }
-  
-  body.ugly .fontB{
-      font-family: var(--fontBu);
+}
+
+body.ugly button{
+  border: solid 1px var(--colorBu);
+  color: var(--colorBu);
+}
+
+body.ugly button:hover{
+  background-color: var(--colorFu);
+}
+
+body.ugly input[type="text"] {
+    border-bottom-color: var(--colorEu);
+}
+
+body.ugly input[type="checkbox"] {
+  border-color: var(--colorFu);
+}
+
+body.ugly input[type="checkbox"]:checked:after {
+  border-color: var(--colorFu);
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 480px) {
+  .buttonRow a{
+    display: block;
+    margin-right: 0;
+    margin-bottom: 1em;
+
+    text-align: center;
   }
-
-  body.ugly h1, 
-  body.ugly h2 {
-      font-family: var(--fontAu);
+  .buttonRow a:last-child{
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0em;
   }
-
-
-  body.ugly,
-  body.ugly .page_bg {
-    background-color: var(--bgcoloru);
-  }
-
-  body.ugly a {
-    color: var(--colorBu);
-    &:hover {
-      color: var(--colorFu);
-    }
-  }
-
-  body.ugly button{
-    border: solid 1px var(--colorBu);
-    color: var(--colorBu);
-  }
-
-  body.ugly button:hover{
-    background-color: var(--colorFu);
-  }
-
-  body.ugly input[type="text"] {
-      border-bottom-color: var(--colorEu);
-  }
-
-  body.ugly input[type="checkbox"] {
-    border-color: var(--colorFu);
-  }
-
-  body.ugly input[type="checkbox"]:checked:after {
-    border-color: var(--colorFu);
-  }
-
-
-  /* === RESPONSIVE === */
-
-   @media screen and (max-width: 480px) {
-      .buttonRow a{
-        display: block;
-        margin-right: 0;
-        margin-bottom: 1em;
-
-        text-align: center;
-      }
-      .buttonRow a:last-child{
-        display: block;
-        margin-right: 0;
-        margin-bottom: 0em;
-      }
-   }
+}

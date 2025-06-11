@@ -1,314 +1,292 @@
-@import  './../../root.scss';
+@import './../../root.scss';
 
 :host {
   display: flex;
   justify-content: flex-end;
-}
 
-/* === SECTION === */
+  .skill {
+    color: var(--colorB);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+  }
 
-    .skill{
-        color: var(--colorB);
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        margin-bottom: 2em;
-    }
-    .skillIcon{
-        width: 4em;
-        height: 4em;
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
+  .skillIcon {
+    width: 4em;
+    height: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
 
-    :host section {
+  section {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--colorE);
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    justify-content: center;
 
-        display: flex; 
-        align-items: flex-start; 
-        background-color: var(--colorE);
-
-        background-image: none;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 20%;
-
-        justify-content: center;
-
-    }
-
-    :host section .two_col.rowA {
+    .two_col {
+      &.rowA {
         height: auto;
-
         align-items: center;
         display: flex;
         justify-content: flex-start;
-
         margin: 0;
         margin-bottom: 2.5vw;
-        
-    }
-    :host section .two_col.rowB{
-        justify-content: space-between; 
+
+        .col {
+          &.left {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: auto;
+            margin-right: 4em;
+          }
+          &.right {
+            flex-direction: column;
+            justify-content: center;
+            width: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+          }
+        }
+      }
+      &.rowB {
+        justify-content: space-between;
         height: auto;
         align-items: flex-end;
         margin: 0;
-    }
 
-    :host section .two_col.rowA .col.left {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: auto;
-
-        margin-right: 4em;
-    }
-    :host section .two_col.rowA .col.right {
-        flex-direction: column; 
-        justify-content: center; 
-        width: auto;
-
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    :host section .two_col.rowB .col.left {
-       align-items: flex-end; 
-       align-items: center;
-       width: 40%;
-    }
-    :host section .two_col.rowB .col.right {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: calc(60%);
-        position: relative;
-    }
-
-/* === SPECIAL === */
-
-     .projectNav{
-        display: flex;
-        justify-content: space-between;
-        width: calc(100% - 2em);
-        margin: 2em;
-        margin-right: 0;
-        margin-top: 0;
-     }
-
-    :host .emoji{
-        width: 1.5em;
-        height: 1.5em;
-        -webkit-animation-name: bounce ;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        transform-origin: center;
-
-        image-rendering: optimizeQuality;
-    }
-
-    :host .sealC svg > g:nth-child(1){
-        -webkit-animation-name: rotate;
-        -webkit-animation-duration: 5s;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        transform-origin: center;
-    }
-
-    :host .sealC svg > g:nth-child(1) path{
-        fill: var(--colorF);
-    }
-
-    :host .sealC{
-        position: absolute;
-        width: 33%;
-        height: 33%;
-        left: 0;
-        bottom: 0;
-        z-index: 0;
-    }
-
-    .projects{
-        width: 100%;
-        height: 100%;
-        background-color: var(--colorE);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: solid 1px var(--colorD);
-        border-radius: 0.5em;
-
-        overflow: hidden;
-
-        position: relative;
-    }
-    
-    .project{
-        position: absolute;
-        width: calc(100% - 10%);
-        height: calc(100% - 10%);
-
-        height: 40vh;
-
-        padding: 5%;
-        z-index: 1;
-
-        display: none;
-    }
-
-    .project img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .project.active{
-        position: relative;
-        display: block;
-    }
-
-    :host .projectHolder{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-
-    .projectDesc{
-        display: none; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: stretch;
-        padding: 2em; 
-        margin: 2em;
-        margin-right: 0;
-        min-height: calc(100% - 12em);
-
-        color: var(--colorB);
-        background-color: var(--colorD);
-    }
-
-    .projectTech{
-        color: var(--colorE); 
-        font-size: smaller;
-    }
-
-    .projectDesc.active{
-        display: flex;
-    }
-
-    a.projectButton {
-        color: var(--colorD);
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-    a.projectButton:hover{
-        color: var(--colorF);
-    }
-
-/* === BUTTON ARROWS === */
-
-    .buttonArrow{
-        height: 1em;
-        width: 1em;
-        margin-left: 0.25em;
-        vertical-align: text-bottom;
-
-        transform-origin: center;
-        transition: transform 0.3s;
-    }
-    svg.buttonArrow > g:nth-child(1) path{
-        fill: var(--colorB);
-    }
-    button:hover svg.buttonArrow{
-        transform: rotate(-45deg);
-    }
-
-/* === UGLY COLORS === */
-
-    body.ugly :host section {
-        background-color: var(--colorBu);
-    }
-    
-    body.ugly :host a.projectButton {
-        color: var(--colorDu);
-    }
-
-    body.ugly :host .projects{
-        background-color: var(--colorEu);
-        border: solid 1px var(--colorDu);
-    }
-
-    body.ugly :host .projectTech{
-        color: var(--colorAu); 
-    }
-
-    body.ugly :host .projectDesc{
-        color: var(--colorBu);
-        background-color: var(--colorDu);
-    }
-
-    body.ugly :host .sealC svg > g:nth-child(1) path{
-        fill: var(--colorFu);
-    }
-
-
-/* === ANIMATION === */
-
-    @-webkit-keyframes rotate {
-        from {
-        -webkit-transform: rotate(0deg);
-        }
-        to {
-        -webkit-transform: rotate(360deg);
-        }
-    }
-
-    @-webkit-keyframes bounce {
-        from {
-        -webkit-transform: translate((0,0em));
-        }
-        50%{
-        -webkit-transform: translate((0,-0.5em));
-        }
-        to {
-        -webkit-transform: translate((0,0));
-        }
-    }
-  
-
-/* === RESPONSIVE === */
-
-    @media screen and (max-width: 800px) {
-
-        :host section .two_col.rowA,
-        :host section .two_col.rowB{
+        .col {
+          &.left {
+            align-items: center;
+            width: 40%;
+          }
+          &.right {
+            display: flex;
+            justify-content: center;
             flex-direction: column;
+            width: 60%;
+            position: relative;
+          }
         }
-
-        :host section .two_col.rowA .col.left,
-        :host section .two_col.rowA .col.right,
-        :host section .two_col.rowB .col.left,
-        :host section .two_col.rowB .col.right{
-            width: 100%;
-        }
-
-        :host section .two_col.rowA .col.left{
-            margin-right: 0em; 
-        }
-
-        :host .projectDesc,
-        :host .projectNav{
-            margin-left: 0;
-            margin-right: 0;
-        }
-        :host .projectNav{
-            width: 100%;
-        }
+      }
     }
+  }
+
+  .projectNav {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+    margin: 2em;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .emoji {
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    transform-origin: center;
+    image-rendering: optimizeQuality;
+  }
+
+  .sealC {
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+
+    svg > g:nth-child(1) {
+      -webkit-animation-name: rotate;
+      -webkit-animation-duration: 5s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      transform-origin: center;
+
+      path {
+        fill: var(--colorF);
+      }
+    }
+  }
+
+  .projects {
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorE);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--colorD);
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .projectHolder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .project {
+    position: absolute;
+    width: calc(100% - 10%);
+    height: 40vh;
+    padding: 5%;
+    z-index: 1;
+    display: none;
+
+    &.active {
+      position: relative;
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .projectDesc {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2em;
+    margin: 2em;
+    margin-right: 0;
+    min-height: calc(100% - 12em);
+    color: var(--colorB);
+    background-color: var(--colorD);
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .projectTech {
+    color: var(--colorE);
+    font-size: smaller;
+  }
+
+  a.projectButton {
+    color: var(--colorD);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+
+    &:hover {
+      color: var(--colorF);
+    }
+  }
+
+  .buttonArrow {
+    height: 1em;
+    width: 1em;
+    margin-left: 0.25em;
+    vertical-align: text-bottom;
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+
+  svg.buttonArrow > g:nth-child(1) path {
+    fill: var(--colorB);
+  }
+
+  button:hover svg.buttonArrow {
+    transform: rotate(-45deg);
+  }
+
+  /* === UGLY COLORS === */
+  body.ugly & {
+    section {
+      background-color: var(--colorBu);
+    }
+    a.projectButton {
+      color: var(--colorDu);
+    }
+    .projects {
+      background-color: var(--colorEu);
+      border: solid 1px var(--colorDu);
+    }
+    .projectTech {
+      color: var(--colorAu);
+    }
+    .projectDesc {
+      color: var(--colorBu);
+      background-color: var(--colorDu);
+    }
+    .sealC svg > g:nth-child(1) path {
+      fill: var(--colorFu);
+    }
+  }
+
+  /* === ANIMATION === */
+  @-webkit-keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes bounce {
+    from {
+      -webkit-transform: translate(0, 0em);
+    }
+    50% {
+      -webkit-transform: translate(0, -0.5em);
+    }
+    to {
+      -webkit-transform: translate(0, 0);
+    }
+  }
+
+  /* === RESPONSIVE === */
+  @media screen and (max-width: 800px) {
+    section {
+      .two_col {
+        &.rowA,
+        &.rowB {
+          flex-direction: column;
+        }
+        .col {
+          &.left,
+          &.right {
+            width: 100% !important;
+          }
+        }
+      }
+      .two_col.rowA .col.left {
+        margin-right: 0em;
+      }
+    }
+    .projectDesc,
+    .projectNav {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .projectNav {
+      width: 100%;
+    }
+  }
+}
