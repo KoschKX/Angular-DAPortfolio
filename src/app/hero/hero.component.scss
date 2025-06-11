@@ -158,6 +158,34 @@
     }
   }
 
+  @media screen and (max-width: 480px) {
+    .two_col .col.right > div {
+      height: 100% !important;
+      width: calc(100% + 4em) !important;
+      left: 2em;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-height: 800px) and (max-width: 800px) {
+    .two_col {
+      .col {
+        &.left {
+            height: 50%;
+            position: absolute;
+            top: -2em;
+        }
+        &.right {
+          position: absolute;
+          width: 50% !important;
+          right: 0;
+          bottom: -4em;
+          z-index: 0;
+        }
+      }
+    }
+}
+
   @media screen and (max-height: 800px) and (min-width: 801px) {
     .two_col {
       .col {
@@ -175,12 +203,4 @@
     }
   }
 
-  @media screen and (max-width: 480px) {
-    .two_col .col.right > div {
-      height: 100% !important;
-      width: calc(100% + 4em) !important;
-      left: 2em;
-      position: relative;
-    }
-  }
 }
