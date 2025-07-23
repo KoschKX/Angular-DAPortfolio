@@ -1,2 +1,2 @@
 #!/bin/bash
-ng build Portfolio --configuration=production
+ng build Portfolio --configuration=production --output-hashing=none
