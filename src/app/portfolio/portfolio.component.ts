@@ -90,6 +90,17 @@ export class PortfolioComponent {
       '', 
       '',
     ],
+    [
+      'PROJECTS.JOIN.TITLE', 
+      './assets/img/screenshot_projectH.jpg', 
+      './assets/img/icon_projectA.svg', 
+      'PROJECTS.JOIN.TAGS', 
+      'PROJECTS.JOIN.DESC',
+      'PORTFOLIO.LIVE', 
+      'https://garyangelonejr.me/projects/join/', 
+      'PORTFOLIO.GITHUB', 
+      'https://github.com/KoschKX/Join',
+    ],
   ];
 
   currentProject: number = 0;
