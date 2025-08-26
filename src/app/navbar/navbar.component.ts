@@ -10,6 +10,30 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements AfterViewInit {
+  @ViewChild('navRef') navRef!: ElementRef<HTMLElement>;
+  
+  /** HANDLE INVERTED COLORS */
+  handleInvertedColors() {
+    const invertElements = Array.from(document.querySelectorAll('.invert')) as HTMLElement[];
+    const firstSectionTheme = this.anchors.length > 0 ? this.anchors[0].getAttribute('theme') || 'light' : 'light';
+    invertElements.forEach(el => {
+      el.classList.remove('light');
+      el.classList.remove('dark');
+      const elRect = el.getBoundingClientRect();
+      const elCenter = elRect.top + elRect.height / 2;
+      let themed = false;
+      for (const section of this.anchors) {
+        const sectionRect = section.getBoundingClientRect();
+        if (elCenter >= sectionRect.top && elCenter <= sectionRect.bottom) {
+          const theme = section.getAttribute('theme') || firstSectionTheme;
+          el.classList.add(theme);
+          themed = true;
+          break;
+        }
+      }
+      if (!themed) { el.classList.add(firstSectionTheme); }
+    });
+  }
   
   currentLang = 'en';
 
@@ -33,12 +57,42 @@ export class NavbarComponent implements AfterViewInit {
   activeSection: string | null = null;
   anchors: HTMLElement[] = [];
   dots: string[] = [];
+  private lastWheelTime = 0;
   theme: string = "light";
   top: number = 0;
 
-  @ViewChild('navRef') navRef!: ElementRef<HTMLElement>;
+  /** HANDLE MOUSE WHEEL */
+  private wheelHandler = (event: WheelEvent) => {
+    if (!this.anchors || this.anchors.length === 0) {
+      return;
+    }
+    // Debounce
+    const now = Date.now();
+    if (now - this.lastWheelTime < 100) {
+      return;
+    }
+    this.lastWheelTime = now;
 
-  /** INITIALIZE BY ADDING THE DOTS AND CHECK THE SCROLLING FOR THE FIRST TIME */  
+    // If activeSection is null, default to first section
+    let currentIndex = this.anchors.findIndex(a => a.id === this.activeSection);
+    if (currentIndex === -1) {
+      currentIndex = 0;
+    }
+    let targetIndex = currentIndex;
+    if (event.deltaY > 0) {
+      // Scroll down: next section
+      targetIndex = Math.min(currentIndex + 1, this.anchors.length - 1);
+    } else if (event.deltaY < 0) {
+      // Scroll up: previous section
+      targetIndex = Math.max(currentIndex - 1, 0);
+    }
+    if (targetIndex !== currentIndex) {
+      const targetId = this.anchors[targetIndex].id;
+      this.scrollToElement(targetId, true);
+      event.preventDefault();
+    }
+  };
+
   ngAfterViewInit(): void {
     this.anchors = Array.from(document.querySelectorAll('section')).filter(section => section.id !== 'navbar') as HTMLElement[];
     setTimeout(() => {
@@ -48,6 +102,10 @@ export class NavbarComponent implements AfterViewInit {
         this.handleInvertedColors();
       });
     });
+    document.addEventListener('wheel', this.wheelHandler, { passive: false });
+  }
+  ngOnDestroy(): void {
+    document.removeEventListener('wheel', this.wheelHandler);
   }
 
   /** TOGGLE THE DROP DOWN MENU */
@@ -72,41 +130,18 @@ export class NavbarComponent implements AfterViewInit {
 
   /** FIND THE ACTIVE SECTION */
   findActiveSection() {
-      let closestId: string = "";
-      let minDistance = Number.POSITIVE_INFINITY;
-      let activeSection: string = "";
-      this.anchors.forEach(anchor => {
-        const rect = anchor.getBoundingClientRect();
-        const distance = Math.abs(rect.top);
-        if (rect.top - 1 <= 0 && distance < minDistance) {  minDistance = distance; closestId = anchor.id; }
-      });
-      activeSection = closestId;
-      if (!activeSection || activeSection == "navbar") { activeSection = "hero"; }
-      this.renderer.setAttribute(document.body, 'data-active-section', activeSection);
-      return activeSection;
-  }
-
-  /** HANDLE INVERTED COLORS */
-  handleInvertedColors() {
-    const invertElements = Array.from(document.querySelectorAll('.invert')) as HTMLElement[];
-    const firstSectionTheme = this.anchors.length > 0 ? this.anchors[0].getAttribute('theme') || 'light' : 'light';
-    invertElements.forEach(el => {
-      el.classList.remove('light');
-      el.classList.remove('dark');
-      const elRect = el.getBoundingClientRect();
-      const elCenter = elRect.top + elRect.height / 2;
-      let themed = false;
-      for (const section of this.anchors) {
-        const sectionRect = section.getBoundingClientRect();
-        if (elCenter >= sectionRect.top && elCenter <= sectionRect.bottom) {
-          const theme = section.getAttribute('theme') || firstSectionTheme;
-          el.classList.add(theme);
-          themed = true;
-          break;
-        }
-      }
-      if (!themed) { el.classList.add(firstSectionTheme); }
+    let closestId: string = "";
+    let minDistance = Number.POSITIVE_INFINITY;
+    let activeSection: string = "";
+    this.anchors.forEach(anchor => {
+      const rect = anchor.getBoundingClientRect();
+      const distance = Math.abs(rect.top);
+      if (rect.top - 1 <= 0 && distance < minDistance) {  minDistance = distance; closestId = anchor.id; }
     });
+    activeSection = closestId;
+    if (!activeSection || activeSection == "navbar") { activeSection = "hero"; }
+    this.renderer.setAttribute(document.body, 'data-active-section', activeSection);
+    return activeSection;
   }
 
   /** STICK NAV BAR TO SECTION TOP */
@@ -121,9 +156,9 @@ export class NavbarComponent implements AfterViewInit {
   /** HANDLE WINDOW RESIZING */
   @HostListener('window:resize', ['$event'])
     onResize(event: Event) {
-    if(document.body.classList.contains('fixed') && this.activeSection){
-      this.scrollToElement(this.activeSection);
-    }
+    //if(document.body.classList.contains('fixed') && this.activeSection){
+      this.scrollToElement(this.activeSection || 'hero');
+    //}
   }
 
   /** FORCE SCROLL TO ELEMENT */

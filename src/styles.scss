@@ -171,6 +171,15 @@ section .flt{
 }
 
 /* === RESPONSIVE === */
+
+/* DISABLE SCROLLING ON DESKTOP */
+  @media screen and (min-width: 801px) {
+    body,
+    .page_bg {
+      overflow-y: hidden;
+    }
+  }
+
 @media screen and (max-width: 800px) {
   .two_col {
     display: flex;

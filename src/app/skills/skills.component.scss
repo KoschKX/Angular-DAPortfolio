@@ -57,6 +57,7 @@
     margin: 0 5% 2.5% 5%;
     margin-right: 0;
     font-weight: 100;
+    font-size: small;
   }
 
   .skill_icon {
@@ -149,6 +150,14 @@
     .skill {
       width: 20%;
       margin: 0 2.5% 2.5% 2.5%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    section {
+      .skill {
+        width: 25%;
+        margin: 0 2.5% 2.5% 2.5%;
+      }
     }
   }
 }
