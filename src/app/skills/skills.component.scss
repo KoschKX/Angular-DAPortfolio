@@ -70,6 +70,7 @@
 
   .boxA {
     width: 100%;
+    pointer-events: none;
   }
 
   .boxB {
@@ -119,11 +120,35 @@
   }
 
   /* === ANIMATION === */
+
+  .skill_icon:hover {
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    transform-origin: center;
+  }
+
+    @-webkit-keyframes grow {
+  0% {
+        -webkit-transform: scale(1);
+      }
+      50% {
+        -webkit-transform: scale(1.25);
+      }
+      100% {
+        -webkit-transform: scale(1);
+      }
+  }
+
+
   @-webkit-keyframes rotate {
     from {
+      transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
     }
     to {
+      transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
     }
   }
