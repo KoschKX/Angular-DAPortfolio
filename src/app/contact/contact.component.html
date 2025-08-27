@@ -14,26 +14,34 @@
                 <div style="display: flex; justify-content: space-between;">
                     <div class="form_cell" style="margin-right: 1em;">
                         <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.NAME_LABEL' | translate }}</span>
-                        <input name="name" [(ngModel)]="contactData.name" type="text" [placeholder]="'CONTACT.NAME_PLACEHOLDER' | translate" />
+                                                <input name="name" #name="ngModel" [(ngModel)]="contactData.name" type="text"
+                                                    [placeholder]="(name.invalid && name.touched && !nameFocused) ? ('CONTACT.NAME_INVALID' | translate) : ('CONTACT.NAME_PLACEHOLDER' | translate)" required
+                                                    [class.invalid-placeholder]="name.invalid && name.touched && !nameFocused"
+                                                    (focus)="nameFocused = true" (blur)="nameFocused = false" />
                     </div>
                     <div class="form_cell">
                         <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.EMAIL_LABEL' | translate }}</span>
-                        <input name="email" [(ngModel)]="contactData.email" type="text" [placeholder]="'CONTACT.EMAIL_PLACEHOLDER' | translate" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+                                                <input name="email" #email="ngModel" [ngModel]="(email.invalid && email.touched && !emailFocused) ? '' : contactData.email" (ngModelChange)="contactData.email = $event" type="text"
+                                                    [placeholder]="(email.invalid && email.touched && !emailFocused) ? ('CONTACT.EMAIL_INVALID' | translate) : ('CONTACT.EMAIL_PLACEHOLDER' | translate)"
+                                                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                                                    [class.invalid-placeholder]="email.invalid && email.touched && !emailFocused"
+                                                    (focus)="emailFocused = true" (blur)="emailFocused = false" />
                     </div>
                 </div>
                 <br>
                 <div class="form_cell" style="display: flex; flex-direction: column;">
                     <span class="form_label" style="margin-left: 0.75em;">{{ 'CONTACT.MESSAGE_LABEL' | translate }}</span>
-                    <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text" [placeholder]="'CONTACT.MESSAGE_PLACEHOLDER' | translate" />
+                                        <input name="message" #message="ngModel" [(ngModel)]="contactData.message" type="text"
+                                            [placeholder]="(message.invalid && message.touched && !messageFocused) ? ('CONTACT.MESSAGE_INVALID' | translate) : ('CONTACT.MESSAGE_PLACEHOLDER' | translate)" required
+                                            [class.invalid-placeholder]="message.invalid && message.touched && !messageFocused"
+                                            (focus)="messageFocused = true; message.control.markAsTouched();" (blur)="messageFocused = false" />
                 </div>
                 <br>
                 <div class="form_cell" style="display: flex; flex-direction: row;">
-                    <input class="form_label"  type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
+                    <input class="form_label"  type="checkbox" name="privacy" #privacy="ngModel" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
+                    <span *ngIf="privacy.invalid && privacy.touched" class="hint">Please accept the privacy policy</span>
                     <div style="width: calc(100% - 1em);" [innerHTML]="'CONTACT.PRIVACY_TEXT' | translate"></div>
                 </div>
-                @if (!message.valid && message.touched){
-                    <span>Please enter a message</span>
-                }
                 <br><br>
                 <div style="width: 100%; text-align: center;">
                     <button type="submit" value="submit" [disabled]="!contactForm.valid">Drop a Line</button>

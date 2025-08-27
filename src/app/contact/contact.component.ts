@@ -1,17 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  nameFocused = false;
+  emailFocused = false;
+  messageFocused = false;
 
   constructor(private http: HttpClient) {}
 
@@ -38,10 +42,10 @@ export class ContactComponent {
             console.log('send post complete');
             ngForm.resetForm();
           }
-        
       });
     } else {
-       ngForm.resetForm();
+      // Mark all controls as touched to show validation hints
+      Object.values(ngForm.controls).forEach(control => control.markAsTouched());
     }
   }
 

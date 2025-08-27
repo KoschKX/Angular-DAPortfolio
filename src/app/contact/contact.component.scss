@@ -1,3 +1,8 @@
+// Orange placeholder for invalid message input
+.invalid-placeholder::placeholder {
+  color: var(--colorF) !important;
+  opacity: 1;
+}
 @import './../../root.scss';
 
 :host {
