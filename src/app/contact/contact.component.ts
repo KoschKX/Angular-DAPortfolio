@@ -44,6 +44,7 @@ export class ContactComponent {
           }
       });
     } else {
+      // VALIDATiON HINTS
       Object.values(ngForm.controls).forEach(control => control.markAsTouched());
     }
   }
