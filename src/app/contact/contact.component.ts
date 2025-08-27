@@ -44,7 +44,6 @@ export class ContactComponent {
           }
       });
     } else {
-      // Mark all controls as touched to show validation hints
       Object.values(ngForm.controls).forEach(control => control.markAsTouched());
     }
   }
