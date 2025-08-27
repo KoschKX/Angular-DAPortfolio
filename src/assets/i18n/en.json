@@ -24,7 +24,7 @@
         "MESSAGE_LABEL": "How can I help you?",
     "MESSAGE_PLACEHOLDER": "Hello, I am interested in...",
     "MESSAGE_INVALID": "What do you want to develop?",
-        "PRIVACY_TEXT": "I've read the <a href='./privacy'>privacy policy</a> and agree to the processing of my data.",
+        "PRIVACY_TEXT": "I've read the <a href='./privacy' class='reverse_link_color'>privacy policy</a> and agree to the processing of my data.",
         "MESSAGE_REQUIRED": "Please enter a message",
         "SUBMIT": "Drop a Line",
         "LEGAL": "Imprint",

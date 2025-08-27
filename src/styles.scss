@@ -47,6 +47,13 @@ a {
     color: var(--colorF);
   }
 }
+a.reverse_link_color {
+  color: var(--colorF);
+  &:hover {
+    color: var(--colorB);
+  }
+}
+
 
 button{
   background: transparent;
@@ -280,6 +287,12 @@ body.ugly a {
   color: var(--colorBu);
   &:hover {
     color: var(--colorFu);
+  }
+}
+body.ugly a.reverse_link_color {
+  color: var(--colorFu);
+  &:hover {
+    color: var(--colorBu);
   }
 }
 
