@@ -63,9 +63,12 @@ export class NavbarComponent implements AfterViewInit {
 
   /** HANDLE MOUSE WHEEL */
   private wheelHandler = (event: WheelEvent) => {
-    if (!this.anchors || this.anchors.length === 0) {
-      return;
-    }
+      if (window.innerWidth < 800) {
+        return;
+      }
+      if (!this.anchors || this.anchors.length === 0) {
+        return;
+      }
     // Debounce
     const now = Date.now();
     if (now - this.lastWheelTime < 100) {
