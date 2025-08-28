@@ -130,7 +130,7 @@
     },
     "IMPRINT":{
         "HEADLINE": "Imprint",
-        "CONTENT": "This is the imprint of Gary's Portfolio. It contains legal information about the website and its owner.",
+        "CONTENT": "<p>According to § 5 TMG</p> <h2>Gary Michael Angelone jr.</h2> <p>Söflinger Strasse 169<br> 89077 Ulm</p> <h2>Contact:</h2> <p>Telephone: 0176-51806951<br> Email: garyangelone@gmail.com</p> <h2>Editor:</h2> <p>Gary Michael Angelone jr., Ulm</p> <h2>Programming:</h2> <p>Gary Michael Angelone jr.</p>",
         "BACK": "Back"
     }
 }
