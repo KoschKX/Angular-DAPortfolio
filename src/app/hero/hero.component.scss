@@ -15,6 +15,9 @@
       h2 {
         color: var(--colorB);
       }
+      h1{
+        font-size: clamp(2em, 20vw, 7rem);
+      }
     }
   }
 

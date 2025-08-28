@@ -11,7 +11,7 @@
 
   section {
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between !important;
     background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +32,7 @@
 
     .two_col {
       margin: 0;
+      margin-top: 4em;
 
       .col {
         &.left {
@@ -247,6 +248,7 @@
     section {
       .two_col {
         flex-direction: column;
+        margin-top: 0em;
 
         .col {
           &.left,
