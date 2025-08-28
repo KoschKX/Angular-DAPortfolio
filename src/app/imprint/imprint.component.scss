@@ -21,3 +21,29 @@
 
         color: var(--colorB);
     }
+
+.scroll-box {
+    max-height: 30em;
+    overflow-y: auto;
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 2em;
+    margin-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 8px;
+}
+.scroll-box::-webkit-scrollbar-track {
+    background: transparent;
+}

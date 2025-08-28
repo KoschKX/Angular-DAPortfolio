@@ -4,7 +4,9 @@
         <h1>{{'PRIVACY.HEADLINE' |  translate }}</h1>
     </div>
 
-    <p>{{'PRIVACY.CONTENT' |  translate }}</p>
+        <div class="scroll-box">
+            <p [innerHTML]="'PRIVACY.CONTENT' | translate"></p>
+        </div>
 
     <a href="./"><< {{'IMPRINT.BACK' |  translate }} </a>
 

@@ -3,8 +3,9 @@
     <div class="title">
         <h1>{{'IMPRINT.HEADLINE' |  translate }}</h1>
     </div>
-
-    <p>{{'IMPRINT.CONTENT' |  translate }}</p>
+    <div class="scroll-box">
+        <p [innerHTML]="'IMPRINT.CONTENT' | translate"></p>
+    </div>
 
     <a href="./"><< {{'IMPRINT.BACK' |  translate }} </a>
 
