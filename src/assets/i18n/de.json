@@ -27,6 +27,7 @@
         "PRIVACY_TEXT": "Ich habe die <a href='./privacy' class='reverse_link_color'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
         "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein",
         "SUBMIT": "Nachricht senden",
+        "SUCCESS": "Danke! Deine Nachricht wurde erfolgreich versendet.",
         "LEGAL": "Impressum",
         "LINKEDIN": "LinkedIn",
         "GITHUB": "GitHub"

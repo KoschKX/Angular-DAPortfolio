@@ -17,6 +17,8 @@ export class ContactComponent {
   emailFocused = false;
   messageFocused = false;
 
+  messageSent = false;
+
   constructor(private http: HttpClient) {}
 
   contactData  = {
@@ -29,24 +31,24 @@ export class ContactComponent {
   mailTest = false;
 
   onSubmit(ngForm: NgForm){
-    if (ngForm.form.valid && ngForm.submitted && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => {
-            console.log('send post complete');
-            ngForm.resetForm();
-          }
-      });
-    } else {
-      // VALIDATiON HINTS
-      Object.values(ngForm.controls).forEach(control => control.markAsTouched());
-    }
+      if (ngForm.form.valid && ngForm.submitted && !this.mailTest) {
+        this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+          .subscribe({
+            next: (response) => {
+              ngForm.resetForm();
+              this.messageSent = true;
+            },
+            error: (error) => {
+              console.error(error);
+            },
+            complete: () => {
+              console.log('send post complete');
+            }
+        });
+      } else {
+        // VALIDATiON HINTS
+        Object.values(ngForm.controls).forEach(control => control.markAsTouched());
+      }
   }
 
   post = {

@@ -44,7 +44,12 @@
                 </div>
                 <br><br>
                 <div style="width: 100%; text-align: center;">
-                    <button type="submit" value="submit" [disabled]="!contactForm.valid">{{ 'CONTACT.SUBMIT' | translate }}</button>
+                    <ng-container *ngIf="!messageSent; else successMsg">
+                        <button type="submit" value="submit" [disabled]="!contactForm.valid">{{ 'CONTACT.SUBMIT' | translate }}</button>
+                    </ng-container>
+                    <ng-template #successMsg>
+                        <div class="success-message">{{ 'CONTACT.SUCCESS' | translate }}</div>
+                    </ng-template>
                 </div>
             </form>
         </div>
