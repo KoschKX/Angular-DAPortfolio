@@ -9,6 +9,10 @@ body.fixed{
     overflow: hidden;
 }
 
+.subpage #side_menu{
+  display: none !important;
+}
+
 /* === BASE === */
 body,
 .page_bg {
