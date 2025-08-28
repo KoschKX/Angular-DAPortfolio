@@ -15,6 +15,7 @@ body,
   overflow-y: scroll;
   margin: 0;
   font-family: var(--fontB);
+  font-weight: 100;
   background-image: none;
   background-color: var(--bgcolor);
   background-size: cover;
@@ -26,13 +27,16 @@ body,
 .fontA {
   font-family: var(--fontA);
 }
-
 .fontB {
   font-family: var(--fontB);
+  font-weight: 100;
 }
 
-h1, h2 {
+h1{
   font-family: var(--fontA);
+}
+h2{
+  font-family: var(--fontB);
 }
 
 a {
@@ -273,9 +277,12 @@ body.ugly .fontB{
   font-family: var(--fontBu);
 }
 
-body.ugly h1, 
-body.ugly h2 {
+body.ugly h1{
   font-family: var(--fontAu);
+}
+body.ugly h2 {
+  font-family: var(--fontBu);
+  font-weight: 100;
 }
 
 body.ugly,

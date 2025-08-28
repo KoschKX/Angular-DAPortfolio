@@ -16,6 +16,7 @@
       justify-content: space-between;
       height: auto;
       margin-bottom: 5vw;
+      margin-top: 3em;
       align-items: flex-end;
 
       &.rowA {
@@ -27,6 +28,7 @@
         }
       }
       &.rowB {
+        margin-bottom: 0em;
         .col.left {
           align-items: flex-end;
         }
@@ -156,16 +158,23 @@
   /* === RESPONSIVE === */
   @media screen and (max-width: 800px) {
     section {
+      min-height: calc(100vh);
+      padding-top: 0;
+      padding-bottom: 0;
+
       .two_col {
         flex-direction: column;
-
+        margin-top: 0em;
         .col {
           width: 100% !important;
         }
         &.rowB {
           .col.right {
             justify-content: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
           }
+          margin-bottom: 0em;
         }
       }
     }

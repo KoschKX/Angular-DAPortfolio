@@ -36,7 +36,7 @@
                                             [class.invalid-placeholder]="message.invalid && message.touched && !messageFocused"
                                             (focus)="messageFocused = true; message.control.markAsTouched();" (blur)="messageFocused = false" />
                 </div>
-                <br>
+                <br><br>
                 <div class="form_cell" style="display: flex; flex-direction: row;">
                     <input class="form_label"  type="checkbox" name="privacy" #privacy="ngModel" [(ngModel)]="contactData.privacy" required style="margin-right: 1em;" />
                     <span *ngIf="privacy.invalid && privacy.touched" class="hint">Please accept the privacy policy</span>
