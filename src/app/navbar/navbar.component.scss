@@ -153,6 +153,30 @@
     }
   }
 
+  #up_arrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    position: absolute;
+    top: 10em;
+    width: 1.5em;
+    z-index: 900;
+    right: 0;
+  }
+  .dark #up_arrow svg path {
+    fill: var(--colorB) !important;
+  }
+  .light #up_arrow svg path {
+    fill: var(--colorD) !important;
+  }
+  #up_arrow.show{
+    display: flex;
+  }
+
+
+
   /* === DROP MENU === */
   #pmenu {
     list-style: none;
@@ -248,7 +272,7 @@
     ul {
       list-style: none;
       position: relative;
-      right: calc(-3.5vw);
+      /* right: calc(-3.5vw); */
       padding: 0;
     }
 
