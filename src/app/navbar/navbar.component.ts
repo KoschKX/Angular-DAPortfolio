@@ -194,4 +194,9 @@ export class NavbarComponent implements AfterViewInit {
     this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
     this.translate.use(this.currentLang);
   }
+
+  isLastSectionActive(): boolean {
+    if (!this.anchors || this.anchors.length === 0) return false;
+    return this.activeSection === this.anchors[this.anchors.length - 1].id;
+  }
 }
